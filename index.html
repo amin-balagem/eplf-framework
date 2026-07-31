@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html lang="en" data-lang-mode="bilingual">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPLF™ Executive Knowledge Platform</title>
+
+    <!-- Executive Fonts: Inter for EN, Cairo for AR -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- خط التوقيع الكلاسيكي الفخم للاسم -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        executive: {
+                            gold: '#D4AF37',
+                            goldDark: '#AA882E',
+                            /* Section Specific Accents */
+                            navy: '#0B132B',    /* Hero / General Dark */
+                            emerald: '#064E3B', /* Definition & Purpose */
+                            purple: '#4C1D95',  /* Decision Hub */
+                            black: '#111827',   /* Competency Ring */
+                            crimson: '#7F1D1D', /* Philosophy */
+                            indigo: '#312E81',  /* Positioning */
+                            /* Pillars */
+                            p1: '#D4AF37', p2: '#1E3A8B', p3: '#059669', p4: '#2563EB',
+                            p5: '#EA580C', p6: '#8B5CF6', p7: '#10B981', p8: '#475569'
+                        }
+                    },
+                    fontFamily: {
+                        en: ['Inter', 'sans-serif'],
+                        ar: ['Cairo', 'sans-serif'],
+                        signature: ['Great Vibes', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- SEO -->
+<meta name="description" content="Executive Project Leadership Framework™ (EPLF™) - AI-Enabled Executive Operating Model for Leadership, Governance, Strategy, Project Delivery and Decision Intelligence.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EPLF™">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://amin-balagem.github.io/eplf-framework/">
+<meta property="og:title" content="Executive Project Leadership Framework™ (EPLF™)">
+<meta property="og:description" content="An Integrated Executive Operating Model for Leadership, Governance, Strategy, Project Delivery & AI-Enabled Decision Intelligence.">
+<meta property="og:image" content="https://amin-balagem.github.io/eplf-framework/images/eplf-preview.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Executive Project Leadership Framework™ (EPLF™)">
+<meta name="twitter:description" content="AI-Enabled Executive Operating Model">
+<meta name="twitter:image" content="https://amin-balagem.github.io/eplf-framework/images/eplf-preview.png">
+
+    </head>
+<body class="pt-[100px]">
+
+    <!-- TOP NAVIGATION & MULTI-LANGUAGE TOGGLE -->
+<nav class="fixed top-0 w-full h-[70px] z-50 flex items-center justify-between px-10" style="background: rgba(11, 19, 43, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+    <!-- الشعار الجديد -->
+    <div class="flex items-center gap-3">
+        <img src="eplf-logo.png" alt="EPLF Logo" class="h-12 w-auto object-contain drop-shadow-[0_0_8px_rgba(212,175,55,0.6)]">
+    </div>
+    
+    <!-- أزرار اللغات الملونة -->
+    <div class="flex bg-executive-navy/90 p-1.5 rounded-xl shadow-inner border border-executive-gold/40 gap-1">
+        <button onclick="setLangMode('en')" id="btn-en" class="px-5 py-1.5 rounded-lg text-lg font-bold transition-all text-blue-300 hover:bg-blue-900/50 hover:text-white">English</button>
+        <button onclick="setLangMode('bilingual')" id="btn-bi" class="px-5 py-1.5 rounded-lg text-lg font-bold transition-all text-purple-300 hover:bg-purple-900/50 hover:text-white">Bilingual</button>
+        <button onclick="setLangMode('ar')" id="btn-ar" class="px-5 py-1.5 rounded-lg text-lg font-bold transition-all text-emerald-300 hover:bg-emerald-900/50 hover:text-white">العربية</button>
+    </div>
+</nav>
+
+    <!-- ==========================================================================
+         HERO SECTION (Navy Marble)
+         ========================================================================== -->
+    <section class="section-padding bg-executive-navy marble-dark text-center relative overflow-hidden flex flex-col items-center">
+        <!-- 3D Grid Background -->
+        <div class="absolute inset-0 opacity-20" style="background-image: linear-gradient(#D4AF37 1px, transparent 1px), linear-gradient(90deg, #D4AF37 1px, transparent 1px); background-size: 50px 50px; transform: perspective(500px) rotateX(60deg) scale(2); transform-origin: top;"></div>
+        
+        <!-- الصورة الشخصية، الاسم، والتاريخ (في المنتصف تماماً) -->
+        <div class="relative z-30 flex flex-col items-center group pointer-events-auto mb-12">
+            <!-- الصورة وتوهجها -->
+            <div class="relative">
+                <div class="absolute -inset-3 bg-gradient-to-r from-[#D4AF37] via-[#FFF8DC] to-[#D4AF37] rounded-full blur-lg opacity-70 group-hover:opacity-100 transition duration-1000 animate-pulse"></div>
+                <!-- تأكد من تعديل profile.jpg إلى اسم ملف صورتك -->
+                <img src="profile.jpg" 
+                     alt="Engr. Amin Balagem" 
+                     class="relative w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 object-cover rounded-full border-[6px] border-[#D4AF37] shadow-[0_0_60px_rgba(212,175,55,0.9)] transform transition duration-500 hover:scale-105">
+            </div>
+            
+            <!-- الاسم بخط التوقيع (القلم) وتاريخ الإعداد أسفل الصورة -->
+            <div class="mt-6 text-center transform transition duration-500 group-hover:scale-105 flex flex-col items-center">
+                <span class="block text-[#D4AF37] text-5xl md:text-6xl tracking-wider mb-2" style="font-family: 'Great Vibes', cursive; text-shadow: 2px 4px 8px rgba(0,0,0,0.9);">
+                    Engr. Amin Balagem
+                </span>
+                
+                <!-- تاريخ الإعداد باللغتين -->
+                <div class="content-group !mb-0 text-gray-400 font-medium tracking-widest text-sm md:text-base mt-2 px-6 py-1 border-t border-b border-gray-600/50">
+                    <span class="lang-en uppercase">Prepared on: July 26, 2026</span>
+                    <span class="lang-ar">تاريخ الإعداد: 26 يوليو 2026</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative z-10 w-full max-w-[1600px]">
+
+    <!-- الشارة الذهبية -->
+    <div class="hero-badge inline-flex items-center gap-3 px-6 py-2 border border-executive-gold bg-executive-gold/10 text-executive-gold text-2xl font-bold uppercase tracking-widest mb-10 rounded-full shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+
+        <i class="ph-fill ph-seal-check text-3xl"></i>
+
+        <span class="lang-en">Foundational Edition | Version 1.0 | 2026</span>
+
+        <span class="lang-ar">الإصدار التأسيسي | النسخة 1.0 | 2026</span>
+
+    </div>
+
+    <!-- العنوان -->
+    <h1 class="font-serif font-bold mb-10 leading-tight" style="font-size: var(--font-hero);">
+        <div class="content-group text-white">
+            <span class="lang-en">
+                EXECUTIVE PROJECT <br>
+                <span class="gold-gradient-text">LEADERSHIP FRAMEWORK™</span>
+            </span>
+
+            <span class="lang-ar">
+                إطار القيادة التنفيذية <br>
+                <span class="gold-gradient-text">للمشاريع™ (EPLF™)</span>
+            </span>
+        </div>
+    </h1>
+
+</div>
+            
+            <!-- الوصف -->
+            <div class="content-group text-gray-300 font-light mx-auto max-w-6xl" style="font-size: var(--font-subtitle);">
+                <span class="lang-en">An Integrated Executive Operating Model for Leadership, Governance, Strategy, Project Delivery & AI-Enabled Decision Intelligence</span>
+                <span class="lang-ar">نموذج تشغيل تنفيذي متكامل للقيادة، الحوكمة، الاستراتيجية، تسليم المشاريع، وذكاء اتخاذ القرار المدعوم بالذكاء الاصطناعي</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         EXECUTIVE TABLE OF CONTENTS (Custom Design)
+         ========================================================================== -->
+    <section class="section-padding marble-light border-b-8 border-gray-200">
+        <div class="max-w-[1600px] mx-auto">
+            <!-- أضفنا id="sec-index" هنا لكي يستجيب لروابط العودة بسلاسة -->
+            <h2 id="sec-index" class="font-bold text-executive-navy uppercase tracking-widest mb-12 flex items-center gap-4" style="font-size: var(--font-section);">
+                <i class="ph-fill ph-list-dashes text-executive-gold"></i>
+                <div class="content-group !mb-0"><span class="lang-en">Executive Index</span><span class="lang-ar">الفهرس التنفيذي</span></div>
+            </h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- 1 -->
+                <a href="#sec-def" class="index-card gold">
+                    <i class="ph-fill ph-bookmark-simple text-4xl block mb-2 opacity-80 mx-auto"></i>
+                    <div class="content-group !mb-0">
+                        <span class="lang-en">Definition & Purpose</span>
+                        <span class="lang-ar">التعريف والغرض</span>
+                    </div>
+                </a>
+                
+                <!-- 2 -->
+                <a href="#sec-aud" class="index-card navy">
+                    <i class="ph-fill ph-users-three text-4xl block mb-2 opacity-80 mx-auto text-white"></i>
+                    <div class="content-group !mb-0">
+                        <span class="lang-en">Audience & Principles</span>
+                        <span class="lang-ar">الجمهور والمبادئ</span>
+                    </div>
+                </a>
+                
+                <!-- 3 -->
+                <a href="#sec-hub" class="index-card brown">
+                    <i class="ph-fill ph-brain text-4xl block mb-2 opacity-80 mx-auto"></i>
+                    <div class="content-group !mb-0">
+                        <span class="lang-en">Decision Hub</span>
+                        <span class="lang-ar">مركز القرار</span>
+                    </div>
+                </a>
+                
+                <!-- 4 -->
+                <a href="#sec-pillars" class="index-card silver">
+                    <i class="ph-fill ph-columns text-4xl block mb-2 opacity-80 mx-auto"></i>
+                    <div class="content-group !mb-0">
+                        <span class="lang-en">The 8 Pillars</span>
+                        <span class="lang-ar">الركائز الثمانية</span>
+                    </div>
+                </a>
+                
+                <!-- 5 -->
+                <a href="#sec-comp" class="index-card green">
+                    <i class="ph-fill ph-target text-4xl block mb-2 opacity-80 mx-auto text-white"></i>
+                    <div class="content-group !mb-0">
+                        <span class="lang-en">Competency Ring</span>
+                        <span class="lang-ar">حلقة الكفاءات</span>
+                    </div>
+                </a>
+                
+                <!-- 6 -->
+                <a href="#sec-success" class="index-card burgundy">
+                    <i class="ph-fill ph-chart-line-up text-4xl block mb-2 opacity-80 mx-auto text-white"></i>
+                    <div class="content-group !mb-0">
+                        <span class="lang-en">Success Model</span>
+                        <span class="lang-ar">نموذج النجاح</span>
+                    </div>
+                </a>
+                
+                <!-- 7 -->
+                <a href="#sec-phil" class="index-card copper">
+                    <i class="ph-fill ph-lightbulb text-4xl block mb-2 opacity-80 mx-auto"></i>
+                    <div class="content-group !mb-0">
+                        <span class="lang-en">Philosophy & Core</span>
+                        <span class="lang-ar">الفلسفة والمبدأ</span>
+                    </div>
+                </a>
+                
+                <!-- 8 -->
+                <a href="#sec-eco" class="index-card royal">
+                    <i class="ph-fill ph-tree-structure text-4xl block mb-2 opacity-80 mx-auto text-white"></i>
+                    <div class="content-group !mb-0">
+                        <span class="lang-en">Ecosystem</span>
+                        <span class="lang-ar">النظام البيئي</span>
+                    </div>
+                </a>
+                
+                <!-- 9 -->
+                <a href="#sec-pos" class="index-card black">
+                    <i class="ph-fill ph-crosshair text-4xl block mb-2 opacity-80 mx-auto text-white"></i>
+                    <div class="content-group !mb-0">
+                        <span class="lang-en">Positioning</span>
+                        <span class="lang-ar">التموضع والتمايز</span>
+                    </div>
+                </a>
+                
+                <!-- 10 -->
+                <a href="#sec-ref" class="index-card marble">
+                    <i class="ph-fill ph-books text-4xl block mb-2 opacity-80 mx-auto"></i>
+                    <div class="content-group !mb-0">
+                        <span class="lang-en">References</span>
+                        <span class="lang-ar">المراجع</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         DEFINITION & PURPOSE (Emerald Marble)
+         ========================================================================== -->
+    <section id="sec-def" class="section-padding bg-executive-emerald marble-dark">
+        <div class="max-w-[1600px] mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b-2 border-executive-gold/30 pb-4 mb-12">
+                <h2 class="font-bold text-executive-gold uppercase tracking-widest flex items-center gap-4 m-0" style="font-size: var(--font-section);">
+                    <i class="ph-fill ph-bookmark-simple"></i>
+                    <div class="content-group !mb-0"><span class="lang-en">Executive Definition & Purpose</span><span class="lang-ar text-gray-300">التعريف التنفيذي والغرض</span></div>
+                </h2>
+                <a href="#sec-index" class="inline-flex items-center gap-2 px-5 py-2.5 bg-executive-navy text-executive-gold border border-executive-gold/40 rounded-full font-bold text-sm shadow-lg hover:bg-executive-gold hover:text-executive-navy transition-all duration-300 shrink-0">
+                    <i class="ph-bold ph-arrow-fat-up text-lg"></i>
+                    <span class="lang-en">Back to Index</span>
+                    <span class="lang-ar">العودة للفهرس</span>
+                </a>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div>
+                    <h3 class="font-bold text-white uppercase tracking-widest mb-8" style="font-size: var(--font-subtitle);">
+                        <span class="lang-en">Executive Definition</span><span class="lang-ar">التعريف التنفيذي</span>
+                    </h3>
+                    <div class="content-group text-justify mb-8 font-medium">
+                        <span class="lang-en">The Executive Project Leadership Framework™ (EPLF™) is an integrated executive reference framework that combines internationally recognized standards, executive leadership, governance, business strategy, project, program and portfolio management, digital transformation, commercial excellence, and AI-enabled decision intelligence into one coherent executive operating model.</span>
+                        <span class="lang-ar">إطار القيادة التنفيذية للمشاريع™ (EPLF™) هو إطار مرجعي تنفيذي متكامل يجمع بين المعايير المعترف بها دولياً، القيادة التنفيذية، الحوكمة، استراتيجية الأعمال، إدارة المشاريع والبرامج والمحافظ، التحول الرقمي، التميز التجاري، وذكاء اتخاذ القرار المدعوم بالذكاء الاصطناعي في نموذج تشغيل تنفيذي واحد متماسك.</span>
+                    </div>
+                    <div class="content-group text-justify font-medium">
+                        <span class="lang-en">The framework enables organizations and executive leaders to align strategy with execution, strengthen governance, improve executive decision-making, enhance project delivery, and create sustainable organizational value.</span>
+                        <span class="lang-ar">يُمكّن الإطار المؤسسات والقادة التنفيذيين من مواءمة الاستراتيجية مع التنفيذ، تعزيز الحوكمة، تحسين اتخاذ القرار التنفيذي، الارتقاء بتسليم المشاريع، وخلق قيمة مؤسسية مستدامة.</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white uppercase tracking-widest mb-8" style="font-size: var(--font-subtitle);">
+                        <span class="lang-en">Framework Purpose</span><span class="lang-ar">الغرض من الإطار</span>
+                    </h3>
+                    <p class="mb-6 font-bold text-executive-gold"><span class="lang-en">The Executive Project Leadership Framework™ enables executives, project leaders, organizations, consultants, contractors, and public institutions to:</span><span class="lang-ar">يُمكّن الإطار المديرين التنفيذيين وقادة المشاريع والمؤسسات من:</span></p>
+                    <ul class="premium-list text-white">
+                        <li class="content-group !mb-0"><span class="lang-en">Align strategy with execution.</span><span class="lang-ar premium-list-item">مواءمة الاستراتيجية مع التنفيذ.</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">Strengthen governance and executive accountability.</span><span class="lang-ar premium-list-item">تعزيز الحوكمة والمساءلة التنفيذية.</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">Improve executive decision-making.</span><span class="lang-ar premium-list-item">تحسين اتخاذ القرار التنفيذي.</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">Deliver sustainable organizational value.</span><span class="lang-ar premium-list-item">تسليم قيمة مؤسسية مستدامة.</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">Integrate leadership with project delivery.</span><span class="lang-ar premium-list-item">دمج القيادة مع تسليم المشاريع.</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">Enhance digital transformation.</span><span class="lang-ar premium-list-item">تعزيز التحول الرقمي.</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">Govern Artificial Intelligence responsibly.</span><span class="lang-ar premium-list-item">حوكمة الذكاء الاصطناعي بمسؤولية.</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">Improve organizational resilience and continuous improvement.</span><span class="lang-ar premium-list-item">تحسين المرونة المؤسسية والتطوير المستمر.</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">Support evidence-based executive leadership across projects, programs, and portfolios.</span><span class="lang-ar premium-list-item">دعم القيادة التنفيذية القائمة على الأدلة عبر المشاريع، البرامج، والمحافظ.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         AUDIENCE & PRINCIPLES (Light Marble)
+         ========================================================================== -->
+    <section id="sec-aud" class="section-padding marble-light border-b-8 border-gray-200">
+        <div class="max-w-[1600px] mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b-2 border-gray-300 pb-4 mb-12">
+                <h2 class="font-bold text-executive-navy uppercase tracking-widest flex items-center gap-4 m-0" style="font-size: var(--font-section);">
+                    <i class="ph-fill ph-users-three text-blue-600"></i>
+                    <div class="content-group !mb-0"><span class="lang-en">Audience & Principles</span><span class="lang-ar">الجمهور والمبادئ</span></div>
+                </h2>
+                <a href="#sec-index" class="inline-flex items-center gap-2 px-5 py-2.5 bg-executive-navy text-executive-gold border border-executive-gold/40 rounded-full font-bold text-sm shadow-lg hover:bg-executive-gold hover:text-executive-navy transition-all duration-300 shrink-0">
+                    <i class="ph-bold ph-arrow-fat-up text-lg"></i>
+                    <span class="lang-en">Back to Index</span>
+                    <span class="lang-ar">العودة للفهرس</span>
+                </a>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div>
+                    <h3 class="font-bold text-executive-navy uppercase tracking-widest mb-8" style="font-size: var(--font-subtitle);">
+                        <span class="lang-en">Intended Audience</span><span class="lang-ar">الجمهور المستهدف</span>
+                    </h3>
+                    <ul class="premium-list">
+                        <li class="content-group !mb-0"><span class="lang-en">Executive Leaders & Board Members</span><span class="lang-ar premium-list-item">القادة التنفيذيون وأعضاء مجالس الإدارة</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">Chief Executive Officers (CEOs) & Government Leaders</span><span class="lang-ar premium-list-item">الرؤساء التنفيذيون والقيادات الحكومية</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">PMO, Portfolio & Program Managers</span><span class="lang-ar premium-list-item">مدراء مكاتب إدارة المشاريع والمحافظ والبرامج</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">Project Directors & Senior Project Managers</span><span class="lang-ar premium-list-item">مدراء المشاريع وكبار مدراء المشاريع</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">Consulting Firms & Public Institutions</span><span class="lang-ar premium-list-item">الشركات الاستشارية والمؤسسات العامة</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">Infrastructure & Construction Organizations</span><span class="lang-ar premium-list-item">مؤسسات البنية التحتية والإنشاءات</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">Development Agencies</span><span class="lang-ar premium-list-item">وكالات التنمية</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">Organizations pursuing Digital Transformation and AI-enabled Governance</span><span class="lang-ar premium-list-item">المؤسسات الساعية للتحول الرقمي والحوكمة بالذكاء الاصطناعي</span></li>
+                    </ul>
+                    <div class="mt-10 p-8 bg-blue-50 rounded-2xl border border-blue-200 text-blue-900 font-bold italic">
+                        <div class="content-group !mb-0"><span class="lang-en">The framework can also serve as an executive blueprint for establishing, transforming, or maturing Project Management Offices (PMOs) at organizational, portfolio, and enterprise levels.</span><span class="lang-ar">يمكن أن يخدم الإطار أيضاً كمخطط تنفيذي لتأسيس، أو تحويل، أو إنضاج مكاتب إدارة المشاريع (PMOs) على المستوى المؤسسي، ومستوى المحافظ، ومستوى المنشأة ككل.</span></div>
+                    </div>
+                </div>
+                
+                <div class="bg-executive-navy text-white p-12 rounded-3xl shadow-2xl">
+                    <h2 class="font-bold text-executive-gold uppercase tracking-widest mb-12 border-b-2 border-executive-gold/30 pb-4" style="font-size: var(--font-section);">
+                        <div class="content-group !mb-0"><span class="lang-en">Executive Leadership Principles</span><span class="lang-ar">مبادئ القيادة التنفيذية</span></div>
+                    </h2>
+                    <ul class="space-y-8 font-bold" style="font-size: var(--font-subtitle);">
+                        <li class="flex items-center gap-6"><i class="ph-fill ph-check-circle text-executive-gold text-5xl"></i> <div class="content-group !mb-0"><span class="lang-en">Think Systemically</span><span class="lang-ar">التفكير المنظومي</span></div></li>
+                        <li class="flex items-center gap-6"><i class="ph-fill ph-check-circle text-executive-gold text-5xl"></i> <div class="content-group !mb-0"><span class="lang-en">Govern Effectively</span><span class="lang-ar">الحوكمة الفعالة</span></div></li>
+                        <li class="flex items-center gap-6"><i class="ph-fill ph-check-circle text-executive-gold text-5xl"></i> <div class="content-group !mb-0"><span class="lang-en">Lead with Integrity</span><span class="lang-ar">القيادة بنزاهة</span></div></li>
+                        <li class="flex items-center gap-6"><i class="ph-fill ph-check-circle text-executive-gold text-5xl"></i> <div class="content-group !mb-0"><span class="lang-en">Deliver Excellence</span><span class="lang-ar">تسليم التميز</span></div></li>
+                        <li class="flex items-center gap-6"><i class="ph-fill ph-check-circle text-executive-gold text-5xl"></i> <div class="content-group !mb-0"><span class="lang-en">Decide Intelligently</span><span class="lang-ar">اتخاذ القرار بذكاء</span></div></li>
+                        <li class="flex items-center gap-6 text-executive-gold pt-8 border-t border-white/20"><i class="ph-fill ph-star text-5xl"></i> <div class="content-group !mb-0"><span class="lang-en">Create Sustainable Value</span><span class="lang-ar">خلق قيمة مستدامة</span></div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         DECISION HUB (Purple Marble)
+         ========================================================================== -->
+    <section id="sec-hub" class="section-padding bg-executive-purple marble-dark text-center">
+        <div class="max-w-[1600px] mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 border-b-2 border-white/30 pb-4 mb-16 max-w-5xl mx-auto">
+                <h2 class="font-bold text-white uppercase tracking-widest flex items-center justify-center gap-4 m-0" style="font-size: var(--font-section);">
+                    <i class="ph-fill ph-brain text-executive-gold"></i>
+                    <div class="content-group !mb-0"><span class="lang-en">Decision Intelligence Hub</span><span class="lang-ar text-gray-300">مركز ذكاء اتخاذ القرار</span></div>
+                </h2>
+                <a href="#sec-index" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-executive-navy border border-executive-gold/40 rounded-full font-bold text-sm shadow-lg hover:bg-executive-gold hover:text-white transition-all duration-300 shrink-0">
+                    <i class="ph-bold ph-arrow-fat-up text-lg"></i>
+                    <span class="lang-en">Back to Index</span>
+                    <span class="lang-ar">العودة للفهرس</span>
+                </a>
+            </div>
+            
+            <h3 class="text-gray-400 font-bold uppercase tracking-widest mb-10" style="font-size: var(--font-subtitle);">
+                <span class="lang-en">Transforms</span><span class="lang-ar">يُحوّل</span>
+            </h3>
+            
+            <div class="flex flex-wrap justify-center gap-8 mb-16">
+                <!-- 1. Data -->
+                <div class="card-3d bg-gradient-to-br from-blue-600 to-blue-900 text-white p-6 min-w-[200px] font-bold border border-white/10 flex flex-col items-center">
+                    <i class="ph-fill ph-database text-5xl mb-4 text-blue-300 drop-shadow-md"></i>
+                    <div class="content-group !mb-0 w-full">
+                        <span class="lang-en">Data</span>
+                        <span class="lang-ar">البيانات</span>
+                    </div>
+                </div>
+
+                <!-- 2. Information -->
+                <div class="card-3d bg-gradient-to-br from-teal-600 to-teal-900 text-white p-6 min-w-[200px] font-bold border border-white/10 flex flex-col items-center">
+                    <i class="ph-fill ph-files text-5xl mb-4 text-teal-300 drop-shadow-md"></i>
+                    <div class="content-group !mb-0 w-full">
+                        <span class="lang-en">Information</span>
+                        <span class="lang-ar">المعلومات</span>
+                    </div>
+                </div>
+
+                <!-- 3. Knowledge -->
+                <div class="card-3d bg-gradient-to-br from-indigo-600 to-indigo-900 text-white p-6 min-w-[200px] font-bold border border-white/10 flex flex-col items-center">
+                    <i class="ph-fill ph-lightbulb text-5xl mb-4 text-indigo-300 drop-shadow-md"></i>
+                    <div class="content-group !mb-0 w-full">
+                        <span class="lang-en">Knowledge</span>
+                        <span class="lang-ar">المعرفة</span>
+                    </div>
+                </div>
+
+                <!-- 4. Experience -->
+                <div class="card-3d bg-gradient-to-br from-orange-600 to-orange-900 text-white p-6 min-w-[200px] font-bold border border-white/10 flex flex-col items-center">
+                    <i class="ph-fill ph-compass text-5xl mb-4 text-orange-300 drop-shadow-md"></i>
+                    <div class="content-group !mb-0 w-full">
+                        <span class="lang-en">Experience</span>
+                        <span class="lang-ar">الخبرة</span>
+                    </div>
+                </div>
+
+                <!-- 5. Leadership -->
+                <div class="card-3d bg-gradient-to-br from-rose-600 to-rose-900 text-white p-6 min-w-[200px] font-bold border border-white/10 flex flex-col items-center">
+                    <i class="ph-fill ph-crown text-5xl mb-4 text-rose-300 drop-shadow-md"></i>
+                    <div class="content-group !mb-0 w-full">
+                        <span class="lang-en">Leadership</span>
+                        <span class="lang-ar">القيادة</span>
+                    </div>
+                </div>
+
+                <!-- 6. Governance -->
+                <div class="card-3d bg-gradient-to-br from-slate-600 to-slate-900 text-white p-6 min-w-[200px] font-bold border border-white/10 flex flex-col items-center">
+                    <i class="ph-fill ph-scales text-5xl mb-4 text-slate-300 drop-shadow-md"></i>
+                    <div class="content-group !mb-0 w-full">
+                        <span class="lang-en">Governance</span>
+                        <span class="lang-ar">الحوكمة</span>
+                    </div>
+                </div>
+
+                <!-- 7. Artificial Intelligence -->
+                <div class="card-3d bg-executive-gold border-4 border-white text-executive-navy p-6 min-w-[280px] font-black flex flex-col items-center justify-center mt-4">
+                    <i class="ph-fill ph-cpu text-6xl mb-4 text-executive-navy drop-shadow-md"></i>
+                    <div class="content-group !mb-0 w-full text-center">
+                        <span class="lang-en">Artificial Intelligence</span>
+                        <span class="lang-ar text-gray-800">الذكاء الاصطناعي</span>
+                    </div>
+                </div>
+            </div>
+
+            <i class="ph-bold ph-arrow-down text-6xl text-executive-gold mb-10"></i>
+            
+            <h3 class="text-gray-400 font-bold uppercase tracking-widest mb-10" style="font-size: var(--font-subtitle);">
+                <span class="lang-en">Into</span><span class="lang-ar">إلى</span>
+            </h3>
+
+            <div class="bg-white text-executive-navy py-10 px-20 rounded-full shadow-[0_20px_50px_rgba(255,255,255,0.1)] mb-10 inline-block">
+                <div class="content-group !mb-0 font-bold" style="font-size: var(--font-section);">
+                    <span class="lang-en">EXECUTIVE DECISIONS</span><span class="lang-ar text-gray-500">قرارات تنفيذية</span>
+                </div>
+            </div>
+
+            <br><i class="ph-bold ph-arrow-down text-6xl text-white mb-10"></i>
+
+            <h3 class="text-gray-400 font-bold uppercase tracking-widest mb-10" style="font-size: var(--font-subtitle);">
+                <span class="lang-en">That Create</span><span class="lang-ar">والتي تخلق</span>
+            </h3>
+
+            <div class="bg-[#10B981] border-8 border-white py-12 px-24 rounded-3xl shadow-[0_0_50px_rgba(16,185,129,0.5)] inline-block">
+                <div class="content-group !mb-0 font-black text-white uppercase tracking-widest" style="font-size: var(--font-main);">
+                    <span class="lang-en">Sustainable Organizational Value</span><span class="lang-ar">قيمة مؤسسية مستدامة</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         THE 8 PILLARS (Luxurious Marble Cards)
+         ========================================================================== -->
+    <section id="sec-pillars" class="section-padding marble-light border-b-8 border-gray-200">
+        <div class="max-w-[1600px] mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b-2 border-gray-300 pb-4 mb-16">
+                <h2 class="font-bold text-executive-navy uppercase tracking-widest flex items-center gap-4 m-0" style="font-size: var(--font-section);">
+                    <i class="ph-fill ph-columns text-executive-gold"></i>
+                    <div class="content-group !mb-0"><span class="lang-en">The Eight Executive Pillars</span><span class="lang-ar">الركائز التنفيذية الثمانية</span></div>
+                </h2>
+                <a href="#sec-index" class="inline-flex items-center gap-2 px-5 py-2.5 bg-executive-navy text-executive-gold border border-executive-gold/40 rounded-full font-bold text-sm shadow-lg hover:bg-executive-gold hover:text-executive-navy transition-all duration-300 shrink-0">
+                    <i class="ph-bold ph-arrow-fat-up text-lg"></i>
+                    <span class="lang-en">Back to Index</span>
+                    <span class="lang-ar">العودة للفهرس</span>
+                </a>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                
+                <!-- Pillar 1: Leadership -->
+                <div class="card-3d pillar-card bg-pillar-1 p-12 border-t-8">
+                    <h3 class="font-bold text-executive-p1 uppercase flex gap-4 pillar-title mb-6">
+                        <span class="text-executive-gold/50">①</span> <div class="content-group !mb-0"><span class="lang-en">Leadership & Emotional Intelligence</span><span class="lang-ar text-gray-700">القيادة والذكاء العاطفي</span></div>
+                    </h3>
+                    
+                    <button onclick="document.getElementById('modal-pillar-1').classList.remove('hidden')" class="mt-2 mb-8 flex items-center gap-3 bg-white hover:bg-[#D4AF37] hover:text-white text-executive-navy font-bold py-2.5 px-5 rounded-xl transition-all shadow-[0_5px_15px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(212,175,55,0.4)] w-fit border border-gray-200 group">
+                        <div class="relative flex items-center justify-center w-8 h-8">
+                            <span class="absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-40 animate-ping"></span>
+                            <i class="ph-bold ph-git-merge text-2xl text-[#D4AF37] relative z-10 group-hover:text-white transition-colors"></i>
+                        </div>
+                        <div class="content-group !mb-0 text-sm tracking-wide">
+                            <span class="lang-en">View Executive Flow</span>
+                            <span class="lang-ar border-none !mt-0 !pr-0">عرض المسار التنفيذي</span>
+                        </div>
+                    </button>
+
+                    <div class="grid sm:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <h4 class="font-bold text-executive-navy mb-4 border-b border-gray-300 pb-2"><span class="lang-en">Leadership Excellence</span><span class="lang-ar">التميز القيادي</span></h4>
+                            <ul class="premium-list" style="font-size: 22px;">
+                                <li class="content-group !mb-0"><span class="lang-en">Visionary Leadership</span><span class="lang-ar premium-list-item">القيادة الحكيمة</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Strategic Thinking</span><span class="lang-ar premium-list-item">التفكير الاستراتيجي</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Executive Communication</span><span class="lang-ar premium-list-item">التواصل التنفيذي</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Negotiation & Influence</span><span class="lang-ar premium-list-item">التفاوض والتأثير</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Coaching & Mentoring</span><span class="lang-ar premium-list-item">التوجيه والإرشاد</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Team Empowerment</span><span class="lang-ar premium-list-item">تمكين الفريق</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Change Leadership</span><span class="lang-ar premium-list-item">قيادة التغيير</span></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-executive-navy mb-4 border-b border-gray-300 pb-2"><span class="lang-en">Emotional Intelligence</span><span class="lang-ar">الذكاء العاطفي</span></h4>
+                            <ul class="premium-list" style="font-size: 22px;">
+                                <li class="content-group !mb-0"><span class="lang-en">Self-Awareness</span><span class="lang-ar premium-list-item">الوعي الذاتي</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Self-Management</span><span class="lang-ar premium-list-item">الإدارة الذاتية</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Empathy</span><span class="lang-ar premium-list-item">التعاطف</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Trust Building</span><span class="lang-ar premium-list-item">بناء الثقة</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Relationship Management</span><span class="lang-ar premium-list-item">إدارة العلاقات</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Motivation</span><span class="lang-ar premium-list-item">التحفيز</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white/60 backdrop-blur-sm p-6 rounded-xl border-l-4 border-executive-p1 rtl:border-l-0 rtl:border-r-4 text-executive-navy font-bold italic shadow-sm">
+                        <div class="content-group !mb-0"><span class="lang-en">Executive Insight: Leadership transforms strategy into organizational capability.</span><span class="lang-ar">الرؤية: القيادة تحول الاستراتيجية إلى قدرة مؤسسية.</span></div>
+                    </div>
+                </div>
+
+                <!-- Pillar 2: Governance -->
+                <div class="card-3d pillar-card bg-pillar-2 p-12 border-t-8">
+                    <h3 class="font-bold text-executive-p2 uppercase flex gap-4 pillar-title mb-6">
+                        <span class="text-[#1E3A8B]/40">②</span> <div class="content-group !mb-0"><span class="lang-en">Governance</span><span class="lang-ar text-gray-700">الحوكمة</span></div>
+                    </h3>
+                    
+                    <button onclick="document.getElementById('modal-pillar-2').classList.remove('hidden')" class="mt-2 mb-8 flex items-center gap-3 bg-white hover:bg-[#1E3A8B] hover:text-white text-executive-navy font-bold py-2.5 px-5 rounded-xl transition-all shadow-[0_5px_15px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(30,58,139,0.4)] w-fit border border-gray-200 group">
+                        <div class="relative flex items-center justify-center w-8 h-8">
+                            <span class="absolute inline-flex h-full w-full rounded-full bg-[#1E3A8B] opacity-40 animate-ping"></span>
+                            <i class="ph-bold ph-git-merge text-2xl text-[#1E3A8B] relative z-10 group-hover:text-white transition-colors"></i>
+                        </div>
+                        <div class="content-group !mb-0 text-sm tracking-wide">
+                            <span class="lang-en">View Executive Flow</span>
+                            <span class="lang-ar border-none !mt-0 !pr-0">عرض المسار التنفيذي</span>
+                        </div>
+                    </button>
+
+                    <div class="grid sm:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <h4 class="font-bold text-executive-navy mb-4 border-b border-gray-300 pb-2"><span class="lang-en">Governance Framework</span><span class="lang-ar">إطار الحوكمة</span></h4>
+                            <ul class="premium-list" style="font-size: 22px;">
+                                <li class="content-group !mb-0"><span class="lang-en">Principles</span><span class="lang-ar premium-list-item">المبادئ</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Policies</span><span class="lang-ar premium-list-item">السياسات</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Structures</span><span class="lang-ar premium-list-item">الهياكل</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Processes</span><span class="lang-ar premium-list-item">العمليات</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Executive Decision Gates</span><span class="lang-ar premium-list-item">بوابات القرار</span></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-executive-navy mb-4 border-b border-gray-300 pb-2"><span class="lang-en">Governance Functions</span><span class="lang-ar">وظائف الحوكمة</span></h4>
+                            <ul class="premium-list" style="font-size: 22px;">
+                                <li class="content-group !mb-0"><span class="lang-en">Accountability</span><span class="lang-ar premium-list-item">المساءلة</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Transparency</span><span class="lang-ar premium-list-item">الشفافية</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Ethics & Compliance</span><span class="lang-ar premium-list-item">الأخلاقيات والامتثال</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Decision Rights & Assurance</span><span class="lang-ar premium-list-item">حقوق القرار والتأكيد</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Executive Oversight</span><span class="lang-ar premium-list-item">الإشراف التنفيذي</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Performance Governance</span><span class="lang-ar premium-list-item">حوكمة الأداء</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white/60 backdrop-blur-sm p-6 rounded-xl border-l-4 border-executive-p2 rtl:border-l-0 rtl:border-r-4 text-executive-navy font-bold italic shadow-sm">
+                        <div class="content-group !mb-0"><span class="lang-en">Executive Insight: Governance bridges strategy and execution.</span><span class="lang-ar">الرؤية: الحوكمة تجسر الفجوة بين الاستراتيجية والتنفيذ.</span></div>
+                    </div>
+                </div>
+
+                <!-- Pillar 3: PM -->
+                <div class="card-3d pillar-card bg-pillar-4 p-12 border-t-8">
+                    <h3 class="font-bold text-executive-p4 uppercase flex gap-4 pillar-title mb-6">
+                        <span class="text-[#2563EB]/40">③</span> <div class="content-group !mb-0"><span class="lang-en">Project, Program & Portfolio Mgmt</span><span class="lang-ar text-gray-700">إدارة المشاريع والبرامج والمحافظ</span></div>
+                    </h3>
+                    
+                    <button onclick="document.getElementById('modal-pillar-3').classList.remove('hidden')" class="mt-2 mb-8 flex items-center gap-3 bg-white hover:bg-[#2563EB] hover:text-white text-executive-navy font-bold py-2.5 px-5 rounded-xl transition-all shadow-[0_5px_15px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(37,99,235,0.4)] w-fit border border-gray-200 group">
+                        <div class="relative flex items-center justify-center w-8 h-8">
+                            <span class="absolute inline-flex h-full w-full rounded-full bg-[#2563EB] opacity-40 animate-ping"></span>
+                            <i class="ph-bold ph-git-merge text-2xl text-[#2563EB] relative z-10 group-hover:text-white transition-colors"></i>
+                        </div>
+                        <div class="content-group !mb-0 text-sm tracking-wide">
+                            <span class="lang-en">View Executive Flow</span>
+                            <span class="lang-ar border-none !mt-0 !pr-0">عرض المسار التنفيذي</span>
+                        </div>
+                    </button>
+
+                    <h4 class="font-bold text-executive-navy mb-4 border-b border-gray-300 pb-2"><span class="lang-en">Strategic Delivery Management</span><span class="lang-ar">إدارة التسليم الاستراتيجي</span></h4>
+                    <div class="grid sm:grid-cols-2 gap-8 mb-8">
+                        <ul class="premium-list" style="font-size: 22px;">
+                            <li class="content-group !mb-0"><span class="lang-en">PMBOK® Performance Domains</span><span class="lang-ar premium-list-item">مجالات أداء PMBOK®</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Project Life Cycle</span><span class="lang-ar premium-list-item">دورة حياة المشروع</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Project Governance</span><span class="lang-ar premium-list-item">حوكمة المشاريع</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Program Management</span><span class="lang-ar premium-list-item">إدارة البرامج</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Portfolio Management</span><span class="lang-ar premium-list-item">إدارة المحافظ</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Benefits Governance & Realization</span><span class="lang-ar premium-list-item">حوكمة وتحقيق الفوائد</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Stakeholder Management</span><span class="lang-ar premium-list-item">إدارة أصحاب المصلحة</span></li>
+                        </ul>
+                        <ul class="premium-list" style="font-size: 22px;">
+                            <li class="content-group !mb-0"><span class="lang-en">Governance Roles & RACI Matrix</span><span class="lang-ar premium-list-item">أدوار الحوكمة ومصفوفة RACI</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Resource Management</span><span class="lang-ar premium-list-item">إدارة الموارد</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Organizational Change Mgmt</span><span class="lang-ar premium-list-item">إدارة التغيير المؤسسي</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Predictive Delivery</span><span class="lang-ar premium-list-item">التسليم التنبؤي</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Agile Delivery</span><span class="lang-ar premium-list-item">التسليم المرن</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Hybrid Delivery</span><span class="lang-ar premium-list-item">التسليم الهجين</span></li>
+                        </ul>
+                    </div>
+                    <div class="bg-white/60 backdrop-blur-sm p-6 rounded-xl border-l-4 border-executive-p4 rtl:border-l-0 rtl:border-r-4 text-executive-navy font-bold italic shadow-sm">
+                        <div class="content-group !mb-0"><span class="lang-en">Executive Insight: Projects execute strategy. Programs coordinate value. Portfolios optimize investments.</span><span class="lang-ar">الرؤية: المشاريع تنفذ الاستراتيجية. البرامج تنسق القيمة. المحافظ تحسن الاستثمارات.</span></div>
+                    </div>
+                </div>
+
+                <!-- Pillar 4: Strategy -->
+                <div class="card-3d pillar-card bg-pillar-3 p-12 border-t-8">
+                    <h3 class="font-bold text-executive-p3 uppercase flex gap-4 pillar-title mb-6">
+                        <span class="text-[#059669]/40">④</span> <div class="content-group !mb-0"><span class="lang-en">Business Strategy & Value Creation</span><span class="lang-ar text-gray-700">استراتيجية الأعمال وخلق القيمة</span></div>
+                    </h3>
+                    
+                    <button onclick="document.getElementById('modal-pillar-4').classList.remove('hidden')" class="mt-2 mb-8 flex items-center gap-3 bg-white hover:bg-[#059669] hover:text-white text-executive-navy font-bold py-2.5 px-5 rounded-xl transition-all shadow-[0_5px_15px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(5,150,105,0.4)] w-fit border border-gray-200 group">
+                        <div class="relative flex items-center justify-center w-8 h-8">
+                            <span class="absolute inline-flex h-full w-full rounded-full bg-[#059669] opacity-40 animate-ping"></span>
+                            <i class="ph-bold ph-git-merge text-2xl text-[#059669] relative z-10 group-hover:text-white transition-colors"></i>
+                        </div>
+                        <div class="content-group !mb-0 text-sm tracking-wide">
+                            <span class="lang-en">View Executive Flow</span>
+                            <span class="lang-ar border-none !mt-0 !pr-0">عرض المسار التنفيذي</span>
+                        </div>
+                    </button>
+
+                    <h4 class="font-bold text-executive-navy mb-4 border-b border-gray-300 pb-2"><span class="lang-en">Strategic Excellence</span><span class="lang-ar">التميز الاستراتيجي</span></h4>
+                    <div class="grid sm:grid-cols-2 gap-8 mb-8">
+                        <ul class="premium-list" style="font-size: 22px;">
+                            <li class="content-group !mb-0"><span class="lang-en">Strategy Alignment</span><span class="lang-ar premium-list-item">مواءمة الاستراتيجية</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Business Value</span><span class="lang-ar premium-list-item">قيمة الأعمال</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Portfolio Alignment</span><span class="lang-ar premium-list-item">مواءمة المحفظة</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Business Acumen</span><span class="lang-ar premium-list-item">الفطنة التجارية</span></li>
+                        </ul>
+                        <ul class="premium-list" style="font-size: 22px;">
+                            <li class="content-group !mb-0"><span class="lang-en">Systems Thinking</span><span class="lang-ar premium-list-item">التفكير المنظومي</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Innovation</span><span class="lang-ar premium-list-item">الابتكار</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Sustainability & ESG</span><span class="lang-ar premium-list-item">الاستدامة والحوكمة البيئية والاجتماعية</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Continuous Improvement</span><span class="lang-ar premium-list-item">التحسين المستمر</span></li>
+                        </ul>
+                    </div>
+                    <div class="bg-white/60 backdrop-blur-sm p-6 rounded-xl border-l-4 border-executive-p3 rtl:border-l-0 rtl:border-r-4 text-executive-navy font-bold italic shadow-sm">
+                        <div class="content-group !mb-0"><span class="lang-en">Executive Insight: Strategy defines direction. Projects deliver value. Organizations create impact.</span><span class="lang-ar">الرؤية: الاستراتيجية تحدد الاتجاه. المشاريع تسلم القيمة. المؤسسات تخلق الأثر.</span></div>
+                    </div>
+                </div>
+
+                <!-- Pillar 5: Risk & Decision Intelligence -->
+                <div class="card-3d pillar-card bg-pillar-5 p-12 border-t-8">
+                    <h3 class="font-bold text-executive-p6 uppercase flex gap-4 pillar-title mb-6">
+                        <span class="text-[#8B5CF6]/40">⑤</span> <div class="content-group !mb-0"><span class="lang-en">Risk & Decision Intelligence</span><span class="lang-ar text-gray-700">المخاطر وذكاء اتخاذ القرار</span></div>
+                    </h3>
+                    
+                    <button onclick="document.getElementById('modal-pillar-5').classList.remove('hidden')" class="mt-2 mb-8 flex items-center gap-3 bg-white hover:bg-[#8B5CF6] hover:text-white text-executive-navy font-bold py-2.5 px-5 rounded-xl transition-all shadow-[0_5px_15px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(139,92,246,0.4)] w-fit border border-gray-200 group">
+                        <div class="relative flex items-center justify-center w-8 h-8">
+                            <span class="absolute inline-flex h-full w-full rounded-full bg-[#8B5CF6] opacity-40 animate-ping"></span>
+                            <i class="ph-bold ph-git-merge text-2xl text-[#8B5CF6] relative z-10 group-hover:text-white transition-colors"></i>
+                        </div>
+                        <div class="content-group !mb-0 text-sm tracking-wide">
+                            <span class="lang-en">View Executive Flow</span>
+                            <span class="lang-ar border-none !mt-0 !pr-0">عرض المسار التنفيذي</span>
+                        </div>
+                    </button>
+
+                    <h4 class="font-bold text-executive-navy mb-4 border-b border-gray-300 pb-2"><span class="lang-en">Executive Decision Intelligence</span><span class="lang-ar">ذكاء القرار التنفيذي</span></h4>
+                    <div class="grid sm:grid-cols-2 gap-8 mb-8">
+                        <ul class="premium-list" style="font-size: 22px;">
+                            <li class="content-group !mb-0"><span class="lang-en">Enterprise Risk Management</span><span class="lang-ar premium-list-item">إدارة مخاطر المؤسسة</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">RAID Management (Risks, Assumptions, Issues, Dependencies)</span><span class="lang-ar premium-list-item">إدارة سجل RAID</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Scenario Analysis</span><span class="lang-ar premium-list-item">تحليل السيناريوهات</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Root Cause Analysis</span><span class="lang-ar premium-list-item">تحليل السبب الجذري</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Predictive Analytics</span><span class="lang-ar premium-list-item">التحليلات التنبؤية</span></li>
+                        </ul>
+                        <ul class="premium-list" style="font-size: 22px;">
+                            <li class="content-group !mb-0"><span class="lang-en">Early Warning Systems</span><span class="lang-ar premium-list-item">أنظمة الإنذار المبكر</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Decision Support</span><span class="lang-ar premium-list-item">دعم القرار</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Lessons Learned</span><span class="lang-ar premium-list-item">الدروس المستفادة</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Knowledge Management</span><span class="lang-ar premium-list-item">إدارة المعرفة</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">AI-Augmented Decision Intelligence</span><span class="lang-ar premium-list-item">ذكاء القرار المعزز بالذكاء الاصطناعي</span></li>
+                        </ul>
+                    </div>
+                    <div class="bg-white/60 backdrop-blur-sm p-6 rounded-xl border-l-4 border-executive-p6 rtl:border-l-0 rtl:border-r-4 text-executive-navy font-bold italic shadow-sm">
+                        <div class="content-group !mb-0"><span class="lang-en">Core Principle: Artificial Intelligence augments executive decisions. Human leadership remains fully accountable.</span><span class="lang-ar">المبدأ الأساسي: الذكاء الاصطناعي يعزز القرارات التنفيذية. وتظل القيادة البشرية مسؤولة بالكامل.</span></div>
+                    </div>
+                </div>
+
+                <!-- Pillar 6: Digital Leadership -->
+                <div class="card-3d pillar-card bg-pillar-6 p-12 border-t-8">
+                    <h3 class="font-bold text-[#0D9488] uppercase flex gap-4 pillar-title mb-6">
+                        <span class="text-[#0D9488]/40">⑥</span> <div class="content-group !mb-0"><span class="lang-en">Digital Project Leadership</span><span class="lang-ar text-gray-700">القيادة الرقمية للمشاريع</span></div>
+                    </h3>
+                    
+                    <button onclick="document.getElementById('modal-pillar-6').classList.remove('hidden')" class="mt-2 mb-8 flex items-center gap-3 bg-white hover:bg-[#0D9488] hover:text-white text-executive-navy font-bold py-2.5 px-5 rounded-xl transition-all shadow-[0_5px_15px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(13,148,136,0.4)] w-fit border border-gray-200 group">
+                        <div class="relative flex items-center justify-center w-8 h-8">
+                            <span class="absolute inline-flex h-full w-full rounded-full bg-[#0D9488] opacity-40 animate-ping"></span>
+                            <i class="ph-bold ph-git-merge text-2xl text-[#0D9488] relative z-10 group-hover:text-white transition-colors"></i>
+                        </div>
+                        <div class="content-group !mb-0 text-sm tracking-wide">
+                            <span class="lang-en">View Executive Flow</span>
+                            <span class="lang-ar border-none !mt-0 !pr-0">عرض المسار التنفيذي</span>
+                        </div>
+                    </button>
+
+                    <h4 class="font-bold text-executive-navy mb-4 border-b border-gray-300 pb-2"><span class="lang-en">Digital Transformation</span><span class="lang-ar">التحول الرقمي</span></h4>
+                    <div class="grid sm:grid-cols-2 gap-8 mb-8">
+                        <ul class="premium-list" style="font-size: 22px;">
+                            <li class="content-group !mb-0"><span class="lang-en">Digital Strategy</span><span class="lang-ar premium-list-item">الاستراتيجية الرقمية</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Digital PMO</span><span class="lang-ar premium-list-item">مكتب المشاريع الرقمي</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">PMIS</span><span class="lang-ar premium-list-item">نظام PMIS</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">BIM (ISO 19650)</span><span class="lang-ar premium-list-item">نمذجة BIM</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Digital Twins</span><span class="lang-ar premium-list-item">التوائم الرقمية</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Common Data Environment (CDE)</span><span class="lang-ar premium-list-item">بيئة البيانات المشتركة (CDE)</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Executive Dashboards</span><span class="lang-ar premium-list-item">لوحات القيادة التنفيذية</span></li>
+                        </ul>
+                        <ul class="premium-list" style="font-size: 22px;">
+                            <li class="content-group !mb-0"><span class="lang-en">Workflow Automation</span><span class="lang-ar premium-list-item">أتمتة سير العمل</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Data Analytics</span><span class="lang-ar premium-list-item">تحليل البيانات</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Data Governance</span><span class="lang-ar premium-list-item">حوكمة البيانات</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">AI Governance</span><span class="lang-ar premium-list-item">حوكمة الذكاء الاصطناعي</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Responsible AI</span><span class="lang-ar premium-list-item">الذكاء الاصطناعي المسؤول</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Cybersecurity</span><span class="lang-ar premium-list-item">الأمن السيبراني</span></li>
+                        </ul>
+                    </div>
+                    <div class="bg-white/60 backdrop-blur-sm p-6 rounded-xl border-l-4 border-[#0D9488] rtl:border-l-0 rtl:border-r-4 text-executive-navy font-bold italic shadow-sm">
+                        <div class="content-group !mb-0"><span class="lang-en">Executive Insight: Digital capability accelerates execution. AI enhances intelligence. Leadership remains responsible.</span><span class="lang-ar">الرؤية: القدرة الرقمية تسرع التنفيذ. الذكاء الاصطناعي يعزز الذكاء. القيادة تظل مسؤولة.</span></div>
+                    </div>
+                </div>
+
+                <!-- Pillar 7: Delivery & Commercial -->
+                <div class="card-3d pillar-card bg-pillar-7 p-12 border-t-8">
+                    <h3 class="font-bold text-executive-p5 uppercase flex gap-4 pillar-title mb-6">
+                        <span class="text-[#EA580C]/40">⑦</span> <div class="content-group !mb-0"><span class="lang-en">Project Delivery & Commercial Excellence</span><span class="lang-ar text-gray-700">تسليم المشاريع والتميز التجاري</span></div>
+                    </h3>
+                    
+                    <button onclick="document.getElementById('modal-pillar-7').classList.remove('hidden')" class="mt-2 mb-8 flex items-center gap-3 bg-white hover:bg-[#EA580C] hover:text-white text-executive-navy font-bold py-2.5 px-5 rounded-xl transition-all shadow-[0_5px_15px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(234,88,12,0.4)] w-fit border border-gray-200 group">
+                        <div class="relative flex items-center justify-center w-8 h-8">
+                            <span class="absolute inline-flex h-full w-full rounded-full bg-[#EA580C] opacity-40 animate-ping"></span>
+                            <i class="ph-bold ph-git-merge text-2xl text-[#EA580C] relative z-10 group-hover:text-white transition-colors"></i>
+                        </div>
+                        <div class="content-group !mb-0 text-sm tracking-wide">
+                            <span class="lang-en">View Executive Flow</span>
+                            <span class="lang-ar border-none !mt-0 !pr-0">عرض المسار التنفيذي</span>
+                        </div>
+                    </button>
+
+                    <div class="grid sm:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <h4 class="font-bold text-executive-navy mb-4 border-b border-gray-300 pb-2"><span class="lang-en">Commercial Excellence</span><span class="lang-ar">التميز التجاري</span></h4>
+                            <ul class="premium-list" style="font-size: 22px;">
+                                <li class="content-group !mb-0"><span class="lang-en">Procurement Strategy</span><span class="lang-ar premium-list-item">استراتيجية المشتريات</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Contract Management</span><span class="lang-ar premium-list-item">إدارة العقود</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Contract Administration</span><span class="lang-ar premium-list-item">إدارة تنفيذ العقود</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Commercial Management</span><span class="lang-ar premium-list-item">الإدارة التجارية</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Claims Management</span><span class="lang-ar premium-list-item">إدارة المطالبات</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Dispute Resolution</span><span class="lang-ar premium-list-item">تسوية النزاعات</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">FIDIC Practice</span><span class="lang-ar premium-list-item">ممارسات الفيديك</span></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-executive-navy mb-4 border-b border-gray-300 pb-2"><span class="lang-en">Delivery Excellence</span><span class="lang-ar">تميز التسليم</span></h4>
+                            <ul class="premium-list" style="font-size: 22px;">
+                                <li class="content-group !mb-0"><span class="lang-en">Project Controls</span><span class="lang-ar premium-list-item">ضوابط المشروع</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Cost Engineering</span><span class="lang-ar premium-list-item">هندسة التكاليف</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Schedule Management</span><span class="lang-ar premium-list-item">إدارة الجداول الزمنية</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Earned Value Management (EVM)</span><span class="lang-ar premium-list-item">إدارة القيمة المكتسبة</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Performance Management</span><span class="lang-ar premium-list-item">إدارة الأداء</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Benefits Tracking</span><span class="lang-ar premium-list-item">تتبع الفوائد</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">QA/QC</span><span class="lang-ar premium-list-item">ضمان ومراقبة الجودة</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">HSE</span><span class="lang-ar premium-list-item">الصحة والسلامة والبيئة</span></li>
+                                <li class="content-group !mb-0"><span class="lang-en">Operational Readiness</span><span class="lang-ar premium-list-item">الجاهزية التشغيلية</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white/60 backdrop-blur-sm p-6 rounded-xl border-l-4 border-executive-p5 rtl:border-l-0 rtl:border-r-4 text-executive-navy font-bold italic shadow-sm">
+                        <div class="content-group !mb-0"><span class="lang-en">Executive Insight: Execution excellence transforms strategy into measurable organizational value.</span><span class="lang-ar">الرؤية: التميز في التنفيذ يحول الاستراتيجية إلى قيمة مؤسسية قابلة للقياس.</span></div>
+                    </div>
+                </div>
+
+                <!-- Pillar 8: Standards -->
+                <div class="card-3d pillar-card bg-pillar-8 p-12 border-t-8">
+                    <h3 class="font-bold text-executive-p8 uppercase flex gap-4 pillar-title mb-6">
+                        <span class="text-[#475569]/40">⑧</span> <div class="content-group !mb-0"><span class="lang-en">Global Standards & Best Practices</span><span class="lang-ar text-gray-700">المعايير العالمية وأفضل الممارسات</span></div>
+                    </h3>
+                    
+                    <button onclick="document.getElementById('modal-pillar-8').classList.remove('hidden')" class="mt-2 mb-8 flex items-center gap-3 bg-white hover:bg-[#475569] hover:text-white text-executive-navy font-bold py-2.5 px-5 rounded-xl transition-all shadow-[0_5px_15px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(71,85,105,0.4)] w-fit border border-gray-200 group">
+                        <div class="relative flex items-center justify-center w-8 h-8">
+                            <span class="absolute inline-flex h-full w-full rounded-full bg-[#475569] opacity-40 animate-ping"></span>
+                            <i class="ph-bold ph-git-merge text-2xl text-[#475569] relative z-10 group-hover:text-white transition-colors"></i>
+                        </div>
+                        <div class="content-group !mb-0 text-sm tracking-wide">
+                            <span class="lang-en">View Executive Flow</span>
+                            <span class="lang-ar border-none !mt-0 !pr-0">عرض المسار التنفيذي</span>
+                        </div>
+                    </button>
+
+                    <h4 class="font-bold text-executive-navy mb-4 border-b border-gray-300 pb-2"><span class="lang-en">International References</span><span class="lang-ar">المراجع الدولية</span></h4>
+                    <div class="grid sm:grid-cols-2 gap-8 mb-8">
+                        <ul class="premium-list" style="font-size: 22px;">
+                            <li class="content-group !mb-0"><span class="lang-en">PMBOK® Guide (7th Edition)</span><span class="lang-ar premium-list-item">دليل PMBOK®</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">PMI® Standard for Program Management</span><span class="lang-ar premium-list-item">معيار إدارة البرامج</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">PMI® Standard for Portfolio Management</span><span class="lang-ar premium-list-item">معيار إدارة المحافظ</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">ISO 21502</span><span class="lang-ar premium-list-item">أيزو 21502</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">ISO 31000</span><span class="lang-ar premium-list-item">أيزو 31000</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">ISO 19650</span><span class="lang-ar premium-list-item">أيزو 19650</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">ISO/IEC 42001 (AIMS)</span><span class="lang-ar premium-list-item">أيزو 42001 (الذكاء الاصطناعي)</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">ISO 9001</span><span class="lang-ar premium-list-item">أيزو 9001</span></li>
+                        </ul>
+                        <ul class="premium-list" style="font-size: 22px;">
+                            <li class="content-group !mb-0"><span class="lang-en">ISO 45001</span><span class="lang-ar premium-list-item">أيزو 45001</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Agile Practice Guide</span><span class="lang-ar premium-list-item">دليل الممارسة الرشيقة</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Scrum Guide</span><span class="lang-ar premium-list-item">دليل سكروم</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">Kanban</span><span class="lang-ar premium-list-item">كانبان</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">FIDIC Suite of Contracts</span><span class="lang-ar premium-list-item">مجموعة عقود الفيديك</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">AACE International Recommended Practices</span><span class="lang-ar premium-list-item">ممارسات AACE</span></li>
+                            <li class="content-group !mb-0"><span class="lang-en">ANSI/EIA-748 (EVMS)</span><span class="lang-ar premium-list-item">نظام EVMS</span></li>
+                        </ul>
+                    </div>
+                    <div class="bg-white/60 backdrop-blur-sm p-6 rounded-xl border-l-4 border-executive-p8 rtl:border-l-0 rtl:border-r-4 text-executive-navy font-bold italic shadow-sm">
+                        <div class="content-group !mb-0"><span class="lang-en">Executive Insight: Global standards provide consistency, credibility, governance, and continuous improvement.</span><span class="lang-ar">الرؤية: المعايير العالمية توفر الاتساق، المصداقية، الحوكمة، والتحسين المستمر.</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         COMPETENCY RING (Dark Executive Theme)
+         ========================================================================== -->
+    <section id="sec-comp" class="section-padding bg-executive-black marble-dark text-white">
+        <div class="max-w-[1600px] mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 border-b-2 border-executive-gold/30 pb-4 mb-16">
+                <h2 class="font-bold text-executive-gold uppercase tracking-widest flex items-center gap-4 m-0" style="font-size: var(--font-section);">
+                    <i class="ph-fill ph-target"></i>
+                    <div class="content-group !mb-0"><span class="lang-en">Executive Competency Ring</span><span class="lang-ar text-gray-300">حلقة الكفاءات التنفيذية</span></div>
+                </h2>
+                <a href="#sec-index" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-executive-navy border border-executive-gold/40 rounded-full font-bold text-sm shadow-lg hover:bg-executive-gold hover:text-white transition-all duration-300 shrink-0">
+                    <i class="ph-bold ph-arrow-fat-up text-lg"></i>
+                    <span class="lang-en">Back to Index</span>
+                    <span class="lang-ar">العودة للفهرس</span>
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card-3d bg-white/5 border border-white/10 p-8 rounded-3xl">
+                    <i class="ph-fill ph-compass text-5xl text-executive-gold mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-3 text-executive-gold"><span class="lang-en">Strategic Mastery</span><span class="lang-ar">الإتقان الاستراتيجي</span></h3>
+                    <p class="text-gray-300"><span class="lang-en">Aligning enterprise direction with operational execution.</span><span class="lang-ar">مواءمة اتجاه المؤسسة مع التنفيذ التشغيلي.</span></p>
+                </div>
+                <div class="card-3d bg-white/5 border border-white/10 p-8 rounded-3xl">
+                    <i class="ph-fill ph-scales text-5xl text-executive-gold mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-3 text-executive-gold"><span class="lang-en">Governance Agility</span><span class="lang-ar">مرونة الحوكمة</span></h3>
+                    <p class="text-gray-300"><span class="lang-en">Balancing control structures with rapid adaptability.</span><span class="lang-ar">موازنة هياكل الرقابة مع التكيف السريع.</span></p>
+                </div>
+                <div class="card-3d bg-white/5 border border-white/10 p-8 rounded-3xl">
+                    <i class="ph-fill ph-cpu text-5xl text-executive-gold mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-3 text-executive-gold"><span class="lang-en">Digital Fluency</span><span class="lang-ar">الطلاقة الرقمية</span></h3>
+                    <p class="text-gray-300"><span class="lang-en">Leveraging BIM, CDE, and AI for decisions.</span><span class="lang-ar">الاستفادة من نمذجة BIM والذكاء الاصطناعي.</span></p>
+                </div>
+                <div class="card-3d bg-white/5 border border-white/10 p-8 rounded-3xl">
+                    <i class="ph-fill ph-handshake text-5xl text-executive-gold mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-3 text-executive-gold"><span class="lang-en">Commercial Acumen</span><span class="lang-ar">الفطنة التجارية</span></h3>
+                    <p class="text-gray-300"><span class="lang-en">Mastering contracts, FIDIC, and value creation.</span><span class="lang-ar">إتقان العقود وعقود الفيديك وخلق القيمة.</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         SUCCESS MODEL (Burgundy Marble)
+         ========================================================================== -->
+    <section id="sec-success" class="section-padding bg-executive-burgundy marble-dark text-white">
+        <div class="max-w-[1600px] mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 border-b-2 border-executive-gold/30 pb-4 mb-16">
+                <h2 class="font-bold text-executive-gold uppercase tracking-widest flex items-center gap-4 m-0" style="font-size: var(--font-section);">
+                    <i class="ph-fill ph-chart-line-up"></i>
+                    <div class="content-group !mb-0"><span class="lang-en">Executive Success Model</span><span class="lang-ar text-gray-300">نموذج النجاح التنفيذي</span></div>
+                </h2>
+                <a href="#sec-index" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-executive-navy border border-executive-gold/40 rounded-full font-bold text-sm shadow-lg hover:bg-executive-gold hover:text-white transition-all duration-300 shrink-0">
+                    <i class="ph-bold ph-arrow-fat-up text-lg"></i>
+                    <span class="lang-en">Back to Index</span>
+                    <span class="lang-ar">العودة للفهرس</span>
+                </a>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-10">
+                <div class="bg-white/10 p-10 rounded-3xl border border-white/20">
+                    <span class="text-4xl font-bold text-executive-gold mb-4 block">01</span>
+                    <h3 class="text-2xl font-bold mb-4"><span class="lang-en">Input & Alignment</span><span class="lang-ar">المدخلات والمواءمة</span></h3>
+                    <p class="text-gray-200"><span class="lang-en">Strategic intent, organizational goals, and stakeholder requirements properly set.</span><span class="lang-ar">ضبط التوجه الاستراتيجي وأهداف المؤسسة ومتطلبات أصحاب المصلحة.</span></p>
+                </div>
+                <div class="bg-white/10 p-10 rounded-3xl border border-white/20">
+                    <span class="text-4xl font-bold text-executive-gold mb-4 block">02</span>
+                    <h3 class="text-2xl font-bold mb-4"><span class="lang-en">Execution & Governance</span><span class="lang-ar">التنفيذ والحوكمة</span></h3>
+                    <p class="text-gray-200"><span class="lang-en">Disciplined project controls, commercial excellence, and AI-augmented decisions.</span><span class="lang-ar">ضوابط منضبطة للمشاريع، تميز تجاري، وقرارات معززة بالذكاء الاصطناعي.</span></p>
+                </div>
+                <div class="bg-white/10 p-10 rounded-3xl border border-white/20">
+                    <span class="text-4xl font-bold text-executive-gold mb-4 block">03</span>
+                    <h3 class="text-2xl font-bold mb-4"><span class="lang-en">Sustainable Value</span><span class="lang-ar">القيمة المستدامة</span></h3>
+                    <p class="text-gray-200"><span class="lang-en">Realizing long-term benefits, continuous improvement, and organizational resilience.</span><span class="lang-ar">تحقيق الفوائد طويلة الأجل، التحسين المستمر، والمرونة المؤسسية.</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         PHILOSOPHY & CORE PRINCIPLE (Crimson Marble)
+         ========================================================================== -->
+    <section id="sec-phil" class="section-padding bg-executive-crimson marble-dark">
+        <div class="max-w-[1600px] mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 border-b-2 border-white/30 pb-4 mb-16">
+                <h2 class="font-bold text-white uppercase tracking-widest flex items-center gap-4 m-0" style="font-size: var(--font-section);">
+                    <i class="ph-fill ph-lightbulb text-executive-gold"></i>
+                    <div class="content-group !mb-0"><span class="lang-en">Framework Philosophy</span><span class="lang-ar text-gray-300">فلسفة الإطار</span></div>
+                </h2>
+                <!-- زر العودة السريعة في الأعلى -->
+                <a href="#sec-index" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-executive-navy border border-executive-gold/40 rounded-full font-bold text-sm shadow-lg hover:bg-executive-gold hover:text-white transition-all duration-300 shrink-0">
+                    <i class="ph-bold ph-arrow-fat-up text-lg"></i>
+                    <span class="lang-en">Back to Index</span>
+                    <span class="lang-ar">العودة للفهرس</span>
+                </a>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
+                
+                <!-- Box 1 -->
+                <div class="bg-white rounded-3xl p-10 relative overflow-hidden group shadow-[0_10px_30px_rgba(0,0,0,0.15)] hover:shadow-[0_20px_50px_rgba(37,99,235,0.3)] transition-all duration-500 transform hover:-translate-y-2 border border-white/20">
+                    <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-blue-600 to-cyan-400"></div>
+                    <i class="ph-fill ph-share-network absolute rtl:left-auto rtl:-left-4 rtl:-bottom-4 -right-4 -bottom-4 text-[120px] text-blue-500 opacity-5 group-hover:scale-125 group-hover:-rotate-12 transition-transform duration-700 pointer-events-none"></i>
+                    <div class="flex flex-col gap-6 mb-6 relative z-10">
+                        <div class="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center shadow-inner border border-blue-100 group-hover:bg-blue-600 group-hover:text-white text-blue-600 transition-colors duration-300">
+                            <i class="ph-fill ph-share-network text-4xl"></i>
+                        </div>
+                        <h4 class="font-bold text-2xl md:text-3xl text-executive-navy">
+                            <div class="content-group !mb-0 [&_.lang-ar]:!border-none [&_.lang-ar]:!pr-0 [&_.lang-ar]:!mt-1">
+                                <span class="lang-en">Think Systemically</span>
+                                <span class="lang-ar text-blue-800">التفكير المنظومي</span>
+                            </div>
+                        </h4>
+                    </div>
+                    <div class="font-medium text-gray-600 relative z-10 text-xl leading-relaxed mt-4 border-t border-gray-100 pt-4">
+                        <div class="content-group !mb-0 [&_.lang-ar]:!border-none [&_.lang-ar]:!pr-0 [&_.lang-ar]:!mt-2">
+                            <span class="lang-en">View organizations and projects as interconnected systems.</span>
+                            <span class="lang-ar text-gray-500">رؤية المؤسسات والمشاريع كأنظمة مترابطة.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Box 2 -->
+                <div class="bg-white rounded-3xl p-10 relative overflow-hidden group shadow-[0_10px_30px_rgba(0,0,0,0.15)] hover:shadow-[0_20px_50px_rgba(147,51,234,0.3)] transition-all duration-500 transform hover:-translate-y-2 border border-white/20">
+                    <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-purple-600 to-fuchsia-400"></div>
+                    <i class="ph-fill ph-scales absolute rtl:left-auto rtl:-left-4 rtl:-bottom-4 -right-4 -bottom-4 text-[120px] text-purple-500 opacity-5 group-hover:scale-125 group-hover:-rotate-12 transition-transform duration-700 pointer-events-none"></i>
+                    <div class="flex flex-col gap-6 mb-6 relative z-10">
+                        <div class="w-16 h-16 rounded-2xl bg-purple-50 flex items-center justify-center shadow-inner border border-purple-100 group-hover:bg-purple-600 group-hover:text-white text-purple-600 transition-colors duration-300">
+                            <i class="ph-fill ph-scales text-4xl"></i>
+                        </div>
+                        <h4 class="font-bold text-2xl md:text-3xl text-executive-navy">
+                            <div class="content-group !mb-0 [&_.lang-ar]:!border-none [&_.lang-ar]:!pr-0 [&_.lang-ar]:!mt-1">
+                                <span class="lang-en">Govern Effectively</span>
+                                <span class="lang-ar text-purple-800">الحوكمة الفعالة</span>
+                            </div>
+                        </h4>
+                    </div>
+                    <div class="font-medium text-gray-600 relative z-10 text-xl leading-relaxed mt-4 border-t border-gray-100 pt-4">
+                        <div class="content-group !mb-0 [&_.lang-ar]:!border-none [&_.lang-ar]:!pr-0 [&_.lang-ar]:!mt-2">
+                            <span class="lang-en">Establish transparent governance structures, disciplined processes, and accountable decision-making.</span>
+                            <span class="lang-ar text-gray-500">إنشاء هياكل حوكمة شفافة، عمليات منضبطة، وقرارات خاضعة للمساءلة.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Box 3 -->
+                <div class="bg-white rounded-3xl p-10 relative overflow-hidden group shadow-[0_10px_30px_rgba(0,0,0,0.15)] hover:shadow-[0_20px_50px_rgba(16,185,129,0.3)] transition-all duration-500 transform hover:-translate-y-2 border border-white/20">
+                    <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-emerald-600 to-teal-400"></div>
+                    <i class="ph-fill ph-shield-check absolute rtl:left-auto rtl:-left-4 rtl:-bottom-4 -right-4 -bottom-4 text-[120px] text-emerald-500 opacity-5 group-hover:scale-125 group-hover:-rotate-12 transition-transform duration-700 pointer-events-none"></i>
+                    <div class="flex flex-col gap-6 mb-6 relative z-10">
+                        <div class="w-16 h-16 rounded-2xl bg-emerald-50 flex items-center justify-center shadow-inner border border-emerald-100 group-hover:bg-emerald-600 group-hover:text-white text-emerald-600 transition-colors duration-300">
+                            <i class="ph-fill ph-shield-check text-4xl"></i>
+                        </div>
+                        <h4 class="font-bold text-2xl md:text-3xl text-executive-navy">
+                            <div class="content-group !mb-0 [&_.lang-ar]:!border-none [&_.lang-ar]:!pr-0 [&_.lang-ar]:!mt-1">
+                                <span class="lang-en">Lead with Integrity</span>
+                                <span class="lang-ar text-emerald-800">القيادة بنزاهة</span>
+                            </div>
+                        </h4>
+                    </div>
+                    <div class="font-medium text-gray-600 relative z-10 text-xl leading-relaxed mt-4 border-t border-gray-100 pt-4">
+                        <div class="content-group !mb-0 [&_.lang-ar]:!border-none [&_.lang-ar]:!pr-0 [&_.lang-ar]:!mt-2">
+                            <span class="lang-en">Lead through ethics, professionalism, responsibility, and trust.</span>
+                            <span class="lang-ar text-gray-500">القيادة بالأخلاقيات، المهنية، المسؤولية، والثقة.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Box 4 -->
+                <div class="bg-white rounded-3xl p-10 relative overflow-hidden group shadow-[0_10px_30px_rgba(0,0,0,0.15)] hover:shadow-[0_20px_50px_rgba(234,88,12,0.3)] transition-all duration-500 transform hover:-translate-y-2 border border-white/20">
+                    <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-orange-600 to-amber-400"></div>
+                    <i class="ph-fill ph-rocket-launch absolute rtl:left-auto rtl:-left-4 rtl:-bottom-4 -right-4 -bottom-4 text-[120px] text-orange-500 opacity-5 group-hover:scale-125 group-hover:-rotate-12 transition-transform duration-700 pointer-events-none"></i>
+                    <div class="flex flex-col gap-6 mb-6 relative z-10">
+                        <div class="w-16 h-16 rounded-2xl bg-orange-50 flex items-center justify-center shadow-inner border border-orange-100 group-hover:bg-orange-600 group-hover:text-white text-orange-600 transition-colors duration-300">
+                            <i class="ph-fill ph-rocket-launch text-4xl"></i>
+                        </div>
+                        <h4 class="font-bold text-2xl md:text-3xl text-executive-navy">
+                            <div class="content-group !mb-0 [&_.lang-ar]:!border-none [&_.lang-ar]:!pr-0 [&_.lang-ar]:!mt-1">
+                                <span class="lang-en">Deliver Excellence</span>
+                                <span class="lang-ar text-orange-800">تسليم التميز</span>
+                            </div>
+                        </h4>
+                    </div>
+                    <div class="font-medium text-gray-600 relative z-10 text-xl leading-relaxed mt-4 border-t border-gray-100 pt-4">
+                        <div class="content-group !mb-0 [&_.lang-ar]:!border-none [&_.lang-ar]:!pr-0 [&_.lang-ar]:!mt-2">
+                            <span class="lang-en">Integrate commercial excellence, project controls, quality, safety, and execution discipline.</span>
+                            <span class="lang-ar text-gray-500">دمج التميز التجاري، ضوابط المشروع، الجودة، السلامة، وانضباط التنفيذ.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Box 5 -->
+                <div class="bg-white rounded-3xl p-10 relative overflow-hidden group shadow-[0_10px_30px_rgba(0,0,0,0.15)] hover:shadow-[0_20px_50px_rgba(225,29,72,0.3)] transition-all duration-500 transform hover:-translate-y-2 border border-white/20">
+                    <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-rose-600 to-pink-400"></div>
+                    <i class="ph-fill ph-brain absolute rtl:left-auto rtl:-left-4 rtl:-bottom-4 -right-4 -bottom-4 text-[120px] text-rose-500 opacity-5 group-hover:scale-125 group-hover:-rotate-12 transition-transform duration-700 pointer-events-none"></i>
+                    <div class="flex flex-col gap-6 mb-6 relative z-10">
+                        <div class="w-16 h-16 rounded-2xl bg-rose-50 flex items-center justify-center shadow-inner border border-rose-100 group-hover:bg-rose-600 group-hover:text-white text-rose-600 transition-colors duration-300">
+                            <i class="ph-fill ph-brain text-4xl"></i>
+                        </div>
+                        <h4 class="font-bold text-2xl md:text-3xl text-executive-navy">
+                            <div class="content-group !mb-0 [&_.lang-ar]:!border-none [&_.lang-ar]:!pr-0 [&_.lang-ar]:!mt-1">
+                                <span class="lang-en">Decide Intelligently</span>
+                                <span class="lang-ar text-rose-800">اتخاذ القرار بذكاء</span>
+                            </div>
+                        </h4>
+                    </div>
+                    <div class="font-medium text-gray-600 relative z-10 text-xl leading-relaxed mt-4 border-t border-gray-100 pt-4">
+                        <div class="content-group !mb-0 [&_.lang-ar]:!border-none [&_.lang-ar]:!pr-0 [&_.lang-ar]:!mt-2">
+                            <span class="lang-en">Transform trusted data into actionable insights and executive decisions.</span>
+                            <span class="lang-ar text-gray-500">تحويل البيانات الموثوقة إلى رؤى وقرارات تنفيذية.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Box 6 -->
+                <div class="bg-white rounded-3xl p-10 relative overflow-hidden group shadow-[0_10px_30px_rgba(0,0,0,0.15)] hover:shadow-[0_20px_50px_rgba(212,175,55,0.3)] transition-all duration-500 transform hover:-translate-y-2 border border-white/20">
+                    <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-[#D4AF37] to-[#FDE047]"></div>
+                    <i class="ph-fill ph-plant absolute rtl:left-auto rtl:-left-4 rtl:-bottom-4 -right-4 -bottom-4 text-[120px] text-[#D4AF37] opacity-5 group-hover:scale-125 group-hover:-rotate-12 transition-transform duration-700 pointer-events-none"></i>
+                    <div class="flex flex-col gap-6 mb-6 relative z-10">
+                        <div class="w-16 h-16 rounded-2xl bg-yellow-50 flex items-center justify-center shadow-inner border border-yellow-100 group-hover:bg-[#D4AF37] group-hover:text-white text-[#D4AF37] transition-colors duration-300">
+                            <i class="ph-fill ph-plant text-4xl"></i>
+                        </div>
+                        <h4 class="font-bold text-2xl md:text-3xl text-executive-navy">
+                            <div class="content-group !mb-0 [&_.lang-ar]:!border-none [&_.lang-ar]:!pr-0 [&_.lang-ar]:!mt-1">
+                                <span class="lang-en">Create Sustainable Value</span>
+                                <span class="lang-ar text-[#AA882E]">خلق قيمة مستدامة</span>
+                            </div>
+                        </h4>
+                    </div>
+                    <div class="font-medium text-gray-600 relative z-10 text-xl leading-relaxed mt-4 border-t border-gray-100 pt-4">
+                        <div class="content-group !mb-0 [&_.lang-ar]:!border-none [&_.lang-ar]:!pr-0 [&_.lang-ar]:!mt-2">
+                            <span class="lang-en">Measure success through long-term organizational value rather than project completion alone.</span>
+                            <span class="lang-ar text-gray-500">قياس النجاح من خلال القيمة المؤسسية طويلة الأجل وليس المشروع فقط.</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Core Principle -->
+            <div class="bg-executive-navy text-center p-20 rounded-3xl shadow-2xl relative overflow-hidden border border-white/10">
+                <i class="ph-fill ph-quotes absolute -left-10 -top-10 text-[300px] text-white/5 pointer-events-none"></i>
+                <h3 class="text-executive-gold font-bold uppercase tracking-widest text-3xl mb-10"><span class="lang-en">Core Principle & Golden Message</span><span class="lang-ar">المبدأ الأساسي والرسالة الذهبية</span></h3>
+                
+                <div class="content-group text-white leading-loose font-serif italic mb-12" style="font-size: var(--font-section);">
+                    <span class="lang-en">People Lead. Governance Guides. Strategy Aligns. Commercial Excellence Protects. Data Informs. Artificial Intelligence Augments. <span class="text-executive-gold font-bold not-italic border-b-2 border-executive-gold pb-2">Decision Intelligence Creates Sustainable Value.</span></span>
+                    <span class="lang-ar">الأشخاص يقودون. الحوكمة تُوجه. الاستراتيجية تُوائم. التميز التجاري يحمي. البيانات تُعلم. الذكاء الاصطناعي يُعزز. <span class="text-executive-gold font-bold not-italic border-b-2 border-executive-gold pb-2">ذكاء اتخاذ القرار يخلق قيمة مستدامة.</span></span>
+                </div>
+
+                <div class="w-64 h-1 bg-executive-gold mx-auto mb-12 opacity-50"></div>
+
+                <div class="content-group text-gray-300 leading-relaxed font-light mx-auto max-w-5xl" style="font-size: var(--font-subtitle);">
+                    <span class="lang-en">"Great project leaders do not simply deliver projects. They create sustainable organizational value by integrating leadership, governance, business strategy, project, program and portfolio management, commercial excellence, digital transformation, and AI-enabled decision intelligence—while ensuring that every executive decision remains guided by human judgment, accountability, ethics, and responsible leadership."</span>
+                    <span class="lang-ar">"قادة المشاريع العظماء لا يقومون ببساطة بتسليم المشاريع. إنهم يخلقون قيمة مؤسسية مستدامة من خلال دمج القيادة، الحوكمة، استراتيجية الأعمال، إدارة المشاريع والبرامج والمحافظ، التميز التجاري، التحول الرقمي، وذكاء اتخاذ القرار المدعوم بالذكاء الاصطناعي — مع ضمان أن يظل كل قرار تنفيذي موجهاً بالحكم البشري، المساءلة، الأخلاقيات، والقيادة المسؤولة."</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         ECOSYSTEM (Light Marble)
+         ========================================================================== -->
+    <section id="sec-eco" class="section-padding marble-light border-b-8 border-gray-200">
+        <div class="max-w-[1600px] mx-auto flex flex-col items-center">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 border-b-2 border-gray-300 pb-4 mb-16 w-full">
+                <h2 class="font-bold text-executive-navy uppercase tracking-widest flex items-center gap-4 m-0" style="font-size: var(--font-section);">
+                    <i class="ph-fill ph-tree-structure text-cyan-600"></i>
+                    <div class="content-group !mb-0"><span class="lang-en">Framework Ecosystem</span><span class="lang-ar">النظام البيئي للإطار</span></div>
+                </h2>
+                <a href="#sec-index" class="inline-flex items-center gap-2 px-5 py-2.5 bg-executive-navy text-executive-gold border border-executive-gold/40 rounded-full font-bold text-sm shadow-lg hover:bg-executive-gold hover:text-executive-navy transition-all duration-300 shrink-0">
+                    <i class="ph-bold ph-arrow-fat-up text-lg"></i>
+                    <span class="lang-en">Back to Index</span>
+                    <span class="lang-ar">العودة للفهرس</span>
+                </a>
+            </div>
+
+            <!-- 1. EPLF -->
+            <div class="card-3d p-12 text-center w-full max-w-4xl relative z-10">
+                <h3 class="font-bold text-executive-navy mb-2" style="font-size: var(--font-section);">① Executive Project Leadership Framework™ (EPLF™)</h3>
+                <div class="content-group text-executive-gold font-bold uppercase tracking-widest text-2xl mb-8"><span class="lang-en">The Executive Reference Framework</span><span class="lang-ar">الإطار المرجعي التنفيذي</span></div>
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 text-left rtl:text-right">
+                    <strong class="text-3xl text-executive-navy block mb-6"><span class="lang-en">Defines:</span><span class="lang-ar">يحدد:</span></strong>
+                    <ul class="premium-list">
+                        <li class="content-group !mb-0"><span class="lang-en">What should be achieved.</span><span class="lang-ar premium-list-item">ما يجب تحقيقه.</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">Why it matters.</span><span class="lang-ar premium-list-item">لماذا هو مهم.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="h-24 w-4 bg-gradient-to-b from-gray-300 to-executive-gold my-2 rounded-full"></div>
+
+            <!-- 2. EPLT -->
+            <div class="card-3d p-12 text-center w-full max-w-5xl relative z-10">
+                <h3 class="font-bold text-executive-navy mb-2" style="font-size: var(--font-section);">② Executive Project Leadership Toolkit™ (EPLT™)</h3>
+                <div class="content-group text-executive-gold font-bold uppercase tracking-widest text-2xl mb-8"><span class="lang-en">The Practical Implementation Toolkit</span><span class="lang-ar">مجموعة أدوات التنفيذ العملية</span></div>
+                
+                <div class="bg-gray-50 p-10 rounded-2xl border border-gray-100 mb-8">
+                    <strong class="text-3xl text-executive-navy block mb-8 border-b pb-4"><span class="lang-en">Implementation Library</span><span class="lang-ar">مكتبة التنفيذ</span></strong>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-left rtl:text-right text-gray-600 font-medium text-xl">
+                        <div>• WBS</div><div>• Work Packages</div><div>• Milestone Planning</div><div>• RACI Matrix</div><div>• RAM</div><div>• Dependency Mapping</div><div>• CPM</div><div>• Communication Matrix</div><div>• Stakeholder Engagement Plan</div><div>• Risk Breakdown Structure (RBS)</div><div>• RAID Log</div><div>• Resource Planning</div><div>• Cost Breakdown Structure (CBS)</div><div>• Cost Baseline</div><div>• Schedule Baseline</div><div>• Quality Management Plan</div><div>• Procurement Strategy</div><div>• Change Management Plan</div><div>• Deliverable Acceptance Criteria</div><div>• Meeting Governance</div><div>• Decision Register</div><div>• Lessons Learned Register</div><div>• Benefits Realization Plan</div><div>• Executive Dashboards</div><div>• KPI & OKR Framework</div><div>• Earned Value Management (EVM)</div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 text-left rtl:text-right">
+                    <strong class="text-3xl text-executive-navy block mb-6"><span class="lang-en">Defines:</span><span class="lang-ar">يحدد:</span></strong>
+                    <ul class="premium-list">
+                        <li class="content-group !mb-0"><span class="lang-en">How to implement the framework.</span><span class="lang-ar premium-list-item">كيفية تنفيذ الإطار.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="h-24 w-4 bg-gradient-to-b from-executive-gold to-[#8B5CF6] my-2 rounded-full"></div>
+
+            <!-- 3. Project OS -->
+            <div class="bg-white border-4 border-[#8B5CF6] p-12 text-center w-full max-w-5xl relative z-10 rounded-3xl shadow-[0_0_50px_rgba(139,92,246,0.3)]">
+                <h3 class="font-bold text-executive-navy mb-2" style="font-size: var(--font-section);">③ Project OS™</h3>
+                <div class="content-group text-[#8B5CF6] font-bold uppercase tracking-widest text-2xl mb-8"><span class="lang-en">The AI-Enabled Digital Operating System</span><span class="lang-ar">نظام التشغيل الرقمي المدعوم بالذكاء الاصطناعي</span></div>
+                
+                <div class="bg-purple-50/50 p-10 rounded-2xl border border-purple-100 mb-8 text-left rtl:text-right">
+                    <strong class="text-3xl text-executive-navy block mb-8 border-b border-purple-200 pb-4"><span class="lang-en">Provides</span><span class="lang-ar">يوفر</span></strong>
+                    <div class="grid grid-cols-2 gap-8 font-medium text-gray-600 text-2xl">
+                        <div class="content-group !mb-0"><span class="lang-en">• AI-Powered Project Management</span><span class="lang-ar">• إدارة المشاريع بالذكاء الاصطناعي</span></div>
+                        <div class="content-group !mb-0"><span class="lang-en">• Automation</span><span class="lang-ar">• الأتمتة</span></div>
+                        <div class="content-group !mb-0"><span class="lang-en">• Executive Dashboards</span><span class="lang-ar">• لوحات القيادة التنفيذية</span></div>
+                        <div class="content-group !mb-0"><span class="lang-en">• Predictive Analytics</span><span class="lang-ar">• التحليلات التنبؤية</span></div>
+                        <div class="content-group !mb-0"><span class="lang-en">• Decision Intelligence</span><span class="lang-ar">• ذكاء اتخاذ القرار</span></div>
+                        <div class="content-group !mb-0"><span class="lang-en">• Integrated Project Data</span><span class="lang-ar">• بيانات المشروع المتكاملة</span></div>
+                        <div class="content-group !mb-0"><span class="lang-en">• Digital Governance</span><span class="lang-ar">• الحوكمة الرقمية</span></div>
+                        <div class="content-group !mb-0"><span class="lang-en">• Real-Time Performance Monitoring</span><span class="lang-ar">• مراقبة الأداء في الوقت الفعلي</span></div>
+                    </div>
+                </div>
+
+                <div class="bg-purple-50/50 p-8 rounded-2xl border border-purple-100 text-left rtl:text-right">
+                    <strong class="text-3xl text-executive-navy block mb-6"><span class="lang-en">Defines:</span><span class="lang-ar">يحدد:</span></strong>
+                    <ul class="premium-list text-gray-600">
+                        <li class="content-group !mb-0"><span class="lang-en">How technology executes the framework digitally.</span><span class="lang-ar premium-list-item">كيفية تنفيذ التكنولوجيا للإطار رقمياً.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         POSITIONING (Indigo Marble)
+         ========================================================================== -->
+    <section id="sec-pos" class="section-padding bg-executive-indigo marble-dark">
+        <div class="max-w-[1600px] mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 border-b-2 border-white/30 pb-4 mb-16">
+                <h2 class="font-bold text-white uppercase tracking-widest flex items-center gap-4 m-0" style="font-size: var(--font-section);">
+                    <i class="ph-fill ph-crosshair text-executive-gold"></i>
+                    <div class="content-group !mb-0"><span class="lang-en">Positioning & Differentiation</span><span class="lang-ar text-gray-300">التموضع والتمايز</span></div>
+                </h2>
+                <a href="#sec-index" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-executive-navy border border-executive-gold/40 rounded-full font-bold text-sm shadow-lg hover:bg-executive-gold hover:text-white transition-all duration-300 shrink-0">
+                    <i class="ph-bold ph-arrow-fat-up text-lg"></i>
+                    <span class="lang-en">Back to Index</span>
+                    <span class="lang-ar">العودة للفهرس</span>
+                </a>
+            </div>
+
+            <div class="bg-white/10 p-12 rounded-3xl border-l-8 border-executive-gold rtl:border-l-0 rtl:border-r-8 text-white shadow-xl mb-16">
+                <h3 class="font-bold uppercase tracking-widest text-2xl mb-6 text-executive-gold"><span class="lang-en">Positioning Statement</span><span class="lang-ar">بيان التموضع</span></h3>
+                <div class="content-group text-justify mb-6 font-medium">
+                    <span class="lang-en">The Executive Project Leadership Framework™ (EPLF™) is not intended to replace internationally recognized standards such as PMBOK®, ISO 21502, PRINCE2®, FIDIC, or AACE International.</span>
+                    <span class="lang-ar">إطار القيادة التنفيذية للمشاريع™ (EPLF™) لا يهدف إلى استبدال المعايير المعترف بها دولياً مثل PMBOK®، ISO 21502، PRINCE2®، FIDIC، أو AACE International.</span>
+                </div>
+                <div class="content-group text-justify font-medium">
+                    <span class="lang-en">Instead, it provides an integrated executive operating model that combines leadership, governance, business strategy, project, program and portfolio management, commercial excellence, digital transformation, and AI-enabled decision intelligence into a unified executive reference framework that complements and strengthens these globally recognized standards.</span>
+                    <span class="lang-ar">بدلاً من ذلك، فإنه يوفر نموذج تشغيل تنفيذي متكامل يجمع بين القيادة، الحوكمة، استراتيجية الأعمال، إدارة المشاريع والبرامج والمحافظ، التميز التجاري، التحول الرقمي، وذكاء اتخاذ القرار المدعوم بالذكاء الاصطناعي في إطار مرجعي تنفيذي موحد يكمل ويعزز هذه المعايير المعترف بها عالمياً.</span>
+                </div>
+            </div>
+
+            <!-- ==========================================================================
+                 COMPARISON CARDS (GRID LAYOUT REDESIGN)
+                 ========================================================================== -->
+            <div class="content-group !mb-10">
+                <h3 class="font-black uppercase tracking-widest text-3xl mb-10 text-white flex flex-col md:flex-row md:items-center justify-between border-b border-white/20 pb-4">
+                    <span class="lang-en">What Makes EPLF™ Different?</span>
+                    <span class="lang-ar text-executive-gold">ما الذي يميز EPLF™؟</span>
+                </h3>
+            </div>
+
+            <div class="flex flex-col gap-4">
+                <!-- Header -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 rounded-3xl overflow-hidden shadow-2xl border border-white/10 mb-2">
+                    <div class="bg-[#F8FAFC] p-8 flex items-center justify-center border-b-4 border-gray-300">
+                        <div class="content-group !mb-0 text-center">
+                            <span class="lang-en text-[#64748B] font-bold uppercase tracking-widest text-xl">Traditional Standards</span>
+                            <span class="lang-ar text-[#64748B] font-bold text-2xl !border-none !pr-0">المعايير التقليدية</span>
+                        </div>
+                    </div>
+                    <div class="bg-executive-navy p-8 flex items-center justify-center border-b-4 border-executive-gold relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-executive-gold/10 to-transparent pointer-events-none"></div>
+                        <div class="content-group !mb-0 text-center relative z-10">
+                            <span class="lang-en text-executive-gold font-black uppercase tracking-widest text-3xl drop-shadow-md">EPLF™</span>
+                            <span class="lang-ar text-executive-gold font-black uppercase tracking-widest text-3xl drop-shadow-md !border-none !pr-0">إطار EPLF™</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 1 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="bg-[#FCFDFD] p-8 rounded-3xl shadow-sm border border-gray-100 hover:bg-red-50 hover:border-red-200 transition-all duration-300 flex items-start gap-5 group">
+                        <i class="ph-duotone ph-x-circle text-4xl text-gray-400 group-hover:text-red-400 mt-1 shrink-0 transition-colors"></i>
+                        <div class="content-group !mb-0 w-full">
+                            <span class="lang-en text-gray-500 font-medium text-xl group-hover:text-red-900 transition-colors">Focus primarily on project delivery</span>
+                            <span class="lang-ar text-gray-400 font-medium text-xl group-hover:text-red-900 transition-colors !border-none !pr-0">التركيز أساساً على تسليم المشروع</span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:bg-[#FFFCF5] hover:border-executive-gold/40 hover:shadow-lg transition-all duration-300 flex items-start gap-5 group transform hover:-translate-y-1">
+                        <i class="ph-fill ph-seal-check text-4xl text-executive-gold mt-1 shrink-0 drop-shadow-sm"></i>
+                        <div class="content-group !mb-0 w-full">
+                            <span class="lang-en text-executive-navy font-extrabold text-2xl leading-tight">Executive leadership and organizational value</span>
+                            <span class="lang-ar text-executive-navy/80 font-bold text-xl leading-relaxed !border-none !pr-0">القيادة التنفيذية والقيمة المؤسسية</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="bg-[#FCFDFD] p-8 rounded-3xl shadow-sm border border-gray-100 hover:bg-red-50 hover:border-red-200 transition-all duration-300 flex items-start gap-5 group">
+                        <i class="ph-duotone ph-x-circle text-4xl text-gray-400 group-hover:text-red-400 mt-1 shrink-0 transition-colors"></i>
+                        <div class="content-group !mb-0 w-full">
+                            <span class="lang-en text-gray-500 font-medium text-xl group-hover:text-red-900 transition-colors">Separate standards and methodologies</span>
+                            <span class="lang-ar text-gray-400 font-medium text-xl group-hover:text-red-900 transition-colors !border-none !pr-0">معايير ومنهجيات منفصلة</span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:bg-[#FFFCF5] hover:border-executive-gold/40 hover:shadow-lg transition-all duration-300 flex items-start gap-5 group transform hover:-translate-y-1">
+                        <i class="ph-fill ph-seal-check text-4xl text-executive-gold mt-1 shrink-0 drop-shadow-sm"></i>
+                        <div class="content-group !mb-0 w-full">
+                            <span class="lang-en text-executive-navy font-extrabold text-2xl leading-tight">Integrated executive operating model</span>
+                            <span class="lang-ar text-executive-navy/80 font-bold text-xl leading-relaxed !border-none !pr-0">نموذج تشغيل تنفيذي متكامل</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="bg-[#FCFDFD] p-8 rounded-3xl shadow-sm border border-gray-100 hover:bg-red-50 hover:border-red-200 transition-all duration-300 flex items-start gap-5 group">
+                        <i class="ph-duotone ph-x-circle text-4xl text-gray-400 group-hover:text-red-400 mt-1 shrink-0 transition-colors"></i>
+                        <div class="content-group !mb-0 w-full">
+                            <span class="lang-en text-gray-500 font-medium text-xl group-hover:text-red-900 transition-colors">Limited governance integration</span>
+                            <span class="lang-ar text-gray-400 font-medium text-xl group-hover:text-red-900 transition-colors !border-none !pr-0">دمج محدود للحوكمة</span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:bg-[#FFFCF5] hover:border-executive-gold/40 hover:shadow-lg transition-all duration-300 flex items-start gap-5 group transform hover:-translate-y-1">
+                        <i class="ph-fill ph-seal-check text-4xl text-executive-gold mt-1 shrink-0 drop-shadow-sm"></i>
+                        <div class="content-group !mb-0 w-full">
+                            <span class="lang-en text-executive-navy font-extrabold text-2xl leading-tight">Leadership, governance, strategy, and delivery aligned</span>
+                            <span class="lang-ar text-executive-navy/80 font-bold text-xl leading-relaxed !border-none !pr-0">مواءمة القيادة، الحوكمة، الاستراتيجية والتسليم</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="bg-[#FCFDFD] p-8 rounded-3xl shadow-sm border border-gray-100 hover:bg-red-50 hover:border-red-200 transition-all duration-300 flex items-start gap-5 group">
+                        <i class="ph-duotone ph-x-circle text-4xl text-gray-400 group-hover:text-red-400 mt-1 shrink-0 transition-colors"></i>
+                        <div class="content-group !mb-0 w-full">
+                            <span class="lang-en text-gray-500 font-medium text-xl group-hover:text-red-900 transition-colors">Limited AI coverage</span>
+                            <span class="lang-ar text-gray-400 font-medium text-xl group-hover:text-red-900 transition-colors !border-none !pr-0">تغطية محدودة للذكاء الاصطناعي</span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:bg-[#FFFCF5] hover:border-executive-gold/40 hover:shadow-lg transition-all duration-300 flex items-start gap-5 group transform hover:-translate-y-1">
+                        <i class="ph-fill ph-seal-check text-4xl text-executive-gold mt-1 shrink-0 drop-shadow-sm"></i>
+                        <div class="content-group !mb-0 w-full">
+                            <span class="lang-en text-executive-navy font-extrabold text-2xl leading-tight">AI Governance & Decision Intelligence embedded</span>
+                            <span class="lang-ar text-executive-navy/80 font-bold text-xl leading-relaxed !border-none !pr-0">حوكمة الذكاء الاصطناعي مدمجة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 5 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="bg-[#FCFDFD] p-8 rounded-3xl shadow-sm border border-gray-100 hover:bg-red-50 hover:border-red-200 transition-all duration-300 flex items-start gap-5 group">
+                        <i class="ph-duotone ph-x-circle text-4xl text-gray-400 group-hover:text-red-400 mt-1 shrink-0 transition-colors"></i>
+                        <div class="content-group !mb-0 w-full">
+                            <span class="lang-en text-gray-500 font-medium text-xl group-hover:text-red-900 transition-colors">Operational project focus</span>
+                            <span class="lang-ar text-gray-400 font-medium text-xl group-hover:text-red-900 transition-colors !border-none !pr-0">تركيز تشغيلي للمشروع</span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:bg-[#FFFCF5] hover:border-executive-gold/40 hover:shadow-lg transition-all duration-300 flex items-start gap-5 group transform hover:-translate-y-1">
+                        <i class="ph-fill ph-seal-check text-4xl text-executive-gold mt-1 shrink-0 drop-shadow-sm"></i>
+                        <div class="content-group !mb-0 w-full">
+                            <span class="lang-en text-executive-navy font-extrabold text-2xl leading-tight">Enterprise-wide executive perspective</span>
+                            <span class="lang-ar text-executive-navy/80 font-bold text-xl leading-relaxed !border-none !pr-0">منظور تنفيذي على مستوى المؤسسة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 6 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="bg-[#FCFDFD] p-8 rounded-3xl shadow-sm border border-gray-100 hover:bg-red-50 hover:border-red-200 transition-all duration-300 flex items-start gap-5 group">
+                        <i class="ph-duotone ph-x-circle text-4xl text-gray-400 group-hover:text-red-400 mt-1 shrink-0 transition-colors"></i>
+                        <div class="content-group !mb-0 w-full">
+                            <span class="lang-en text-gray-500 font-medium text-xl group-hover:text-red-900 transition-colors">Project success orientation</span>
+                            <span class="lang-ar text-gray-400 font-medium text-xl group-hover:text-red-900 transition-colors !border-none !pr-0">التوجه نحو نجاح المشروع</span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:bg-[#FFFCF5] hover:border-executive-gold/40 hover:shadow-lg transition-all duration-300 flex items-start gap-5 group transform hover:-translate-y-1">
+                        <i class="ph-fill ph-seal-check text-4xl text-executive-gold mt-1 shrink-0 drop-shadow-sm"></i>
+                        <div class="content-group !mb-0 w-full">
+                            <span class="lang-en text-executive-navy font-extrabold text-2xl leading-tight">Sustainable organizational value orientation</span>
+                            <span class="lang-ar text-executive-navy/80 font-bold text-xl leading-relaxed !border-none !pr-0">التوجه نحو القيمة المؤسسية المستدامة</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         REFERENCES (Light Marble)
+         ========================================================================== -->
+    <section id="sec-ref" class="section-padding marble-light">
+        <div class="max-w-[1600px] mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 border-b-2 border-gray-300 pb-4 mb-16">
+                <h2 class="font-bold text-executive-navy uppercase tracking-widest flex items-center gap-4 m-0" style="font-size: var(--font-section);">
+                    <i class="ph-fill ph-books text-gray-600"></i>
+                    <div class="content-group !mb-0"><span class="lang-en">References & Practices</span><span class="lang-ar">المراجع والممارسات</span></div>
+                </h2>
+                <a href="#sec-index" class="inline-flex items-center gap-2 px-5 py-2.5 bg-executive-navy text-executive-gold border border-executive-gold/40 rounded-full font-bold text-sm shadow-lg hover:bg-executive-gold hover:text-executive-navy transition-all duration-300 shrink-0">
+                    <i class="ph-bold ph-arrow-fat-up text-lg"></i>
+                    <span class="lang-en">Back to Index</span>
+                    <span class="lang-ar">العودة للفهرس</span>
+                </a>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="card-3d p-12">
+                    <h4 class="text-3xl font-bold text-executive-navy mb-8 border-b-2 border-executive-gold pb-4"><span class="lang-en">International References</span><span class="lang-ar">المراجع الدولية</span></h4>
+                    <ul class="premium-list">
+                        <li>PMI® PMBOK® Guide (7th Edition)</li>
+                        <li>PMI® Agile Practice Guide</li>
+                        <li>PMI® Standard for Program Management</li>
+                        <li>PMI® Standard for Portfolio Management</li>
+                        <li>ISO 21502</li>
+                        <li>ISO 31000</li>
+                        <li>ISO 19650</li>
+                        <li>ISO/IEC 42001 – Artificial Intelligence Management System (AIMS)</li>
+                        <li>ISO 9001</li>
+                        <li>ISO 45001</li>
+                        <li>FIDIC Suite of Contracts</li>
+                        <li>AACE International Recommended Practices</li>
+                        <li>ANSI/EIA-748 Earned Value Management System (EVMS)</li>
+                    </ul>
+                </div>
+                <div class="card-3d p-12">
+                    <h4 class="text-3xl font-bold text-executive-navy mb-8 border-b-2 border-executive-gold pb-4"><span class="lang-en">Contemporary Practices in:</span><span class="lang-ar">الممارسات المعاصرة في:</span></h4>
+                    <ul class="premium-list">
+                        <li class="content-group !mb-0"><span class="lang-en">Executive Leadership</span><span class="lang-ar premium-list-item">القيادة التنفيذية</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">Corporate Governance</span><span class="lang-ar premium-list-item">حوكمة الشركات</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">Systems Thinking</span><span class="lang-ar premium-list-item">التفكير المنظومي</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">Emotional Intelligence</span><span class="lang-ar premium-list-item">الذكاء العاطفي</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">Business Strategy</span><span class="lang-ar premium-list-item">استراتيجية الأعمال</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">Sustainability & ESG</span><span class="lang-ar premium-list-item">الاستدامة و ESG</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">Digital Transformation</span><span class="lang-ar premium-list-item">التحول الرقمي</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">Data Governance</span><span class="lang-ar premium-list-item">حوكمة البيانات</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">AI Governance</span><span class="lang-ar premium-list-item">حوكمة الذكاء الاصطناعي</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">Responsible Artificial Intelligence</span><span class="lang-ar premium-list-item">الذكاء الاصطناعي المسؤول</span></li>
+                        <li class="content-group !mb-0"><span class="lang-en">Decision Intelligence</span><span class="lang-ar premium-list-item">ذكاء اتخاذ القرار</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         FOOTER WITH INTERACTIVE CONTACT & SOCIAL LINKS
+         ========================================================================== -->
+    <footer class="bg-[#0B132B] text-gray-400 py-16 border-t-[8px] border-[#D4AF37]">
+        <div class="max-w-[1600px] mx-auto px-8 md:px-16 flex flex-col lg:flex-row justify-between items-start gap-12 mb-12">
+            
+            <!-- Framework Classification (Left Side) -->
+            <div class="w-full lg:w-1/2 text-left rtl:text-right">
+                <p class="text-[#D4AF37] font-bold tracking-widest uppercase mb-4 text-xl flex items-center gap-3">
+                    <span class="lang-en">FRAMEWORK CLASSIFICATION</span>
+                    <span class="lang-ar">تصنيف الإطار</span>
+                </p>
+                <p class="text-white text-3xl md:text-4xl font-serif mb-4">
+                    <span class="lang-en">Executive Reference Framework</span>
+                    <span class="lang-ar">إطار مرجعي تنفيذي</span>
+                </p>
+                <p class="text-xl text-gray-400 font-light">Foundational Edition | Version 1.0 | 2026</p>
+            </div>
+
+            <!-- Prepared By & Contact Info (Right Side) -->
+            <div class="w-full lg:w-1/2 flex flex-col lg:items-center text-center">
+                
+                <!-- Prepared By (Centered) -->
+                <div class="w-full text-center mb-6">
+                    <p class="text-[#D4AF37] font-bold tracking-widest uppercase mb-2 text-xl">
+                        <span class="lang-en">PREPARED BY</span>
+                        <span class="lang-ar text-gray-500">إعداد</span>
+                    </p>
+                    <p class="text-white text-3xl md:text-4xl font-bold mb-1 tracking-tight">Engr. Amin Alawy Balagem</p>
+                    <p class="text-xl md:text-2xl text-gray-300 font-light">Senior Projects & Construction Manager</p>
+                </div>
+                
+               <!-- CONTACT BUTTONS (Aligned together) -->
+                <div class="flex flex-col gap-4 mb-8 w-full max-w-md mx-auto px-4">
+                    <a href="https://wa.me/967777948124" target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex w-full items-center gap-2 md:gap-3 text-lg md:text-xl font-bold text-[#D4AF37] hover:text-white transition-colors duration-300 group flex-wrap">
+                        <i class="ph-fill ph-whatsapp-logo shrink-0 text-3xl text-[#25D366] group-hover:scale-105 transition-transform"></i>
+                        <i class="ph-fill ph-phone shrink-0 text-2xl text-[#D4AF37]"></i>
+                        <span dir="ltr" class="flex-1 border-b border-transparent group-hover:border-[#D4AF37]">0096777948124</span>
+                    </a>
+
+                    <a href="mailto:balagem27121970@gmail.com" 
+                       class="inline-flex w-full items-center gap-2 md:gap-3 text-base md:text-xl font-semibold text-[#D4AF37] hover:text-white transition-colors duration-300 group flex-wrap">
+                        <i class="ph-fill ph-envelope shrink-0 text-3xl text-[#D4AF37] group-hover:scale-105 transition-transform"></i>
+                        <span class="flex-1 border-b border-transparent group-hover:border-[#D4AF37] break-all md:break-normal">balagem27121970@gmail.com</span>
+                    </a>
+                </div>
+
+                <!-- Interactive Social Links (Customized Luxury Golden Shades & Bigger Icons/Text) -->
+                <div class="flex flex-wrap justify-center items-center gap-4 md:gap-6 mb-8 w-full max-w-3xl mx-auto">
+                    
+                    <!-- LinkedIn Button (Bright Rich Gold Gradient) -->
+                    <a href="https://www.linkedin.com/in/amin-alawy-balagem-26b173248" target="_blank" rel="noopener noreferrer" 
+                       class="flex items-center gap-3 md:gap-4 px-5 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#C5A028] via-[#FFD700] to-[#C5A028] text-[#0B132B] rounded-2xl text-lg md:text-xl font-black shadow-[0_0_30px_rgba(255,215,0,0.5)] hover:scale-105 hover:shadow-[0_0_50px_rgba(255,215,0,0.8)] transition-all duration-300 transform active:scale-95 border-2 border-white animate-pulse group">
+                        <i class="ph-fill ph-linkedin-logo shrink-0 text-3xl md:text-4xl text-[#0B132B] group-hover:rotate-12 transition-transform"></i> 
+                        <span class="tracking-wide">LinkedIn</span>
+                    </a>
+                    
+                    <!-- Facebook Button (Bronze-Gold Warm Gradient) -->
+                    <a href="https://www.facebook.com/profile.php?id=100011065842144" target="_blank" rel="noopener noreferrer" 
+                       class="flex items-center gap-3 md:gap-4 px-5 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#997A15] via-[#E6C657] to-[#997A15] text-[#0B132B] rounded-2xl text-lg md:text-xl font-black shadow-[0_0_30px_rgba(230,198,87,0.5)] hover:scale-105 hover:shadow-[0_0_50px_rgba(230,198,87,0.8)] transition-all duration-300 transform active:scale-95 border-2 border-white animate-pulse group">
+                        <i class="ph-fill ph-facebook-logo shrink-0 text-3xl md:text-4xl text-[#0B132B] group-hover:rotate-12 transition-transform"></i> 
+                        <span class="tracking-wide">Facebook</span>
+                    </a>
+
+                </div>
+
+                <!-- Description (Clear white bright text) -->
+                <p class="text-base md:text-lg uppercase tracking-widest text-white font-semibold max-w-xl leading-relaxed text-center drop-shadow-[0_2px_10px_rgba(255,255,255,0.3)]">
+                    Executive Project Leadership | Governance | Commercial Excellence | AI-Enabled Decision Intelligence
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+         LEVEL 2: THE 8 PILLARS INTERACTIVE FLOWCHARTS (MODALS)
+         ========================================================================== -->
+    <div id="pillar-flowcharts-container">
+        
+        <!-- Modal 1: Leadership -->
+        <div id="modal-pillar-1" class="fixed inset-0 z-[100] hidden bg-black/80 backdrop-blur-sm flex justify-center items-center p-4 md:p-10 transition-opacity" onclick="if(event.target === this) this.classList.add('hidden')">
+            <div class="bg-[#F8F9FA] w-full max-w-[800px] max-h-full rounded-3xl shadow-[0_0_60px_rgba(212,175,55,0.3)] overflow-y-auto relative border-4 border-[#D4AF37] flex flex-col custom-scrollbar">
+                <button onclick="document.getElementById('modal-pillar-1').classList.add('hidden')" class="absolute top-6 right-6 rtl:left-6 rtl:right-auto text-gray-500 hover:text-red-600 z-50 bg-white p-2 rounded-full shadow-md"><i class="ph-bold ph-x text-3xl"></i></button>
+                <div class="p-8 border-b-2 border-gray-200 text-center bg-white sticky top-0 z-40">
+                    <h3 class="text-3xl font-bold text-executive-navy uppercase"><span class="lang-en">1. Leadership Flow</span><span class="lang-ar">1. مسار القيادة</span></h3>
+                </div>
+                <div class="p-10 flex flex-col items-center gap-2">
+                    <div class="group relative bg-[#D4AF37] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Executive Leadership</span><span class="lang-ar">القيادة التنفيذية</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Sets the tone, ethics, and direction.</span><span class="lang-ar">تحدد النبرة، الأخلاقيات، والاتجاه.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+                    
+                    <div class="group relative bg-[#D4AF37] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Strategic Vision</span><span class="lang-ar">الرؤية الاستراتيجية</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Defines long-term organizational goals.</span><span class="lang-ar">تحدد الأهداف المؤسسية طويلة المدى.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+
+                    <div class="group relative bg-[#D4AF37] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Executive Governance</span><span class="lang-ar">الحوكمة التنفيذية</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Establishes accountability frameworks.</span><span class="lang-ar">تؤسس أطر المساءلة.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+
+                    <div class="group relative bg-[#D4AF37] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Stakeholder Alignment</span><span class="lang-ar">مواءمة أصحاب المصلحة</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Ensures all parties move together.</span><span class="lang-ar">تضمن سير جميع الأطراف في نفس الاتجاه.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+
+                    <div class="group relative bg-[#D4AF37] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Execution Leadership</span><span class="lang-ar">قيادة التنفيذ</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Empowers teams to deliver results.</span><span class="lang-ar">تمكن الفِرَق من تحقيق النتائج.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+
+                    <div class="bg-executive-navy border-4 border-[#D4AF37] p-6 rounded-xl w-full max-w-md text-center shadow-[0_0_30px_rgba(212,175,55,0.4)]">
+                        <div class="content-group !mb-0 font-black text-[#D4AF37] text-2xl md:text-3xl"><span class="lang-en">Organizational Value</span><span class="lang-ar">القيمة المؤسسية</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 2: Governance -->
+        <div id="modal-pillar-2" class="fixed inset-0 z-[100] hidden bg-black/80 backdrop-blur-sm flex justify-center items-center p-4 md:p-10 transition-opacity" onclick="if(event.target === this) this.classList.add('hidden')">
+            <div class="bg-[#F8F9FA] w-full max-w-[800px] max-h-full rounded-3xl shadow-[0_0_60px_rgba(30,58,139,0.3)] overflow-y-auto relative border-4 border-[#1E3A8B] flex flex-col custom-scrollbar">
+                <button onclick="document.getElementById('modal-pillar-2').classList.add('hidden')" class="absolute top-6 right-6 rtl:left-6 rtl:right-auto text-gray-500 hover:text-red-600 z-50 bg-white p-2 rounded-full shadow-md"><i class="ph-bold ph-x text-3xl"></i></button>
+                <div class="p-8 border-b-2 border-gray-200 text-center bg-white sticky top-0 z-40">
+                    <h3 class="text-3xl font-bold text-[#1E3A8B] uppercase"><span class="lang-en">2. Governance Flow</span><span class="lang-ar">2. مسار الحوكمة</span></h3>
+                </div>
+                <div class="p-10 flex flex-col items-center gap-2">
+                    <div class="group relative bg-[#1E3A8B] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Governance Framework</span><span class="lang-ar">إطار الحوكمة</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Principles, Policies, Structures.</span><span class="lang-ar">المبادئ، السياسات، والهياكل.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+                    
+                    <div class="group relative bg-[#1E3A8B] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Accountability Setup</span><span class="lang-ar">تأسيس المساءلة</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Defining roles and responsibilities.</span><span class="lang-ar">تحديد الأدوار والمسؤوليات.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+
+                    <div class="group relative bg-[#1E3A8B] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Decision Rights & Gates</span><span class="lang-ar">حقوق القرار والبوابات</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Controlled phase-gate approvals.</span><span class="lang-ar">موافقات محكومة عبر بوابات.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+
+                    <div class="group relative bg-[#1E3A8B] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Executive Oversight</span><span class="lang-ar">الإشراف التنفيذي</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Monitoring strategic alignment.</span><span class="lang-ar">مراقبة المواءمة الاستراتيجية.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+
+                    <div class="bg-executive-navy border-4 border-[#1E3A8B] p-6 rounded-xl w-full max-w-md text-center shadow-[0_0_30px_rgba(30,58,139,0.4)]">
+                        <div class="content-group !mb-0 font-black text-[#3B82F6] text-2xl md:text-3xl"><span class="lang-en">Performance Governance</span><span class="lang-ar">حوكمة الأداء</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 3: PM, Program, Portfolio -->
+        <div id="modal-pillar-3" class="fixed inset-0 z-[100] hidden bg-black/80 backdrop-blur-sm flex justify-center items-center p-4 md:p-10 transition-opacity" onclick="if(event.target === this) this.classList.add('hidden')">
+            <div class="bg-[#F8F9FA] w-full max-w-[800px] max-h-full rounded-3xl shadow-[0_0_60px_rgba(37,99,235,0.3)] overflow-y-auto relative border-4 border-[#2563EB] flex flex-col custom-scrollbar">
+                <button onclick="document.getElementById('modal-pillar-3').classList.add('hidden')" class="absolute top-6 right-6 rtl:left-6 rtl:right-auto text-gray-500 hover:text-red-600 z-50 bg-white p-2 rounded-full shadow-md"><i class="ph-bold ph-x text-3xl"></i></button>
+                <div class="p-8 border-b-2 border-gray-200 text-center bg-white sticky top-0 z-40">
+                    <h3 class="text-3xl font-bold text-[#2563EB] uppercase"><span class="lang-en">3. Project & Portfolio Flow</span><span class="lang-ar">3. مسار المشاريع والمحافظ</span></h3>
+                </div>
+                <div class="p-10 flex flex-col items-center gap-2">
+                    <div class="group relative bg-[#2563EB] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Strategic Objectives</span><span class="lang-ar">الأهداف الاستراتيجية</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">The starting point for investments.</span><span class="lang-ar">نقطة الانطلاق لجميع الاستثمارات.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+                    
+                    <div class="group relative bg-[#2563EB] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Portfolio Management</span><span class="lang-ar">إدارة المحافظ</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Selecting the right programs.</span><span class="lang-ar">اختيار البرامج والمشاريع الصحيحة.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+
+                    <div class="group relative bg-[#2563EB] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Program Management</span><span class="lang-ar">إدارة البرامج</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Coordinating related projects.</span><span class="lang-ar">تنسيق المشاريع المترابطة للتآزر.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+
+                    <div class="group relative bg-[#2563EB] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Project Delivery</span><span class="lang-ar">تسليم المشاريع</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Executing individual initiatives.</span><span class="lang-ar">تنفيذ المبادرات الفردية بنجاح.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+
+                    <div class="bg-executive-navy border-4 border-[#2563EB] p-6 rounded-xl w-full max-w-md text-center shadow-[0_0_30px_rgba(37,99,235,0.4)]">
+                        <div class="content-group !mb-0 font-black text-[#60A5FA] text-2xl md:text-3xl"><span class="lang-en">Benefits Realization</span><span class="lang-ar">تحقيق الفوائد</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 4: Strategy -->
+        <div id="modal-pillar-4" class="fixed inset-0 z-[100] hidden bg-black/80 backdrop-blur-sm flex justify-center items-center p-4 md:p-10 transition-opacity" onclick="if(event.target === this) this.classList.add('hidden')">
+            <div class="bg-[#F8F9FA] w-full max-w-[800px] max-h-full rounded-3xl shadow-[0_0_60px_rgba(5,150,105,0.3)] overflow-y-auto relative border-4 border-[#059669] flex flex-col custom-scrollbar">
+                <button onclick="document.getElementById('modal-pillar-4').classList.add('hidden')" class="absolute top-6 right-6 rtl:left-6 rtl:right-auto text-gray-500 hover:text-red-600 z-50 bg-white p-2 rounded-full shadow-md"><i class="ph-bold ph-x text-3xl"></i></button>
+                <div class="p-8 border-b-2 border-gray-200 text-center bg-white sticky top-0 z-40">
+                    <h3 class="text-3xl font-bold text-[#059669] uppercase"><span class="lang-en">4. Strategy Flow</span><span class="lang-ar">4. مسار الاستراتيجية</span></h3>
+                </div>
+                <div class="p-10 flex flex-col items-center gap-2">
+                    <div class="group relative bg-[#059669] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Mission & Vision</span><span class="lang-ar">الرسالة والرؤية</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">The core purpose and future state.</span><span class="lang-ar">الغاية الأساسية والحالة المستقبلية.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+                    
+                    <div class="group relative bg-[#059669] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Strategic Objectives</span><span class="lang-ar">الأهداف الاستراتيجية</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Measurable organizational targets.</span><span class="lang-ar">أهداف مؤسسية قابلة للقياس.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+
+                    <div class="group relative bg-[#059669] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Business Acumen</span><span class="lang-ar">الفطنة التجارية</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Understanding market drivers.</span><span class="lang-ar">فهم محركات السوق والمال.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+
+                    <div class="group relative bg-[#059669] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Systems Thinking</span><span class="lang-ar">التفكير المنظومي</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Viewing the interconnected whole.</span><span class="lang-ar">رؤية المؤسسة ككل مترابط.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+
+                    <div class="bg-executive-navy border-4 border-[#059669] p-6 rounded-xl w-full max-w-md text-center shadow-[0_0_30px_rgba(5,150,105,0.4)]">
+                        <div class="content-group !mb-0 font-black text-[#34D399] text-2xl md:text-3xl"><span class="lang-en">Sustainable Impact</span><span class="lang-ar">الأثر المستدام</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 5: Risk & Decision Intel -->
+        <div id="modal-pillar-5" class="fixed inset-0 z-[100] hidden bg-black/80 backdrop-blur-sm flex justify-center items-center p-4 md:p-10 transition-opacity" onclick="if(event.target === this) this.classList.add('hidden')">
+            <div class="bg-[#F8F9FA] w-full max-w-[800px] max-h-full rounded-3xl shadow-[0_0_60px_rgba(139,92,246,0.3)] overflow-y-auto relative border-4 border-[#8B5CF6] flex flex-col custom-scrollbar">
+                <button onclick="document.getElementById('modal-pillar-5').classList.add('hidden')" class="absolute top-6 right-6 rtl:left-6 rtl:right-auto text-gray-500 hover:text-red-600 z-50 bg-white p-2 rounded-full shadow-md"><i class="ph-bold ph-x text-3xl"></i></button>
+                <div class="p-8 border-b-2 border-gray-200 text-center bg-white sticky top-0 z-40">
+                    <h3 class="text-3xl font-bold text-[#8B5CF6] uppercase"><span class="lang-en">5. Decision Intel Flow</span><span class="lang-ar">5. مسار ذكاء القرار</span></h3>
+                </div>
+                <div class="p-10 flex flex-col items-center gap-2">
+                    <div class="group relative bg-[#8B5CF6] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Data & Information</span><span class="lang-ar">البيانات والمعلومات</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">The foundation of awareness.</span><span class="lang-ar">أساس الوعي والإدراك.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+                    
+                    <div class="group relative bg-[#8B5CF6] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Risk Analytics (RAID)</span><span class="lang-ar">تحليلات المخاطر (RAID)</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Assessing threats & opportunities.</span><span class="lang-ar">تقييم التهديدات والفرص.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+
+                    <div class="group relative bg-[#8B5CF6] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">AI Augmentation</span><span class="lang-ar">تعزيز الذكاء الاصطناعي</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Processing complex variables.</span><span class="lang-ar">معالجة المتغيرات المعقدة.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+
+                    <div class="group relative bg-[#8B5CF6] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Decision Intelligence</span><span class="lang-ar">ذكاء اتخاذ القرار</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Applying human insight to AI outputs.</span><span class="lang-ar">تطبيق البصيرة البشرية على مخرجات الذكاء الاصطناعي.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+
+                    <div class="bg-executive-navy border-4 border-[#8B5CF6] p-6 rounded-xl w-full max-w-md text-center shadow-[0_0_30px_rgba(139,92,246,0.4)]">
+                        <div class="content-group !mb-0 font-black text-[#A78BFA] text-2xl md:text-3xl"><span class="lang-en">Executive Decision</span><span class="lang-ar">القرار التنفيذي</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 6: Digital Leadership -->
+        <div id="modal-pillar-6" class="fixed inset-0 z-[100] hidden bg-black/80 backdrop-blur-sm flex justify-center items-center p-4 md:p-10 transition-opacity" onclick="if(event.target === this) this.classList.add('hidden')">
+            <div class="bg-[#F8F9FA] w-full max-w-[800px] max-h-full rounded-3xl shadow-[0_0_60px_rgba(13,148,136,0.3)] overflow-y-auto relative border-4 border-[#0D9488] flex flex-col custom-scrollbar">
+                <button onclick="document.getElementById('modal-pillar-6').classList.add('hidden')" class="absolute top-6 right-6 rtl:left-6 rtl:right-auto text-gray-500 hover:text-red-600 z-50 bg-white p-2 rounded-full shadow-md"><i class="ph-bold ph-x text-3xl"></i></button>
+                <div class="p-8 border-b-2 border-gray-200 text-center bg-white sticky top-0 z-40">
+                    <h3 class="text-3xl font-bold text-[#0D9488] uppercase"><span class="lang-en">6. Digital Flow</span><span class="lang-ar">6. المسار الرقمي</span></h3>
+                </div>
+                <div class="p-10 flex flex-col items-center gap-2">
+                    <div class="group relative bg-[#0D9488] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Digital Strategy</span><span class="lang-ar">الاستراتيجية الرقمية</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Aligning tech with business goals.</span><span class="lang-ar">مواءمة التكنولوجيا مع أهداف العمل.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+                    
+                    <div class="group relative bg-[#0D9488] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Data Governance & CDE</span><span class="lang-ar">حوكمة البيانات وبيئة CDE</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Ensuring data integrity.</span><span class="lang-ar">ضمان سلامة وتوافر البيانات.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+
+                    <div class="group relative bg-[#0D9488] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Automation & PMIS</span><span class="lang-ar">الأتمتة وأنظمة PMIS</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Streamlining workflows.</span><span class="lang-ar">تبسيط سير العمل والتقارير.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+
+                    <div class="group relative bg-[#0D9488] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">AI Governance</span><span class="lang-ar">حوكمة الذكاء الاصطناعي</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Responsible and ethical AI use.</span><span class="lang-ar">الاستخدام المسؤول للذكاء الاصطناعي.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+
+                    <div class="bg-executive-navy border-4 border-[#0D9488] p-6 rounded-xl w-full max-w-md text-center shadow-[0_0_30px_rgba(13,148,136,0.4)]">
+                        <div class="content-group !mb-0 font-black text-[#2DD4BF] text-2xl md:text-3xl"><span class="lang-en">Continuous Innovation</span><span class="lang-ar">الابتكار الرقمي المستمر</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 7: Delivery & Commercial -->
+        <div id="modal-pillar-7" class="fixed inset-0 z-[100] hidden bg-black/80 backdrop-blur-sm flex justify-center items-center p-4 md:p-10 transition-opacity" onclick="if(event.target === this) this.classList.add('hidden')">
+            <div class="bg-[#F8F9FA] w-full max-w-[800px] max-h-full rounded-3xl shadow-[0_0_60px_rgba(234,88,12,0.3)] overflow-y-auto relative border-4 border-[#EA580C] flex flex-col custom-scrollbar">
+                <button onclick="document.getElementById('modal-pillar-7').classList.add('hidden')" class="absolute top-6 right-6 rtl:left-6 rtl:right-auto text-gray-500 hover:text-red-600 z-50 bg-white p-2 rounded-full shadow-md"><i class="ph-bold ph-x text-3xl"></i></button>
+                <div class="p-8 border-b-2 border-gray-200 text-center bg-white sticky top-0 z-40">
+                    <h3 class="text-3xl font-bold text-[#EA580C] uppercase"><span class="lang-en">7. Delivery Flow</span><span class="lang-ar">7. مسار التسليم التجاري</span></h3>
+                </div>
+                <div class="p-10 flex flex-col items-center gap-2">
+                    <div class="group relative bg-[#EA580C] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Procurement Strategy</span><span class="lang-ar">استراتيجية المشتريات</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Defining acquisition approach.</span><span class="lang-ar">تحديد نهج الحصول على الموارد.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+                    
+                    <div class="group relative bg-[#EA580C] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Contract Formulation</span><span class="lang-ar">صياغة العقود</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Establishing protective agreements.</span><span class="lang-ar">تأسيس اتفاقيات واضحة ومحمية.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+
+                    <div class="group relative bg-[#EA580C] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Project Controls & EVM</span><span class="lang-ar">ضوابط المشروع والـ EVM</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Monitoring cost and schedule.</span><span class="lang-ar">مراقبة التكلفة والجدول الزمني.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+
+                    <div class="group relative bg-[#EA580C] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Claims & Dispute Resolution</span><span class="lang-ar">المطالبات وتسوية النزاعات</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Managing commercial deviations.</span><span class="lang-ar">إدارة الانحرافات التجارية.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+
+                    <div class="bg-executive-navy border-4 border-[#EA580C] p-6 rounded-xl w-full max-w-md text-center shadow-[0_0_30px_rgba(234,88,12,0.4)]">
+                        <div class="content-group !mb-0 font-black text-[#FB923C] text-2xl md:text-3xl"><span class="lang-en">Execution Excellence</span><span class="lang-ar">التميز في التنفيذ</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 8: Standards & Practices -->
+        <div id="modal-pillar-8" class="fixed inset-0 z-[100] hidden bg-black/80 backdrop-blur-sm flex justify-center items-center p-4 md:p-10 transition-opacity" onclick="if(event.target === this) this.classList.add('hidden')">
+            <div class="bg-[#F8F9FA] w-full max-w-[800px] max-h-full rounded-3xl shadow-[0_0_60px_rgba(71,85,105,0.3)] overflow-y-auto relative border-4 border-[#475569] flex flex-col custom-scrollbar">
+                <button onclick="document.getElementById('modal-pillar-8').classList.add('hidden')" class="absolute top-6 right-6 rtl:left-6 rtl:right-auto text-gray-500 hover:text-red-600 z-50 bg-white p-2 rounded-full shadow-md"><i class="ph-bold ph-x text-3xl"></i></button>
+                <div class="p-8 border-b-2 border-gray-200 text-center bg-white sticky top-0 z-40">
+                    <h3 class="text-3xl font-bold text-[#475569] uppercase"><span class="lang-en">8. Standards Flow</span><span class="lang-ar">8. مسار المعايير</span></h3>
+                </div>
+                <div class="p-10 flex flex-col items-center gap-2">
+                    <div class="group relative bg-[#475569] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Global Standards (ISO, PMI)</span><span class="lang-ar">المعايير العالمية (ISO, PMI)</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Adopting recognized frameworks.</span><span class="lang-ar">تبني الأطر المرجعية المعترف بها.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+                    
+                    <div class="group relative bg-[#475569] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Framework Integration</span><span class="lang-ar">تكامل الإطار</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Customizing to organizational needs.</span><span class="lang-ar">التخصيص لاحتياجات المؤسسة.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+
+                    <div class="group relative bg-[#475569] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Knowledge Management</span><span class="lang-ar">إدارة المعرفة</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Capturing intellectual capital.</span><span class="lang-ar">تنظيم رأس المال الفكري.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+
+                    <div class="group relative bg-[#475569] p-4 rounded-xl cursor-pointer hover:scale-105 transition-all duration-300 w-full max-w-md text-center shadow-lg border border-white/20">
+                        <div class="content-group !mb-0 font-bold text-white text-xl md:text-2xl"><span class="lang-en">Lessons Learned</span><span class="lang-ar">الدروس المستفادة</span></div>
+                        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"><div class="overflow-hidden"><p class="text-white/90 text-base md:text-lg mt-3 pt-3 border-t border-white/30"><span class="lang-en">Applying past experiences.</span><span class="lang-ar">تطبيق التجارب السابقة على المستقبل.</span></p></div></div>
+                    </div>
+                    <i class="ph-bold ph-arrow-down text-4xl text-gray-400 my-1 animate-bounce"></i>
+
+                    <div class="bg-executive-navy border-4 border-[#475569] p-6 rounded-xl w-full max-w-md text-center shadow-[0_0_30px_rgba(71,85,105,0.4)]">
+                        <div class="content-group !mb-0 font-black text-[#94A3B8] text-2xl md:text-3xl"><span class="lang-en">Continuous Improvement</span><span class="lang-ar">التحسين المستمر</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ==========================================================================
+         JAVASCRIPT LOGIC & LANGUAGE MANAGEMENT
+         ========================================================================== -->
+    <script src="js/app.js"></script>
+</body>
+</html>
