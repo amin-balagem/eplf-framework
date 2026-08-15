@@ -237,3 +237,10 @@ html, body, * {
     font-size: clamp(24px, 2vw, 32px) !important;
     text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
 }
+
+/* تصغير خط محدد بنسبة 20% على شاشات اللمس (الجوالات) فقط */
+@media (pointer: coarse) {
+    .mobile-shrink-text {
+        font-size: 80% !important; 
+    }
+}
