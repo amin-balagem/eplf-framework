@@ -279,3 +279,8 @@ a[href="#sec-index"] {
     top: 50% !important;
     transform: translateY(-50%) !important;
 }
+
+/* إخفاء زر العودة للفهرس من جميع الأقسام نهائياً */
+a[href="#sec-index"] {
+    display: none !important;
+}
