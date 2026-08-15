@@ -1,342 +1,351 @@
-        /* ==========================================================================
-           TYPOGRAPHY SCALING (Extremely Large)
-           ========================================================================== */
-        :root {
-            --font-hero: clamp(75px, 6vw, 95px);
-            --font-main: clamp(50px, 4vw, 65px);
-            --font-section: clamp(40px, 3vw, 48px);
-            --font-subtitle: clamp(28px, 2.5vw, 34px);
-            --font-body: 26px;
-            --font-list: 24px;
-        }
+/* ==========================================================================
+   TYPOGRAPHY SCALING (Extremely Large for Desktop)
+   ========================================================================== */
+:root {
+    --font-hero: clamp(75px, 6vw, 95px);
+    --font-main: clamp(50px, 4vw, 65px);
+    --font-section: clamp(40px, 3vw, 48px);
+    --font-subtitle: clamp(28px, 2.5vw, 34px);
+    --font-body: 26px;
+    --font-list: 24px;
+}
 
-        body {
-            font-size: var(--font-body);
-            line-height: 1.8;
-            background-color: #F8F9FA;
-            overflow-x: hidden;
-            transition: all 0.5s ease;
-            scroll-behavior: smooth;
-        }
+body {
+    font-size: var(--font-body);
+    line-height: 1.8;
+    background-color: #F8F9FA;
+    overflow-x: hidden;
+    transition: all 0.5s ease;
+    scroll-behavior: smooth;
+}
 
-        /* Bilingual Display Logic */
-        .content-group { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; }
-        
-        [data-lang-mode="bilingual"] .lang-en { display: block; font-family: 'Inter', sans-serif; }
-        [data-lang-mode="bilingual"] .lang-ar { display: block; font-family: 'Cairo', sans-serif; direction: rtl; opacity: 0.85; border-right: 4px solid #D4AF37; padding-right: 1rem; margin-top: 0.5rem; }
-        
-        [data-lang-mode="en"] .lang-ar { display: none !important; }
-        [data-lang-mode="en"] .lang-en { display: block; font-family: 'Inter', sans-serif; }
-        
-        [data-lang-mode="ar"] .lang-en { display: none !important; }
-        [data-lang-mode="ar"] .lang-ar { display: block; font-family: 'Cairo', sans-serif; direction: rtl; }
+/* Bilingual Display Logic */
+.content-group { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; }
 
-        /* ==========================================================================
-           MARBLE & 3D TEXTURES
-           ========================================================================== */
-        .marble-dark {
-            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)" opacity="0.05"/></svg>');
-            color: white;
-        }
-        .marble-light {
-            background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)" opacity="0.05"/></svg>');
-            color: #1F2937;
-        }
+[data-lang-mode="bilingual"] .lang-en { display: block; font-family: 'Inter', sans-serif; }
+[data-lang-mode="bilingual"] .lang-ar { display: block; font-family: 'Cairo', sans-serif; direction: rtl; opacity: 0.85; border-right: 4px solid #D4AF37; padding-right: 1rem; margin-top: 0.5rem; }
 
-        .glass-nav {
-    background: rgba(11, 19, 43, 0.85); /* خلفية كحلي داكنة شفافة متناسقة مع الموقع */
+[data-lang-mode="en"] .lang-ar { display: none !important; }
+[data-lang-mode="en"] .lang-en { display: block; font-family: 'Inter', sans-serif; }
+
+[data-lang-mode="ar"] .lang-en { display: none !important; }
+[data-lang-mode="ar"] .lang-ar { display: block; font-family: 'Cairo', sans-serif; direction: rtl; }
+
+/* ==========================================================================
+   MARBLE & 3D TEXTURES
+   ========================================================================== */
+.marble-dark {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)" opacity="0.05"/></svg>');
+    color: white;
+}
+.marble-light {
+    background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)" opacity="0.05"/></svg>');
+    color: #1F2937;
+}
+
+.glass-nav {
+    background: rgba(11, 19, 43, 0.85); 
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2); /* خط سفلي ذهبي خفيف وفخم */
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2); 
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-        .gold-gradient-text {
-            background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-        }
+.gold-gradient-text {
+    background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
 
-        /* 3D Cards */
-        .card-3d {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 16px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1), inset 0 2px 0 rgba(255,255,255,0.8);
-            border: 1px solid rgba(0,0,0,0.05);
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
-        }
-        .card-3d:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.15), inset 0 2px 0 rgba(255,255,255,1);
-        }
+/* 3D Cards */
+.card-3d {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1), inset 0 2px 0 rgba(255,255,255,0.8);
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
+}
+.card-3d:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15), inset 0 2px 0 rgba(255,255,255,1);
+}
 
-        .node-3d {
-            border-radius: 12px;
-            padding: 1.5rem 2rem;
-            color: white;
-            font-weight: 700;
-            text-align: center;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2), inset 0 2px 5px rgba(255,255,255,0.3), inset 0 -3px 5px rgba(0,0,0,0.3);
-            transition: transform 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .node-3d:hover { transform: translateY(-5px) scale(1.05); }
+.node-3d {
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2), inset 0 2px 5px rgba(255,255,255,0.3), inset 0 -3px 5px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.node-3d:hover { transform: translateY(-5px) scale(1.05); }
 
-        /* Lists */
-        .premium-list { list-style: none; padding: 0; font-size: var(--font-list); }
-        .premium-list li { position: relative; padding-left: 2.5rem; margin-bottom: 1rem; }
-        [data-lang-mode="ar"] .premium-list li, [data-lang-mode="bilingual"] .lang-ar.premium-list-item { padding-left: 0; padding-right: 2.5rem; }
-        .premium-list li::before { content: '♦'; color: #D4AF37; position: absolute; left: 0; font-size: 1.5rem; }
-        [data-lang-mode="ar"] .premium-list li::before, [data-lang-mode="bilingual"] .lang-ar.premium-list-item::before { left: auto; right: 0; }
+/* Lists */
+.premium-list { list-style: none; padding: 0; font-size: var(--font-list); }
+.premium-list li { position: relative; padding-left: 2.5rem; margin-bottom: 1rem; }
+[data-lang-mode="ar"] .premium-list li, [data-lang-mode="bilingual"] .lang-ar.premium-list-item { padding-left: 0; padding-right: 2.5rem; }
+.premium-list li::before { content: '♦'; color: #D4AF37; position: absolute; left: 0; font-size: 1.5rem; }
+[data-lang-mode="ar"] .premium-list li::before, [data-lang-mode="bilingual"] .lang-ar.premium-list-item::before { left: auto; right: 0; }
 
-        .section-padding { padding: 8rem 4rem; }
+.section-padding { padding: 8rem 4rem; }
 
-        /*==========================================================================
-         EXECUTIVE INDEX CARDS (CUSTOM DESIGN)
-         ==========================================================================*/
-        .index-card {
-            position: relative;
-            min-height: 140px;
-            border-radius: 24px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            padding-bottom: 35px; /* مساحة للسهم السفلي */
-            cursor: pointer;
-            font-size: 24px;
-            font-weight: 800;
-            color: #061B3A;
-            transition: .35s;
-            overflow: hidden;
-            box-shadow: 0 12px 35px rgba(0,0,0,.18);
-            animation: pulse-card 2.6s infinite;
-            text-decoration: none;
-        }
+/*==========================================================================
+ EXECUTIVE INDEX CARDS (CUSTOM DESIGN)
+ ==========================================================================*/
+.index-card {
+    position: relative;
+    min-height: 140px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 35px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 800;
+    color: #061B3A;
+    transition: .35s;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0,0,0,.18);
+    animation: pulse-card 2.6s infinite;
+    text-decoration: none;
+}
 
-        .index-card:hover {
-            transform: translateY(-10px) scale(1.03);
-            box-shadow: 0 22px 45px rgba(0,0,0,.28);
-        }
+.index-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 22px 45px rgba(0,0,0,.28);
+}
 
-        /* Shine Effect */
-        .index-card::before {
-            content: "";
-            position: absolute;
-            left: -120%;
-            top: 0;
-            width: 60%;
-            height: 100%;
-            background: linear-gradient(120deg, transparent, rgba(255,255,255,.65), transparent);
-            transition: 1s;
-        }
+/* Shine Effect */
+.index-card::before {
+    content: "";
+    position: absolute;
+    left: -120%;
+    top: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,.65), transparent);
+    transition: 1s;
+}
 
-        .index-card:hover::before {
-            left: 150%;
-        }
+.index-card:hover::before {
+    left: 150%;
+}
 
-        /* Dropdown Arrow */
-        .index-card::after {
-            content: "▼";
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 18px;
-            color: rgba(0,0,0,0.5); 
-            animation: bounce-arrow 1.4s infinite;
-        }
+/* Dropdown Arrow */
+.index-card::after {
+    content: "▼";
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    color: rgba(0,0,0,0.5); 
+    animation: bounce-arrow 1.4s infinite;
+}
 
-        /* Animations */
-        @keyframes pulse-card {
-            0% { box-shadow: 0 0 0 rgba(0,0,0,.20); }
-            50% { box-shadow: 0 0 35px rgba(200,162,74,.45); }
-            100% { box-shadow: 0 0 0 rgba(0,0,0,.20); }
-        }
+/* Animations */
+@keyframes pulse-card {
+    0% { box-shadow: 0 0 0 rgba(0,0,0,.20); }
+    50% { box-shadow: 0 0 35px rgba(200,162,74,.45); }
+    100% { box-shadow: 0 0 0 rgba(0,0,0,.20); }
+}
 
-        @keyframes bounce-arrow {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(5px); }
-        }
+@keyframes bounce-arrow {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(5px); }
+}
 
-        /* Colors */
-        .gold { background: linear-gradient(135deg, #FFF7D8, #F3E3A2, #C8A24A, #FFF5D0); }
-        .navy { background: linear-gradient(135deg, #173D73, #0B2E59, #244F87, #0A2245); color: white; }
-        .brown { background: linear-gradient(135deg, #F3E4D1, #D4B28A, #9B6C43, #CBA06C); }
-        .silver { background: linear-gradient(135deg, #F8F8F8, #E4E4E4, #CACACA, #FFFFFF); }
-        .green { background: linear-gradient(135deg, #DCE6D5, #8E9E73, #586A44, #C8D1B2); color: white; }
-        .burgundy { background: linear-gradient(135deg, #6B0F1A, #8D2336, #B55C65, #4E0810); color: white; }
-        .copper { background: linear-gradient(135deg, #F2D2AE, #C67A3C, #915126, #E6B98C); }
-        .royal { background: linear-gradient(135deg, #6AA6FF, #1D5BBF, #123D80, #7AB8FF); color: white; }
-        .black { background: linear-gradient(135deg, #444, #222, #111, #555); color: white; }
-        .marble { background: linear-gradient(135deg, #FFF0F5, #FCE4EC, #F8BBD0, #FFF0F5); }
-        
-        /* جعل النصوص والأيقونات في البطاقات الداكنة تظهر باللون الأبيض */
-        .navy .lang-en, .navy .lang-ar, 
-        .green .lang-en, .green .lang-ar, 
-        .burgundy .lang-en, .burgundy .lang-ar, 
-        .royal .lang-en, .royal .lang-ar, 
-        .black .lang-en, .black .lang-ar {
-            color: #ffffff !important;
-        }
-        
-        .navy::after, .green::after, .burgundy::after, .royal::after, .black::after {
-            color: rgba(255,255,255,0.7);
-        }
+/* Colors */
+.gold { background: linear-gradient(135deg, #FFF7D8, #F3E3A2, #C8A24A, #FFF5D0); }
+.navy { background: linear-gradient(135deg, #173D73, #0B2E59, #244F87, #0A2245); color: white; }
+.brown { background: linear-gradient(135deg, #F3E4D1, #D4B28A, #9B6C43, #CBA06C); }
+.silver { background: linear-gradient(135deg, #F8F8F8, #E4E4E4, #CACACA, #FFFFFF); }
+.green { background: linear-gradient(135deg, #DCE6D5, #8E9E73, #586A44, #C8D1B2); color: white; }
+.burgundy { background: linear-gradient(135deg, #6B0F1A, #8D2336, #B55C65, #4E0810); color: white; }
+.copper { background: linear-gradient(135deg, #F2D2AE, #C67A3C, #915126, #E6B98C); }
+.royal { background: linear-gradient(135deg, #6AA6FF, #1D5BBF, #123D80, #7AB8FF); color: white; }
+.black { background: linear-gradient(135deg, #444, #222, #111, #555); color: white; }
+.marble { background: linear-gradient(135deg, #FFF0F5, #FCE4EC, #F8BBD0, #FFF0F5); }
 
-        /* Custom Scrollbar for Modals */
-        .custom-scrollbar::-webkit-scrollbar { width: 8px; }
-        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 10px; }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #AA882E; }
+/* جعل النصوص والأيقونات في البطاقات الداكنة تظهر باللون الأبيض */
+.navy .lang-en, .navy .lang-ar, 
+.green .lang-en, .green .lang-ar, 
+.burgundy .lang-en, .burgundy .lang-ar, 
+.royal .lang-en, .royal .lang-ar, 
+.black .lang-en, .black .lang-ar {
+    color: #ffffff !important;
+}
 
-        /* ==========================================================================
-           LUXURIOUS PILLAR BACKGROUNDS (MARBLE & PASTEL)
-           ========================================================================== */
-        .pillar-card {
-            position: relative;
-            z-index: 1;
-            overflow: hidden;
-        }
-        
-        /* Subtle Marble Texture Overlay */
-        .pillar-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.025"/></svg>');
-            z-index: -1;
-            mix-blend-mode: multiply;
-            pointer-events: none;
-        }
+.navy::after, .green::after, .burgundy::after, .royal::after, .black::after {
+    color: rgba(255,255,255,0.7);
+}
 
-        /* The 8 Unique Executive Backgrounds */
-        .bg-pillar-1 { background: linear-gradient(135deg, #FFFCF5, #FDF5E6); border-top-color: #D4AF37 !important; } /* Beige Gold */
-        .bg-pillar-2 { background: linear-gradient(135deg, #F4F7FF, #EAF0FF); border-top-color: #1E3A8B !important; } /* Ice Royal */
-        .bg-pillar-3 { background: linear-gradient(135deg, #F0FDF4, #E6F8ED); border-top-color: #059669 !important; } /* Mint Emerald */
-        .bg-pillar-4 { background: linear-gradient(135deg, #EFF6FF, #E4EFFF); border-top-color: #2563EB !important; } /* Azure Blue */
-        .bg-pillar-5 { background: linear-gradient(135deg, #FAF5FF, #F4EAFC); border-top-color: #8B5CF6 !important; } /* Soft Lavender */
-        .bg-pillar-6 { background: linear-gradient(135deg, #F0FDFA, #E2F9F6); border-top-color: #0D9488 !important; } /* Light Teal */
-        .bg-pillar-7 { background: linear-gradient(135deg, #FFF7ED, #FEF0E2); border-top-color: #EA580C !important; } /* Warm Copper */
-        .bg-pillar-8 { background: linear-gradient(135deg, #F8FAFC, #EEF2F6); border-top-color: #475569 !important; } /* Silver Slate */
-        
-        /* Enhanced Typography for Pillar Titles */
-        .pillar-title {
-            font-family: var(--font-serif, serif);
-            font-size: clamp(24px, 2vw, 32px) !important;
-            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
-        }
+/* Custom Scrollbar for Modals */
+.custom-scrollbar::-webkit-scrollbar { width: 8px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 10px; }
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #AA882E; }
 
-    /* ===============================
-       General Layout
-       =============================== */
+/* ==========================================================================
+   LUXURIOUS PILLAR BACKGROUNDS (MARBLE & PASTEL)
+   ========================================================================== */
+.pillar-card {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
 
+/* Subtle Marble Texture Overlay */
+.pillar-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.025"/></svg>');
+    z-index: -1;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+}
+
+/* The 8 Unique Executive Backgrounds */
+.bg-pillar-1 { background: linear-gradient(135deg, #FFFCF5, #FDF5E6); border-top-color: #D4AF37 !important; }
+.bg-pillar-2 { background: linear-gradient(135deg, #F4F7FF, #EAF0FF); border-top-color: #1E3A8B !important; }
+.bg-pillar-3 { background: linear-gradient(135deg, #F0FDF4, #E6F8ED); border-top-color: #059669 !important; }
+.bg-pillar-4 { background: linear-gradient(135deg, #EFF6FF, #E4EFFF); border-top-color: #2563EB !important; }
+.bg-pillar-5 { background: linear-gradient(135deg, #FAF5FF, #F4EAFC); border-top-color: #8B5CF6 !important; }
+.bg-pillar-6 { background: linear-gradient(135deg, #F0FDFA, #E2F9F6); border-top-color: #0D9488 !important; }
+.bg-pillar-7 { background: linear-gradient(135deg, #FFF7ED, #FEF0E2); border-top-color: #EA580C !important; }
+.bg-pillar-8 { background: linear-gradient(135deg, #F8FAFC, #EEF2F6); border-top-color: #475569 !important; }
+
+/* Enhanced Typography for Pillar Titles */
+.pillar-title {
+    font-family: var(--font-serif, serif);
+    font-size: clamp(24px, 2vw, 32px) !important;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVE FIX (STRICTLY FOR MOBILE - MAX 768PX)
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* 1. Typography (تصغير الخطوط للجوال فقط) */
+    :root {
+        --font-hero: clamp(32px, 8vw, 45px);
+        --font-main: clamp(28px, 6vw, 38px);
+        --font-section: clamp(22px, 5vw, 30px);
+        --font-subtitle: clamp(18px, 4vw, 24px);
+        --font-body: 18px;
+        --font-list: 16px;
+    }
+
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /* 2. General Layout (تعديل المسافات) */
     .section-padding {
-        padding: 4rem 1.25rem !important;
+        padding: 3rem 1rem !important;
     }
 
     .max-w-\[1600px\] {
         max-width: 100% !important;
     }
 
-    [class*="px-20"],
-    [class*="px-24"] {
+    [class*="px-20"], [class*="px-24"] {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
     }
 
-    [class*="min-w-"] {
-        min-width: auto !important;
+    /* 3. Text Wrapping (منع خروج العناوين عن الشاشة) */
+    h2, h3, h4, p, span {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal !important;
     }
 
-    /* ===============================
-       Lists
-       =============================== */
-
-    .premium-list,
-    .premium-list li {
-        font-size: 18px !important;
+    /* 4. Lists */
+    .premium-list, .premium-list li {
+        font-size: 16px !important;
     }
 
-    /* ===============================
-       Index Cards
-       =============================== */
-
+    /* 5. Index Cards (تصغير وإصلاح تداخل الفهرس) */
     .index-card {
-        font-size: 18px !important;
-        min-height: 110px !important;
-        padding: 15px !important;
-        padding-bottom: 25px !important;
+        font-size: 16px !important;
+        min-height: 100px !important;
+        padding: 15px 10px 25px 10px !important;
+        margin-bottom: 10px;
+    }
+    .index-card i {
+        font-size: 28px !important;
+        margin-bottom: 5px !important;
     }
 
-    /* ===============================
-       Profile Image
-       =============================== */
-
+    /* 6. Profile Image */
     img[alt="Engr. Amin Balagem"] {
         width: 130px !important;
         height: 130px !important;
         border-width: 4px !important;
     }
 
-    /* ===============================
-       Navigation
-       =============================== */
-
+    /* 7. Navigation */
     nav.fixed {
         padding-left: 8px !important;
         padding-right: 8px !important;
     }
-
     nav.fixed img {
         height: 36px !important;
     }
-
     nav.fixed button {
-        padding: 6px 8px !important;
-        font-size: 14px !important;
+        padding: 4px 6px !important;
+        font-size: 12px !important;
         white-space: nowrap;
     }
 
-    /* ===============================
-       Hero Badge
-       (يتطلب إضافة class="hero-badge" في index.html)
-       =============================== */
-
+    /* 8. Hero Badge */
     .hero-badge {
-
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
-
         width: 95% !important;
-
         margin: 0 auto 2rem auto !important;
-
         padding: 1rem !important;
-
         text-align: center !important;
-
         border-radius: 16px !important;
-
         white-space: normal !important;
-
         line-height: 1.5 !important;
-
-        font-size: 14px !important;
-
+        font-size: 12px !important;
         letter-spacing: 1px !important;
     }
-
     .hero-badge i {
+        margin-bottom: 5px !important;
+        font-size: 24px !important;
+    }
 
-        margin-bottom: 8px !important;
-
-        font-size: 28px !important;
+    /* 9. Horizontal Scrolling (إصلاح خروج البطاقات في مسارات النجاح والنظام البيئي) */
+    .overflow-x-auto, .node-3d {
+        min-width: 250px !important;
+    }
+    
+    /* 10. Back to Index Buttons (ترتيب زر العودة للفهرس) */
+    a[href="#sec-index"] {
+        width: 100% !important;
+        justify-content: center !important;
+        margin-top: 15px !important;
+    }
+    .border-b-2.border-gray-300.pb-4.mb-16 {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
     }
 }
