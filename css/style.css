@@ -31,6 +31,12 @@ body {
 [data-lang-mode="ar"] .lang-en { display: none !important; }
 [data-lang-mode="ar"] .lang-ar { display: block; font-family: 'Cairo', sans-serif; direction: rtl; }
 
+/* منع الجوال من تغيير أحجام خطوط نسخة الكمبيوتر */
+html, body, * {
+    -webkit-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
+}
+
 /* ==========================================================================
    MARBLE & 3D TEXTURES
    ========================================================================== */
@@ -106,7 +112,7 @@ body {
     align-items: center;
     text-align: center;
     padding: 20px;
-    padding-bottom: 35px;
+    padding-bottom: 35px; /* مساحة للسهم السفلي */
     cursor: pointer;
     font-size: 24px;
     font-weight: 800;
@@ -215,137 +221,18 @@ body {
 }
 
 /* The 8 Unique Executive Backgrounds */
-.bg-pillar-1 { background: linear-gradient(135deg, #FFFCF5, #FDF5E6); border-top-color: #D4AF37 !important; }
-.bg-pillar-2 { background: linear-gradient(135deg, #F4F7FF, #EAF0FF); border-top-color: #1E3A8B !important; }
-.bg-pillar-3 { background: linear-gradient(135deg, #F0FDF4, #E6F8ED); border-top-color: #059669 !important; }
-.bg-pillar-4 { background: linear-gradient(135deg, #EFF6FF, #E4EFFF); border-top-color: #2563EB !important; }
-.bg-pillar-5 { background: linear-gradient(135deg, #FAF5FF, #F4EAFC); border-top-color: #8B5CF6 !important; }
-.bg-pillar-6 { background: linear-gradient(135deg, #F0FDFA, #E2F9F6); border-top-color: #0D9488 !important; }
-.bg-pillar-7 { background: linear-gradient(135deg, #FFF7ED, #FEF0E2); border-top-color: #EA580C !important; }
-.bg-pillar-8 { background: linear-gradient(135deg, #F8FAFC, #EEF2F6); border-top-color: #475569 !important; }
+.bg-pillar-1 { background: linear-gradient(135deg, #FFFCF5, #FDF5E6); border-top-color: #D4AF37 !important; } /* Beige Gold */
+.bg-pillar-2 { background: linear-gradient(135deg, #F4F7FF, #EAF0FF); border-top-color: #1E3A8B !important; } /* Ice Royal */
+.bg-pillar-3 { background: linear-gradient(135deg, #F0FDF4, #E6F8ED); border-top-color: #059669 !important; } /* Mint Emerald */
+.bg-pillar-4 { background: linear-gradient(135deg, #EFF6FF, #E4EFFF); border-top-color: #2563EB !important; } /* Azure Blue */
+.bg-pillar-5 { background: linear-gradient(135deg, #FAF5FF, #F4EAFC); border-top-color: #8B5CF6 !important; } /* Soft Lavender */
+.bg-pillar-6 { background: linear-gradient(135deg, #F0FDFA, #E2F9F6); border-top-color: #0D9488 !important; } /* Light Teal */
+.bg-pillar-7 { background: linear-gradient(135deg, #FFF7ED, #FEF0E2); border-top-color: #EA580C !important; } /* Warm Copper */
+.bg-pillar-8 { background: linear-gradient(135deg, #F8FAFC, #EEF2F6); border-top-color: #475569 !important; } /* Silver Slate */
 
 /* Enhanced Typography for Pillar Titles */
 .pillar-title {
     font-family: var(--font-serif, serif);
     font-size: clamp(24px, 2vw, 32px) !important;
     text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
-}
-
-/* ==========================================================================
-   MOBILE RESPONSIVE FIX (STRICTLY FOR MOBILE - MAX 768PX)
-   ========================================================================== */
-
-@media screen and (max-width: 768px) {
-
-    /* 1. Typography (تصغير الخطوط للجوال فقط) */
-    :root {
-        --font-hero: clamp(32px, 8vw, 45px);
-        --font-main: clamp(28px, 6vw, 38px);
-        --font-section: clamp(22px, 5vw, 30px);
-        --font-subtitle: clamp(18px, 4vw, 24px);
-        --font-body: 18px;
-        --font-list: 16px;
-    }
-
-    html, body {
-        overflow-x: hidden;
-        width: 100%;
-    }
-
-    /* 2. General Layout (تعديل المسافات) */
-    .section-padding {
-        padding: 3rem 1rem !important;
-    }
-
-    .max-w-\[1600px\] {
-        max-width: 100% !important;
-    }
-
-    [class*="px-20"], [class*="px-24"] {
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
-    }
-
-    /* 3. Text Wrapping (منع خروج العناوين عن الشاشة) */
-    h2, h3, h4, p, span {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        white-space: normal !important;
-    }
-
-    /* 4. Lists */
-    .premium-list, .premium-list li {
-        font-size: 16px !important;
-    }
-
-    /* 5. Index Cards (تصغير وإصلاح تداخل الفهرس) */
-    .index-card {
-        font-size: 16px !important;
-        min-height: 100px !important;
-        padding: 15px 10px 25px 10px !important;
-        margin-bottom: 10px;
-    }
-    .index-card i {
-        font-size: 28px !important;
-        margin-bottom: 5px !important;
-    }
-
-    /* 6. Profile Image */
-    img[alt="Engr. Amin Balagem"] {
-        width: 130px !important;
-        height: 130px !important;
-        border-width: 4px !important;
-    }
-
-    /* 7. Navigation */
-    nav.fixed {
-        padding-left: 8px !important;
-        padding-right: 8px !important;
-    }
-    nav.fixed img {
-        height: 36px !important;
-    }
-    nav.fixed button {
-        padding: 4px 6px !important;
-        font-size: 12px !important;
-        white-space: nowrap;
-    }
-
-    /* 8. Hero Badge */
-    .hero-badge {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        width: 95% !important;
-        margin: 0 auto 2rem auto !important;
-        padding: 1rem !important;
-        text-align: center !important;
-        border-radius: 16px !important;
-        white-space: normal !important;
-        line-height: 1.5 !important;
-        font-size: 12px !important;
-        letter-spacing: 1px !important;
-    }
-    .hero-badge i {
-        margin-bottom: 5px !important;
-        font-size: 24px !important;
-    }
-
-    /* 9. Horizontal Scrolling (إصلاح خروج البطاقات في مسارات النجاح والنظام البيئي) */
-    .overflow-x-auto, .node-3d {
-        min-width: 250px !important;
-    }
-    
-    /* 10. Back to Index Buttons (ترتيب زر العودة للفهرس) */
-    a[href="#sec-index"] {
-        width: 100% !important;
-        justify-content: center !important;
-        margin-top: 15px !important;
-    }
-    .border-b-2.border-gray-300.pb-4.mb-16 {
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
-    }
 }
