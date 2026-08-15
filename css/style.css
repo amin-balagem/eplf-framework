@@ -244,3 +244,28 @@ html, body, * {
         font-size: 80% !important; 
     }
 }
+
+/* ============================================================
+   EPLF — BACK TO INDEX POSITION
+   Keep Back to Index at the far right
+   ============================================================ */
+
+a[href="#sec-index"] {
+    width: auto !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    margin-top: 0 !important;
+}
+
+/* Section headers containing Back to Index */
+.section-padding .max-w-\[1600px\] > div:has(> a[href="#sec-index"]) {
+    position: relative !important;
+}
+
+/* Put the button at the far right */
+.section-padding .max-w-\[1600px\] > div > a[href="#sec-index"] {
+    position: absolute !important;
+    right: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
