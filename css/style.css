@@ -17,6 +17,7 @@ body {
     overflow-x: hidden;
     transition: all 0.5s ease;
     scroll-behavior: smooth;
+    min-width: 1440px; /* <--- هذا السطر هو الذي يمنع انكماش الموقع */
 }
 
 /* Bilingual Display Logic */
