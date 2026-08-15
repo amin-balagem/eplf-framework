@@ -246,8 +246,7 @@ html, body, * {
 }
 
 /* ============================================================
-   EPLF — BACK TO INDEX POSITION
-   Keep Back to Index at the far right
+   EPLF — SMART BACK TO INDEX POSITION (RTL / LTR AWARE)
    ============================================================ */
 
 a[href="#sec-index"] {
@@ -257,15 +256,26 @@ a[href="#sec-index"] {
     margin-top: 0 !important;
 }
 
-/* Section headers containing Back to Index */
+/* الحاوية العامة للعنوان */
 .section-padding .max-w-\[1600px\] > div:has(> a[href="#sec-index"]) {
     position: relative !important;
 }
 
-/* Put the button at the far right */
-.section-padding .max-w-\[1600px\] > div > a[href="#sec-index"] {
+/* 1. في الأقسام الإنجليزية (LTR): الزر يبقى في اليمين */
+.section-padding div:has(> a[href="#sec-index"]) a[href="#sec-index"] {
     position: absolute !important;
     right: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+
+/* 2. في الأقسام العربية (RTL): الزر ينتقل تلقائياً إلى اليسار */
+[dir="rtl"] .section-padding div:has(> a[href="#sec-index"]) a[href="#sec-index"],
+.section-padding [dir="rtl"] div:has(> a[href="#sec-index"]) a[href="#sec-index"],
+.ar-section .section-padding div:has(> a[href="#sec-index"]) a[href="#sec-index"] {
+    position: absolute !important;
+    left: 0 !important;
+    right: auto !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
 }
