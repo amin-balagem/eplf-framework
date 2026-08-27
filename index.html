@@ -280,7 +280,8 @@
      EPLF VIDEO OVERVIEW BUTTON — PREMIUM 3D GOLD & NAVY
      ========================================================== -->
 
-<div class="flex justify-center mt-8 px-4">
+<!-- أضفنا mb-16 هنا لحل مشكلة التصاق القسم السفلي -->
+<div class="flex justify-center mt-8 mb-16 px-4">
 
     <button
         type="button"
@@ -316,7 +317,7 @@
             <!-- GOLD PLAY BUTTON -->
             <div
                 class="relative flex-shrink-0
-                       ml-4 md:ml-6
+                       ml-4 md:ml-6 rtl:ml-0 rtl:mr-4 rtl:md:mr-6
                        w-[68px] h-[68px] md:w-[76px] md:h-[76px]
                        rounded-full
                        flex items-center justify-center
@@ -340,7 +341,7 @@
                            relative z-10
                            text-[#09172c]
                            text-[30px] md:text-[34px]
-                           ml-1
+                           ml-1 rtl:ml-0 rtl:mr-1 rtl:rotate-180
                            drop-shadow-[0_2px_2px_rgba(255,255,255,0.35)]
                            group-hover:scale-110
                            transition-transform duration-300">
@@ -365,12 +366,12 @@
                        flex flex-col
                        justify-center
                        text-center
-                       pr-4 md:pr-8
+                       pr-4 md:pr-8 rtl:pr-0 rtl:pl-4 rtl:md:pl-8
                        min-w-0">
 
-                <!-- ENGLISH -->
+                <!-- ENGLISH TITLE (يظهر في الإنجليزية فقط) -->
                 <span
-                    class="lang-en block
+                    class="lang-en ltr:block rtl:hidden
                            text-white
                            font-black
                            text-lg md:text-2xl
@@ -380,9 +381,9 @@
                     WATCH EPLF OVERVIEW
                 </span>
 
-                <!-- ARABIC -->
+                <!-- ARABIC TITLE (يظهر في العربية فقط) -->
                 <span
-                    class="lang-ar block
+                    class="lang-ar rtl:block ltr:hidden
                            text-white
                            font-black
                            text-lg md:text-2xl
@@ -406,9 +407,9 @@
                            shadow-[0_0_8px_rgba(212,175,55,0.7)]">
                 </div>
 
-                <!-- SECONDARY ENGLISH -->
+                <!-- SECONDARY ENGLISH (يظهر في الإنجليزية فقط) -->
                 <span
-                    class="lang-en block
+                    class="lang-en ltr:block rtl:hidden
                            text-[#f8e7a0]
                            font-bold
                            text-sm md:text-base
@@ -416,9 +417,9 @@
                     Executive Framework Overview
                 </span>
 
-                <!-- SECONDARY ARABIC -->
+                <!-- SECONDARY ARABIC (يظهر في العربية فقط) -->
                 <span
-                    class="lang-ar block
+                    class="lang-ar rtl:block ltr:hidden
                            text-[#f8e7a0]
                            font-bold
                            text-sm md:text-base
@@ -445,7 +446,6 @@
     </button>
 
 </div>
-
 
 <!-- ==========================================================
      EPLF VIDEO MODAL
@@ -510,43 +510,26 @@
 <script>
 
 function openEPLFVideo() {
-
     const modal = document.getElementById('video-modal');
     const video = document.getElementById('eplf-overview-video');
 
     if (!modal || !video) return;
 
-    /*
-     * إظهار الـ Modal بالطريقة الصحيحة
-     * مع الحفاظ على flex
-     */
     modal.classList.remove('hidden');
     modal.classList.add('flex');
 
-    /*
-     * إعادة الفيديو إلى البداية
-     */
     video.currentTime = 0;
 
-    /*
-     * محاولة التشغيل مباشرة
-     */
     const playPromise = video.play();
 
     if (playPromise !== undefined) {
         playPromise.catch(() => {
-            /*
-             * بعض المتصفحات تمنع التشغيل التلقائي.
-             * في هذه الحالة يظهر الفيديو جاهزاً
-             * ويستطيع المستخدم الضغط على Play.
-             */
+            // صامت لتجنب أخطاء منع التشغيل التلقائي
         });
     }
 }
 
-
 function closeEPLFVideo() {
-
     const modal = document.getElementById('video-modal');
     const video = document.getElementById('eplf-overview-video');
 
@@ -561,36 +544,20 @@ function closeEPLFVideo() {
     }
 }
 
-
-/*
- * إغلاق عند الضغط خارج نافذة الفيديو
- */
 document.addEventListener('click', function(event) {
-
     const modal = document.getElementById('video-modal');
-
     if (modal && event.target === modal) {
         closeEPLFVideo();
     }
-
 });
 
-
-/*
- * إغلاق بزر ESC
- */
 document.addEventListener('keydown', function(event) {
-
     if (event.key === 'Escape') {
         closeEPLFVideo();
     }
-
 });
 
 </script>
-
-   </div>
-    </section>
 
     <!-- ==========================================================================
      DEFINITION & PURPOSE (Emerald Marble - Consolidated & Final)
