@@ -326,7 +326,7 @@
         onclick="openEPLFVideo()"
         aria-label="Watch EPLF Overview"
         class="eplf-video-pulse group relative w-full max-w-[620px] flex flex-col
-               min-h-[131px] h-auto py-3 md:py-0 md:h-[147px] p-[3px]
+               min-h-[135px] md:min-h-[150px] p-[3px]
                rounded-[22px]
                bg-gradient-to-b from-[#fcf6ba] via-[#bf953f] to-[#8b6508]
                shadow-[0_8px_30px_rgba(0,0,0,0.35),0_0_22px_rgba(212,175,55,0.35)]
@@ -336,11 +336,12 @@
                transition-all duration-300
                cursor-pointer overflow-hidden">
 
+        <!-- تم حذف h-full وإضافة padding علوي وسفلي مرن py-4 -->
         <div
-            class="relative flex-1 w-full h-full
+            class="relative flex-1 w-full
                    flex items-center
                    rounded-[19px]
-                   py-3 md:py-0
+                   py-4 md:py-5 px-1 md:px-2
                    bg-gradient-to-b from-[#254b94] via-[#1a3875] to-[#102452]
                    border border-[#d4af37]/50
                    shadow-[inset_0_2px_12px_rgba(255,255,255,0.08),
@@ -349,7 +350,7 @@
             <!-- GOLD PLAY BUTTON -->
             <div
                 class="relative flex-shrink-0
-                       ml-3 md:ml-6 rtl:ml-0 rtl:mr-3 rtl:md:mr-6
+                       ml-2 sm:ml-4 md:ml-6 rtl:ml-0 rtl:mr-2 rtl:sm:mr-4 rtl:md:mr-6
                        w-[60px] h-[60px] sm:w-[72px] sm:h-[72px] md:w-[96px] md:h-[96px]
                        rounded-full
                        flex items-center justify-center
@@ -372,7 +373,7 @@
                     class="ph-fill ph-play
                            relative z-10
                            text-[#09172c]
-                           text-[24px] sm:text-[30px] md:text-[44px]
+                           text-[26px] sm:text-[32px] md:text-[44px]
                            ml-1 rtl:ml-0 rtl:mr-1 rtl:rotate-180
                            drop-shadow-[0_2px_2px_rgba(255,255,255,0.35)]
                            group-hover:scale-110
@@ -384,7 +385,7 @@
             <div
                 class="flex-shrink-0
                        w-px self-stretch my-2
-                       mx-2 md:mx-7
+                       mx-2 sm:mx-4 md:mx-7
                        bg-gradient-to-b
                        from-transparent
                        via-[#d4af37]
@@ -392,44 +393,44 @@
                        opacity-80">
             </div>
 
-            <!-- TEXT AREA -->
+            <!-- TEXT AREA (تمت زيادة الفراغات gap-2 وحذف القيود الأفقية) -->
             <div
                 class="flex-1
                        flex flex-col
                        justify-center
-                       text-center gap-1 md:gap-0
+                       text-center gap-1.5 md:gap-2
                        pr-2 md:pr-8 rtl:pr-0 rtl:pl-2 rtl:md:pl-8
                        min-w-0 py-1">
 
                 <span class="lang-en text-white font-black
-                           text-[13px] sm:text-base md:text-xl
-                           leading-tight whitespace-nowrap
+                           text-[14px] sm:text-base md:text-xl
+                           leading-normal md:whitespace-nowrap
                            drop-shadow-[0_2px_3px_rgba(0,0,0,0.7)]">
                     WATCH EPLF OVERVIEW
                 </span>
 
                 <span class="lang-ar text-white font-black
-                           text-[13px] sm:text-base md:text-xl
-                           leading-tight whitespace-nowrap
+                           text-[14px] sm:text-base md:text-xl
+                           leading-normal md:whitespace-nowrap
                            drop-shadow-[0_2px_3px_rgba(0,0,0,0.7)]">
                     شاهد الفيديو التعريفي
                 </span>
 
-                <div class="w-[85%] max-w-[300px] h-[2px] mx-auto my-1 md:my-2
+                <div class="w-[85%] max-w-[300px] h-[2px] mx-auto my-0.5 md:my-1
                            rounded-full bg-gradient-to-r from-transparent
                            via-[#f5d76e] to-transparent
                            shadow-[0_0_8px_rgba(212,175,55,0.7)]">
                 </div>
 
                 <span class="lang-en text-[#f8e7a0] font-bold
-                           text-[10px] sm:text-xs md:text-sm
-                           leading-tight whitespace-nowrap">
+                           text-[11px] sm:text-xs md:text-sm
+                           leading-normal md:whitespace-nowrap">
                     Executive Framework Overview
                 </span>
 
                 <span class="lang-ar text-[#f8e7a0] font-bold
-                           text-[10px] sm:text-xs md:text-sm
-                           leading-tight whitespace-nowrap">
+                           text-[11px] sm:text-xs md:text-sm
+                           leading-normal md:whitespace-nowrap">
                     نظرة تنفيذية على الإطار
                 </span>
             </div>
@@ -515,7 +516,6 @@
           htmlTag.setAttribute('lang', 'en');
           htmlTag.setAttribute('dir', 'ltr');
       } else if (mode === 'bilingual') {
-          // اتجاه أساسي ثابت للإطارات العالمية عند عرض اللغتين معًا
           htmlTag.setAttribute('lang', 'en');
           htmlTag.setAttribute('dir', 'ltr');
       }
@@ -523,7 +523,7 @@
       localStorage.setItem('preferredLangMode', mode);
   }
 
-  // استرجاع آخر لغة محفوظة عند تحميل الصفحة (أو 'ar' كافتراضي)
+  // استرجاع آخر لغة محفوظة عند تحميل الصفحة
   document.addEventListener('DOMContentLoaded', () => {
       const savedMode = localStorage.getItem('preferredLangMode') || 'ar';
       setLangMode(savedMode);
@@ -555,7 +555,7 @@
       if (e.key === 'Escape') closeEPLFVideo();
   });
 </script>
-
+            
     <!-- ==========================================================================
      DEFINITION & PURPOSE (Emerald Marble - Consolidated & Final)
      ========================================================================== -->
