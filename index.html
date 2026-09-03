@@ -2364,56 +2364,50 @@
     <div class="max-w-[1600px] mx-auto relative z-10 px-4 md:px-12">
 
 <!-- Header Row -->
-        <div class="relative max-w-[1500px] mx-auto pb-8 mb-12 border-b border-white/20">
+<div class="relative max-w-[1500px] mx-auto pb-8 mb-12 border-b border-white/20">
 
-            <!-- Back to Index Button (متوافق مع اتجاه اللغة تلقائياً) -->
-            <!-- تم تعديل فئات التموضع هنا -->
-            <a href="#sec-index"
-   class="relative md:absolute block md:inline-flex items-center gap-2
-          mb-6 md:mb-0
-          md:top-0 ltr:md:right-0 rtl:md:left-0
-          w-fit mx-auto md:mx-0 z-20
-          px-5 py-2.5 bg-white text-executive-navy
-          border border-executive-gold/40 rounded-full
-          font-bold text-sm md:text-base shadow-xl
-          hover:bg-executive-gold hover:text-white
-          transition-all duration-300
-          whitespace-nowrap">
-    <i class="ph-bold ph-arrow-fat-up text-lg md:text-xl"></i>
-    <span class="lang-en">Back to Index</span>
-    <span class="lang-ar">العودة للفهرس</span>
-</a>
-<div class="text-center md:text-left rtl:md:text-right px-4">
+    <!-- Back to Index Button (Floating Button connected to CSS) -->
+    <a href="#sec-index"
+       id="back-btn"
+       class="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-executive-navy border border-executive-gold/40 rounded-full font-bold text-sm md:text-base shadow-xl hover:bg-executive-gold hover:text-white transition-all duration-300 whitespace-nowrap">
+        
+        <i class="ph-bold ph-arrow-fat-up text-lg md:text-xl"></i>
+        <span class="lang-en">Back to Index</span>
+        <span class="lang-ar">العودة للفهرس</span>
+    </a>
 
-                <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+    <!-- Title Area -->
+    <div class="text-center md:text-left rtl:md:text-right px-4">
 
-                    <!-- الأيقونة -->
-                    <i class="ph-fill ph-tree-structure text-executive-gold text-6xl md:text-7xl shrink-0"></i>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6">
 
-                    <!-- مجموعة النصوص (إنجليزي وعربي) -->
-                    <div class="flex flex-col items-center md:items-start rtl:md:items-end">
+            <!-- الأيقونة -->
+            <i class="ph-fill ph-tree-structure text-executive-gold text-6xl md:text-7xl shrink-0"></i>
 
-                        <!-- العنوان الإنجليزي متعدد الأسطر -->
-                        <h2 class="font-bold text-white uppercase tracking-widest m-0 leading-tight text-center md:text-left rtl:md:text-right"
-                            style="font-size: clamp(35px, 3.5vw, 55px);">
-                            <span class="lang-en block">EPLF</span>
-                            <span class="lang-en block">EXECUTIVE</span>
-                            <span class="lang-en block">CAPABILITY</span>
-                            <span class="lang-en block">ARCHITECTURE</span>
-                        </h2>
+            <!-- مجموعة النصوص (إنجليزي وعربي) -->
+            <div class="flex flex-col items-center md:items-start rtl:md:items-end">
 
-                        <!-- العنوان العربي -->
-                        <div class="lang-ar text-gray-300 font-bold mt-4 text-2xl md:text-3xl text-center md:text-left rtl:md:text-right">
-                            الهيكل المعماري للقدرات التنفيذية لـ EPLF
-                        </div>
+                <!-- العنوان الإنجليزي متعدد الأسطر -->
+                <h2 class="font-bold text-white uppercase tracking-widest m-0 leading-tight text-center md:text-left rtl:md:text-right"
+                    style="font-size: clamp(35px, 3.5vw, 55px);">
+                    <span class="lang-en block">EPLF</span>
+                    <span class="lang-en block">EXECUTIVE</span>
+                    <span class="lang-en block">CAPABILITY</span>
+                    <span class="lang-en block">ARCHITECTURE</span>
+                </h2>
 
-                    </div>
-
+                <!-- العنوان العربي -->
+                <div class="lang-ar text-gray-300 font-bold mt-4 text-2xl md:text-3xl text-center md:text-left rtl:md:text-right">
+                    الهيكل المعماري للقدرات التنفيذية لـ EPLF
                 </div>
 
             </div>
 
         </div>
+
+    </div>
+
+</div>
         
         <!-- Introductory Text -->
         <div class="text-center mb-14 max-w-5xl mx-auto bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
