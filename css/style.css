@@ -277,23 +277,23 @@ html, body, * {
 }
 
 /* ==========================================================================
-   FLOATING BACK BUTTON (RTL / LTR)
+   FLOATING BACK BUTTON (RTL / LTR) - FINAL FIX
    ========================================================================== */
 #back-btn {
-    position: absolute !important; /* عدلناها هنا ليبقى داخل قسمه */
-    top: 0 !important;
-    z-index: 20 !important;
+    position: absolute !important;
+    top: 10px !important;
+    z-index: 50 !important;
 }
 
-/* التموضع للغة الإنجليزية/المزدوجة (أقصى اليمين) */
+/* التموضع للغة الإنجليزية/المزدوجة (أقصى اليمين داخل الإطار) */
 html[dir="ltr"] #back-btn,
 html:not([dir="rtl"]) #back-btn {
-    right: 0 !important;
+    right: 10px !important;
     left: auto !important;
 }
 
-/* التموضع للغة العربية (أقصى اليسار) */
+/* التموضع للغة العربية (أقصى اليسار داخل الإطار) */
 html[dir="rtl"] #back-btn {
-    left: 0 !important;
+    left: 10px !important;
     right: auto !important;
 }
