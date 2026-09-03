@@ -297,3 +297,10 @@ html[dir="rtl"] #back-btn {
     left: 10px !important;
     right: auto !important;
 }
+
+@media (max-width: 1279px) {
+    .node-3d {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
