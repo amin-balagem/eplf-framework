@@ -277,11 +277,11 @@ html, body, * {
 }
 
 /* ==========================================================================
-   FLOATING BACK BUTTON (RTL / LTR) - FINAL FIX
+   FLOATING BACK BUTTON (RTL / LTR) - FINAL TUNING
    ========================================================================== */
 #back-btn {
     position: absolute !important;
-    top: 10px !important;
+    top: -10px !important; /* تم رفع الزر للأعلى لضبط التموضع بدقة */
     z-index: 50 !important;
 }
 
