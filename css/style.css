@@ -297,3 +297,17 @@ html[dir="rtl"] #back-btn {
     left: 10px !important;
     right: auto !important;
 }
+
+/* ARCHITECTURAL ECOSYSTEM FLOW BRIDGE — MOBILE ONLY */
+@media (max-width: 767px) {
+
+    /* Only affects the Ecosystem section */
+    .ecosystem-flow-bridge .content-group,
+    .ecosystem-flow-bridge .content-group > span {
+        min-width: 0 !important;
+        max-width: 100% !important;
+        overflow-wrap: break-word !important;
+        box-sizing: border-box !important;
+    }
+
+}
