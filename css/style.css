@@ -298,16 +298,423 @@ html[dir="rtl"] #back-btn {
     right: auto !important;
 }
 
-/* ARCHITECTURAL ECOSYSTEM FLOW BRIDGE — MOBILE ONLY */
-@media (max-width: 767px) {
+/* ==========================================================================
+   ARCHITECTURAL ECOSYSTEM FLOW BRIDGE
+   RESPONSIVE HORIZONTAL RECTANGLE DESIGN
+   ========================================================================== */
 
-    /* Only affects the Ecosystem section */
-    .ecosystem-flow-bridge .content-group,
-    .ecosystem-flow-bridge .content-group > span {
-        min-width: 0 !important;
-        max-width: 100% !important;
-        overflow-wrap: break-word !important;
-        box-sizing: border-box !important;
+.ecosystem-flow-bridge {
+    width: 100%;
+    max-width: 1700px;
+    margin: 0 auto 4rem auto;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    border-radius: 2.5rem;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(14px);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.ecosystem-flow-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        90px
+        minmax(0, 1.15fr)
+        90px
+        minmax(0, 1fr)
+        90px
+        minmax(0, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+/* ==========================================================================
+   ECOSYSTEM CARDS
+   ========================================================================== */
+
+.eco-card {
+    width: 100%;
+    min-width: 0;
+    min-height: 160px;
+    padding: 1.5rem 1.25rem;
+    box-sizing: border-box;
+
+    background: rgba(11, 19, 43, 0.92);
+    border: 1px solid rgba(200, 162, 74, 0.65);
+    border-radius: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+    overflow: hidden;
+}
+
+
+/* ==========================================================================
+   CARD TITLES
+   ========================================================================== */
+
+.eco-card-title {
+    width: 100%;
+    min-width: 0;
+
+    color: #C8A24A;
+    font-weight: 900;
+    font-size: clamp(2rem, 3vw, 3rem);
+    line-height: 1.05;
+
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+.eco-card-title-long {
+    font-size: clamp(1.35rem, 2vw, 2rem);
+    line-height: 1.15;
+}
+
+.eco-card-title-project {
+    font-size: clamp(1.45rem, 2vw, 2.1rem);
+}
+
+
+/* ==========================================================================
+   CARD SUBTITLES
+   ========================================================================== */
+
+.eco-card-subtitle {
+    width: 100%;
+    min-width: 0;
+
+    margin-top: 1rem;
+
+    color: #D1D5DB;
+    font-size: clamp(0.7rem, 1vw, 0.9rem);
+    line-height: 1.45;
+
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+[data-lang-mode="bilingual"] .eco-card-subtitle .lang-ar,
+[data-lang-mode="ar"] .eco-card-subtitle .lang-ar {
+    text-transform: none;
+    letter-spacing: normal;
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+}
+
+
+/* ==========================================================================
+   ARROWS
+   ========================================================================== */
+
+.eco-arrow {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: #C8A24A;
+}
+
+.eco-arrow-label {
+    width: 100%;
+    margin-bottom: 0.5rem;
+
+    color: #D1D5DB;
+    font-size: 0.62rem;
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    overflow-wrap: break-word;
+}
+
+.eco-arrow-label .lang-ar {
+    direction: rtl;
+    text-transform: none;
+    letter-spacing: normal;
+    font-family: 'Cairo', sans-serif;
+}
+
+.eco-arrow-right {
+    display: block;
+    font-size: 2.5rem;
+    line-height: 1;
+    filter: drop-shadow(0 3px 5px rgba(0,0,0,0.25));
+}
+
+.eco-arrow-down {
+    display: none;
+}
+
+
+/* ==========================================================================
+   SUMMARY
+   ========================================================================== */
+
+.eco-summary {
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+.eco-summary-divider {
+    width: 100%;
+    height: 1px;
+    margin-bottom: 1.25rem;
+    background: rgba(255, 255, 255, 0.20);
+}
+
+.eco-summary .content-group {
+    margin-bottom: 0 !important;
+}
+
+.eco-summary .lang-en,
+.eco-summary .lang-ar {
+    color: #F3F4F6;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.eco-summary .lang-ar {
+    color: #C8A24A;
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+}
+
+
+/* ==========================================================================
+   TABLET
+   ========================================================================== */
+
+@media (max-width: 1100px) {
+
+    .ecosystem-flow-bridge {
+        padding: 2rem;
     }
 
+    .ecosystem-flow-grid {
+        grid-template-columns:
+            minmax(0, 1fr)
+            65px
+            minmax(0, 1.15fr)
+            65px
+            minmax(0, 1fr)
+            65px
+            minmax(0, 1fr);
+        gap: 0.5rem;
+    }
+
+    .eco-card {
+        min-height: 145px;
+        padding: 1.25rem 0.75rem;
+    }
+
+    .eco-arrow-right {
+        font-size: 2rem;
+    }
+
+    .eco-arrow-label {
+        font-size: 0.52rem;
+    }
+}
+
+
+/* ==========================================================================
+   MOBILE — HORIZONTAL RECTANGLES + VERTICAL FLOW
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    .ecosystem-flow-bridge {
+        width: calc(100vw - 24px) !important;
+        max-width: none !important;
+
+        margin-left: 12px !important;
+        margin-right: 12px !important;
+
+        padding: 1.25rem !important;
+        border-radius: 1.5rem;
+
+        box-sizing: border-box;
+    }
+
+    .ecosystem-flow-grid {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+
+    /* --------------------------------------------------------------
+       HORIZONTAL RECTANGLE CARD
+       -------------------------------------------------------------- */
+
+    .eco-card {
+        width: 100% !important;
+        min-width: 0 !important;
+
+        min-height: 115px;
+
+        padding: 1.15rem 1rem;
+
+        border-radius: 1.25rem;
+
+        box-sizing: border-box;
+    }
+
+
+    /* --------------------------------------------------------------
+       CARD TITLE
+       -------------------------------------------------------------- */
+
+    .eco-card-title {
+        font-size: 2rem;
+        line-height: 1.05;
+
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    .eco-card-title-long {
+        font-size: 1.45rem;
+        line-height: 1.15;
+    }
+
+    .eco-card-title-project {
+        font-size: 1.55rem;
+    }
+
+
+    /* --------------------------------------------------------------
+       CARD SUBTITLE
+       -------------------------------------------------------------- */
+
+    .eco-card-subtitle {
+        margin-top: 0.55rem;
+
+        font-size: 0.7rem;
+        line-height: 1.4;
+
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    .eco-card-subtitle .lang-ar {
+        padding: 0 !important;
+        margin-top: 0.25rem;
+    }
+
+
+    /* --------------------------------------------------------------
+       VERTICAL ARROW
+       -------------------------------------------------------------- */
+
+    .eco-arrow {
+        min-height: 75px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .eco-arrow-label {
+        margin-bottom: 0.35rem;
+
+        font-size: 0.58rem;
+        line-height: 1.25;
+
+        max-width: 180px;
+    }
+
+    .eco-arrow-right {
+        display: none;
+    }
+
+    .eco-arrow-down {
+        display: block;
+        font-size: 2rem;
+        line-height: 1;
+    }
+
+
+    /* --------------------------------------------------------------
+       SUMMARY
+       -------------------------------------------------------------- */
+
+    .eco-summary {
+        margin-top: 1.25rem;
+    }
+
+    .eco-summary .lang-en,
+    .eco-summary .lang-ar {
+        font-size: 0.78rem;
+        line-height: 1.55;
+    }
+
+}
+
+
+/* ==========================================================================
+   VERY SMALL PHONES
+   ========================================================================== */
+
+@media (max-width: 380px) {
+
+    .ecosystem-flow-bridge {
+        padding: 0.9rem !important;
+    }
+
+    .eco-card {
+        min-height: 105px;
+        padding: 1rem 0.75rem;
+    }
+
+    .eco-card-title {
+        font-size: 1.75rem;
+    }
+
+    .eco-card-title-long {
+        font-size: 1.3rem;
+    }
+
+    .eco-card-title-project {
+        font-size: 1.4rem;
+    }
+
+    .eco-card-subtitle {
+        font-size: 0.65rem;
+    }
+
+    .eco-arrow {
+        min-height: 65px;
+    }
 }
