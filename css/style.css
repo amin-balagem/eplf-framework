@@ -17,7 +17,7 @@ body {
     overflow-x: hidden;
     transition: all 0.5s ease;
     scroll-behavior: smooth;
-    min-width: 1440px; /* <--- هذا السطر هو الذي يمنع انكماش الموقع */
+    min-width: 1440px; /* Intentional: preserve the desktop canvas on mobile; pinch-to-zoom remains enabled by the viewport. */
 }
 
 /* Bilingual Display Logic */
@@ -32,7 +32,7 @@ body {
 [data-lang-mode="ar"] .lang-en { display: none !important; }
 [data-lang-mode="ar"] .lang-ar { display: block; font-family: 'Cairo', sans-serif; direction: rtl; }
 
-/* منع الجوال من تغيير أحجام خطوط نسخة الكمبيوتر */
+/* Preserve desktop typography on the fixed desktop canvas used on mobile */
 html, body, * {
     -webkit-text-size-adjust: 100% !important;
     text-size-adjust: 100% !important;
