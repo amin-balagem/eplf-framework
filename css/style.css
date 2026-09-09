@@ -181,6 +181,7 @@ html, body, * {
 .royal { background: linear-gradient(135deg, #6AA6FF, #1D5BBF, #123D80, #7AB8FF); color: white; }
 .black { background: linear-gradient(135deg, #444, #222, #111, #555); color: white; }
 .marble { background: linear-gradient(135deg, #FFF0F5, #FCE4EC, #F8BBD0, #FFF0F5); }
+.teal { background: linear-gradient(135deg, #CFFAFE, #A5F3FC, #22D3EE, #E0FCFF); }
 
 /* جعل النصوص والأيقونات في البطاقات الداكنة تظهر باللون الأبيض */
 .navy .lang-en, .navy .lang-ar, 
