@@ -397,7 +397,6 @@
      ========================================================== -->
 
 <div class="flex justify-center mt-8 mb-16 px-4">
-
     <button
         type="button"
         onclick="openEPLFVideo()"
@@ -413,7 +412,6 @@
                transition-all duration-300
                cursor-pointer overflow-hidden">
 
-        <!-- تم حذف h-full وإضافة padding علوي وسفلي مرن py-4 -->
         <div
             class="relative flex-1 w-full
                    flex items-center
@@ -470,7 +468,7 @@
                        opacity-80">
             </div>
 
-            <!-- TEXT AREA (تمت زيادة الفراغات gap-2 وحذف القيود الأفقية) -->
+            <!-- TEXT AREA -->
             <div
                 class="flex-1
                        flex flex-col
@@ -552,9 +550,7 @@
                    hover:bg-[#d4af37]
                    hover:text-[#071326]
                    transition-all duration-300">
-
             <i class="ph-bold ph-x text-xl"></i>
-
         </button>
 
         <!-- VIDEO -->
@@ -564,8 +560,10 @@
             controls
             playsinline
             preload="metadata">
-
+            
+            <!-- أضفنا ID هنا ليسهل تغييره برمجياً -->
             <source
+                id="eplf-video-source"
                 src="videos/eplf-overview.mp4"
                 type="video/mp4">
 
@@ -573,7 +571,6 @@
         </video>
 
     </div>
-
 </div>
 
     <!-- ==========================================================================
