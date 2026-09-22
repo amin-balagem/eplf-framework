@@ -156,17 +156,8 @@ function setLangMode(mode) {
     }
 }
 
-
 /* ==========================================================================
    2. VIDEO CONTROL SYSTEM
-   ==========================================================================
-
-   English:
-   videos/eplfENG-overview.mp4
-
-   Arabic / Bilingual:
-   videos/eplf-overview.mp4
-
    ========================================================================== */
 
 function openEPLFVideo() {
@@ -203,13 +194,19 @@ function openEPLFVideo() {
 
 
     /* ----------------------------------------------------------------------
-       Select correct video
+       Select correct video based on 3 modes
        ---------------------------------------------------------------------- */
 
-    const videoPath =
-        langMode === 'en'
-            ? 'videos/eplfENG-overview.mp4'
-            : 'videos/eplf-overview.mp4';
+    let videoPath;
+    
+    if (langMode === 'en') {
+        videoPath = 'videos/eplfENG-overview.mp4';
+    } else if (langMode === 'bilingual') {
+        videoPath = 'videos/eplfENG trans-overview.mp4';
+    } else {
+        // 'ar' mode
+        videoPath = 'videos/eplf-overview.mp4';
+    }
 
 
     /* ----------------------------------------------------------------------
