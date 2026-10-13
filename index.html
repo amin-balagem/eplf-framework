@@ -1272,9 +1272,9 @@
         </div>
 
         <!-- ================= CROSS-CUTTING DECISION INTELLIGENCE HUB ================= -->
-        <div class="relative z-30 max-w-5xl mx-auto
-                    drop-shadow-[0_0_70px_rgba(212,175,55,0.5)]
-                    transform hover:scale-105 transition-transform duration-500 mt-4">
+       <div class="relative z-30 max-w-5xl mx-auto
+            drop-shadow-[0_0_70px_rgba(212,175,55,0.5)]
+            transform md:hover:scale-105 transition-transform duration-500 mt-4">
 
             <div class="absolute -top-8 w-full text-center z-40 pointer-events-none">
                 <span class="text-gray-300 text-xs md:text-sm uppercase tracking-[0.35em]
@@ -1470,21 +1470,25 @@
 
     </div>
     <style>
+    /* سداسي: قصّ أخف حتى يتسع العنوان */
     #sec-hub .hub-hex {
-        clip-path: polygon(15% 0, 85% 0, 100% 50%, 85% 100%, 15% 100%, 0 50%);
+        clip-path: polygon(9% 0, 91% 0, 100% 50%, 91% 100%, 9% 100%, 0 50%) !important;
     }
-    @media (max-width: 767px) {
-        #sec-hub .hub-hex {
-            clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0 50%);
-        }
-        #sec-hub .hub-hex-title {
-            font-size: 1.05rem;
-            letter-spacing: 0.02em;
-            overflow-wrap: anywhere;
-        }
-        #sec-hub .hub-hex-title .lang-ar {
-            font-size: 1.15rem;
-        }
+    /* العنوان: أصغر قليلًا وتباعد أقل ليبقى داخل الإطار */
+    #sec-hub .hub-hex-title {
+        font-size: clamp(1.5rem, 3vw, 2.5rem) !important;
+        letter-spacing: 0.04em !important;
+        overflow-wrap: anywhere;
+        padding-inline: 1rem;
+    }
+    #sec-hub .hub-hex-title .lang-ar {
+        font-size: clamp(1.5rem, 3vw, 2.4rem) !important;
+        letter-spacing: normal !important;
+    }
+    /* مساحة داخلية أكبر للسداسي */
+    #sec-hub .hub-hex > .hub-hex {
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
     }
 </style>
 </section>
