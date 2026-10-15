@@ -426,117 +426,159 @@
     </div>
 </section>
 
-    <!-- ==========================================================================
-         EXECUTIVE TABLE OF CONTENTS (Custom Design)
-         ========================================================================== -->
-    <section class="section-padding marble-light border-b-8 border-gray-200">
-        <div class="max-w-[1600px] mx-auto">
-            <!-- أضفنا id="sec-index" هنا لكي يستجيب لروابط العودة بسلاسة -->
-            <h2 id="sec-index" class="font-bold text-executive-navy uppercase tracking-widest mb-12 flex items-center justify-center gap-4 text-center" style="font-size: var(--font-section);">
-                <i class="ph-fill ph-list-dashes text-executive-gold"></i>
-                <span class="content-group !mb-0"><span class="lang-en">Executive Index</span><span class="lang-ar">الفهرس التنفيذي</span></span>
-            </h2>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                <!-- 1 -->
-                <a href="#sec-def" class="index-card gold">
-                    <i class="ph-fill ph-bookmark-simple text-4xl block mb-2 opacity-80 mx-auto"></i>
-                    <div class="content-group !mb-0">
-                        <span class="lang-en">Definition & Purpose</span>
-                        <span class="lang-ar">التعريف والغرض</span>
-                    </div>
-                </a>
-                
-                <!-- 2 -->
-                <a href="#sec-aud" class="index-card navy">
-                    <i class="ph-fill ph-users-three text-4xl block mb-2 opacity-80 mx-auto text-white"></i>
-                    <div class="content-group !mb-0">
-                        <span class="lang-en">Audience & Principles</span>
-                        <span class="lang-ar">الجمهور والمبادئ</span>
-                    </div>
-                </a>
-                
-                <!-- 3 -->
-                <a href="#sec-hub" class="index-card brown">
-                    <i class="ph-fill ph-brain text-4xl block mb-2 opacity-80 mx-auto"></i>
-                    <div class="content-group !mb-0">
-                        <span class="lang-en">Executive Decision Intelligence Hub</span>
-                        <span class="lang-ar">مركز ذكاء القرار التنفيذي</span>
-                    </div>
-                </a>
-                
-                <!-- 4 -->
-                <a href="#sec-pillars" class="index-card silver">
-                    <i class="ph-fill ph-columns text-4xl block mb-2 opacity-80 mx-auto"></i>
-                    <div class="content-group !mb-0">
-                        <span class="lang-en">The 8 Pillars</span>
-                        <span class="lang-ar">الركائز الثمانية</span>
-                    </div>
-                </a>
-                
-                <!-- 5 -->
-                <a href="#sec-comp" class="index-card green">
-                    <i class="ph-fill ph-target text-4xl block mb-2 opacity-80 mx-auto text-white"></i>
-                    <div class="content-group !mb-0">
-                        <span class="lang-en">Executive Capabilities</span>
-                        <span class="lang-ar">القدرات التنفيذية</span>
-                    </div>
-                </a>
-                
-                <!-- 6 -->
-                <a href="#sec-success" class="index-card burgundy">
-                    <i class="ph-fill ph-chart-line-up text-4xl block mb-2 opacity-80 mx-auto text-white"></i>
-                    <div class="content-group !mb-0">
-                        <span class="lang-en">Success Model</span>
-                        <span class="lang-ar">نموذج النجاح</span>
-                    </div>
-                </a>
-                
-                <!-- 7 -->
-                <a href="#sec-phil" class="index-card copper">
-                    <i class="ph-fill ph-lightbulb text-4xl block mb-2 opacity-80 mx-auto"></i>
-                    <div class="content-group !mb-0">
-                        <span class="lang-en">Framework Philosophy</span>
-                        <span class="lang-ar">فلسفة الإطار</span>
-                    </div>
-                </a>
-                
-                <!-- 8 -->
-                <a href="#sec-eco" class="index-card royal">
-                    <i class="ph-fill ph-tree-structure text-4xl block mb-2 opacity-80 mx-auto text-white"></i>
-                    <div class="content-group !mb-0">
-                        <span class="lang-en">Ecosystem</span>
-                        <span class="lang-ar">منظومة الإطار</span>
-                    </div>
-                </a>
-                
-                <!-- 9 -->
-                <a href="#sec-pos" class="index-card black">
-                    <i class="ph-fill ph-crosshair text-4xl block mb-2 opacity-80 mx-auto text-white"></i>
-                    <div class="content-group !mb-0">
-                        <span class="lang-en">Positioning & Differentiation</span>
-                        <span class="lang-ar">التموضع والتمايز</span>
-                    </div>
-                </a>
-                
-                <!-- 10 -->
-                <a href="#sec-ref" class="index-card marble">
-                    <i class="ph-fill ph-books text-4xl block mb-2 opacity-80 mx-auto"></i>
-                    <div class="content-group !mb-0">
-                        <span class="lang-en">References</span>
-                        <span class="lang-ar">المراجع</span>
+<!-- ==========================================================================
+     EXECUTIVE TABLE OF CONTENTS (Last row perfectly centered)
+     ========================================================================== -->
+<style>
+    /* لون مميز لبطاقة الخريطة المعمارية: Deep Teal مع لمسة ذهبية */
+    .index-card.cartographic {
+        background: linear-gradient(135deg, #0B3C49 0%, #0F766E 55%, #14B8A6 100%) !important;
+        color: #ffffff !important;
+        border: 1px solid rgba(212, 175, 55, 0.55);
+    }
+    .index-card.cartographic .map-icon {
+        color: #D4AF37;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35));
+    }
+    .index-card.cartographic .lang-en,
+    .index-card.cartographic .lang-ar { color: #ffffff; }
+
+    /* الصف الأخير: توسيط حقيقي بنفس عرض بطاقة الشبكة (gap-6 = 1.5rem) */
+    .index-last-row > .index-card {
+        width: 100%;
+    }
+    @media (min-width: 640px)  { .index-last-row > .index-card { width: calc((100% - 1.5rem) / 2); } }
+    @media (min-width: 768px)  { .index-last-row > .index-card { width: calc((100% - 3rem) / 3); } }
+    @media (min-width: 1024px) { .index-last-row > .index-card { width: calc((100% - 6rem) / 5); } }
+</style>
+
+<section class="section-padding marble-light border-b-8 border-gray-200">
+    <div class="max-w-[1600px] mx-auto">
+        <h2 id="sec-index" class="font-bold text-executive-navy uppercase tracking-widest mb-12 flex items-center justify-center gap-4 text-center" style="font-size: var(--font-section);">
+            <i class="ph-fill ph-list-dashes text-executive-gold"></i>
+            <span class="content-group !mb-0"><span class="lang-en">Executive Index</span><span class="lang-ar">الفهرس التنفيذي</span></span>
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <!-- 1 -->
+            <a href="#sec-def" class="index-card gold">
+                <i class="ph-fill ph-bookmark-simple text-4xl block mb-2 opacity-80 mx-auto"></i>
+                <div class="content-group !mb-0 flex flex-col items-center">
+                    <span class="lang-en">Definition & Purpose</span>
+                    <span class="lang-ar mt-1 pt-1 border-t border-black/10">التعريف والغرض</span>
+                </div>
+            </a>
+
+            <!-- 2 -->
+            <a href="#sec-aud" class="index-card navy">
+                <i class="ph-fill ph-users-three text-4xl block mb-2 opacity-80 mx-auto text-white"></i>
+                <div class="content-group !mb-0 flex flex-col items-center">
+                    <span class="lang-en">Audience & Principles</span>
+                    <span class="lang-ar mt-1 pt-1 border-t border-white/20">الجمهور والمبادئ</span>
+                </div>
+            </a>
+
+            <!-- 3 -->
+            <a href="#sec-hub" class="index-card brown">
+                <i class="ph-fill ph-brain text-4xl block mb-2 opacity-80 mx-auto"></i>
+                <div class="content-group !mb-0 flex flex-col items-center">
+                    <span class="lang-en">Executive Decision Intelligence Hub</span>
+                    <span class="lang-ar mt-1 pt-1 border-t border-black/10">مركز ذكاء القرار التنفيذي</span>
+                </div>
+            </a>
+
+            <!-- 4 -->
+            <a href="#sec-pillars" class="index-card silver">
+                <i class="ph-fill ph-columns text-4xl block mb-2 opacity-80 mx-auto"></i>
+                <div class="content-group !mb-0 flex flex-col items-center">
+                    <span class="lang-en">The 8 Pillars</span>
+                    <span class="lang-ar mt-1 pt-1 border-t border-black/10">الركائز الثمانية</span>
+                </div>
+            </a>
+
+            <!-- 5 -->
+            <a href="#sec-comp" class="index-card green">
+                <i class="ph-fill ph-target text-4xl block mb-2 opacity-80 mx-auto text-white"></i>
+                <div class="content-group !mb-0 flex flex-col items-center">
+                    <span class="lang-en">Executive Capabilities</span>
+                    <span class="lang-ar mt-1 pt-1 border-t border-white/20">القدرات التنفيذية</span>
+                </div>
+            </a>
+
+            <!-- 6 -->
+            <a href="#sec-success" class="index-card burgundy">
+                <i class="ph-fill ph-chart-line-up text-4xl block mb-2 opacity-80 mx-auto text-white"></i>
+                <div class="content-group !mb-0 flex flex-col items-center">
+                    <span class="lang-en">Success Model</span>
+                    <span class="lang-ar mt-1 pt-1 border-t border-white/20">نموذج النجاح</span>
+                </div>
+            </a>
+
+            <!-- 7 -->
+            <a href="#sec-phil" class="index-card copper">
+                <i class="ph-fill ph-lightbulb text-4xl block mb-2 opacity-80 mx-auto"></i>
+                <div class="content-group !mb-0 flex flex-col items-center">
+                    <span class="lang-en">Framework Philosophy</span>
+                    <span class="lang-ar mt-1 pt-1 border-t border-black/10">فلسفة الإطار</span>
+                </div>
+            </a>
+
+            <!-- 8 -->
+            <a href="#sec-eco" class="index-card royal">
+                <i class="ph-fill ph-tree-structure text-4xl block mb-2 opacity-80 mx-auto text-white"></i>
+                <div class="content-group !mb-0 flex flex-col items-center">
+                    <span class="lang-en">Ecosystem</span>
+                    <span class="lang-ar mt-1 pt-1 border-t border-white/20">منظومة الإطار</span>
+                </div>
+            </a>
+
+            <!-- 9 -->
+            <a href="#sec-pos" class="index-card black">
+                <i class="ph-fill ph-crosshair text-4xl block mb-2 opacity-80 mx-auto text-white"></i>
+                <div class="content-group !mb-0 flex flex-col items-center">
+                    <span class="lang-en">Positioning & Differentiation</span>
+                    <span class="lang-ar mt-1 pt-1 border-t border-white/20">التموضع والتمايز</span>
+                </div>
+            </a>
+
+            <!-- 10 -->
+            <a href="#sec-ref" class="index-card marble">
+                <i class="ph-fill ph-books text-4xl block mb-2 opacity-80 mx-auto"></i>
+                <div class="content-group !mb-0 flex flex-col items-center">
+                    <span class="lang-en">References</span>
+                    <span class="lang-ar mt-1 pt-1 border-t border-black/10">المراجع</span>
+                </div>
+            </a>
+
+            <!-- الصف الأخير: بطاقتان في المنتصف تماماً -->
+            <div class="index-last-row col-span-full flex flex-wrap justify-center gap-6">
+
+                <!-- 11. الخريطة المعمارية: رمز مميز + لون مميز -->
+                <a href="#sec-architecture-map" class="index-card cartographic">
+                    <i class="ph-fill ph-compass map-icon text-4xl block mb-2 mx-auto"></i>
+                    <div class="content-group !mb-0 flex flex-col items-center">
+                        <span class="lang-en font-bold">Architecture Map</span>
+                        <span class="lang-ar mt-1 pt-1 border-t border-white/20 font-bold">الخريطة المعمارية</span>
                     </div>
                 </a>
 
-                <!-- 11 -->
-                <a href="#sec-glossary" class="index-card teal md:col-start-2 lg:col-start-3">
+                <!-- 12. التعريفات الأساسية -->
+                <a href="#sec-glossary" class="index-card gold">
                     <i class="ph-fill ph-book-bookmark text-4xl block mb-2 opacity-80 mx-auto"></i>
-                    <div class="content-group !mb-0">
-    <span class="lang-en">Key Definitions</span>
-    <span class="lang-ar">التعريفات الأساسية</span>
-</div>
+                    <div class="content-group !mb-0 flex flex-col items-center">
+                        <span class="lang-en font-bold">Key Definitions</span>
+                        <span class="lang-ar mt-1 pt-1 border-t border-black/10 font-bold">التعريفات الأساسية</span>
+                    </div>
                 </a>
+
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================================
+     EPLF VIDEO OVERVIEW BUTTON — PREMIUM 3D GOLD & NAVY (Responsive Fix)
+     ========================================================== -->
 
 <!-- ==========================================================
      EPLF VIDEO OVERVIEW BUTTON — PREMIUM 3D GOLD & NAVY (Responsive Fix)
@@ -4857,6 +4899,287 @@
 
         </div>
     </section>
+
+<!-- ==========================================================================
+     EPLF INTERACTIVE ARCHITECTURE MAP (DARK EXECUTIVE THEME - FULL + BACK BTN)
+     ========================================================================== -->
+<style>
+    /* ==========================================================================
+       CSS الخاص بالخريطة المعمارية (النسخة الداكنة الشاملة)
+       ========================================================================== */
+    .map-scroll { overflow-x: auto; padding-bottom: 20px; }
+    .dark-map-container { min-width: 900px; width: 100%; direction: rtl; margin: 0 auto; font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif; }
+    [data-lang-mode="en"] .dark-map-container { direction: ltr; }
+
+    /* إصلاح تداخل النصوص داخل الخريطة في وضع Bilingual */
+    [data-lang-mode="bilingual"] .dark-map-container .lang-en,
+    [data-lang-mode="bilingual"] .dark-map-container .lang-ar { display: block; width: 100%; }
+    
+    /* ألوان الأقسام والخلفيات */
+    .map-sec { background: #121f38; border: 1px solid #2a3a5c; border-radius: 14px; padding: 18px; margin-top: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+    .map-sec:first-child { margin-top: 0; }
+    .map-sec-h { display: flex; flex-wrap: wrap; align-items: baseline; gap: 14px; margin-bottom: 14px; }
+    .map-sec-h h2 { margin: 0; font-size: 1.15rem; font-weight: 700; color: #ffffff; }
+    .map-sec-h p { margin: 0; font-size: 0.95rem; color: #9aa8c4; }
+
+    .map-row { display: flex; align-items: stretch; }
+    .map-arr { flex: 0 0 28px; align-self: center; display: flex; justify-content: center; color: #9aa8c4; }
+    .map-arr svg { width: 22px; height: 22px; }
+    [data-lang-mode="ar"] .map-arr svg, [data-lang-mode="bilingual"] .map-arr svg { transform: scaleX(-1); }
+
+    .map-node { flex: 1 1 0; min-width: 0; border-radius: 10px; padding: 12px 10px; text-align: center; font-weight: 600; font-size: 0.95rem; line-height: 1.35; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; min-height: 88px; transition: transform 0.3s ease; }
+    .map-node:hover { transform: translateY(-3px); }
+    .map-sub { font-weight: 400; font-size: 0.88rem; line-height: 1.4; opacity: 0.95; color: #e8edf7; }
+    .map-badge { width: 22px; height: 22px; border-radius: 50%; background: rgba(255,255,255,0.2); font-size: 0.75rem; font-weight: 700; display: grid; place-items: center; color: #ffffff; }
+
+    /* الألوان الداكنة للعقد (Nodes) */
+    .m-core { background: #2b5192; color: #ffffff; }
+    .m-mid { background: #121f38; border: 2px solid #2b5192; color: #ffffff; }
+    .m-end { background: #e6b84f; color: #1b1405; }
+    .m-end .map-badge { background: rgba(0,0,0,0.12); color: #1b1405; }
+    .m-enab { background: #6d4fb3; color: #ffffff; }
+    .m-hub { background: #241c3b; border: 2px dashed #6d4fb3; color: #ffffff; }
+    .m-eco { background: #2b5192; color: #ffffff; }
+    .m-concept { background: #121f38; border: 2px dashed #2b5192; color: #ffffff; }
+
+    .map-steps .map-node { min-height: 64px; flex-direction: row; gap: 8px; padding: 10px 6px; }
+    .map-steps .map-arr { flex-basis: 18px; }
+    .map-steps .map-arr svg { width: 16px; height: 16px; }
+
+    /* الأشرطة (Bands) */
+    .map-band { border-radius: 10px; padding: 10px 14px; font-size: 0.93rem; text-align: center; margin-top: 10px; }
+    .mb-gov { background: #2a2310; border: 1.5px solid #e0b04c; color: #ffffff; }
+    .mb-dig { background: #10302f; border: 1.5px solid #4fc3c7; color: #ffffff; }
+
+    /* الحلقات (Loops) */
+    .map-loop { position: relative; margin: 12px calc(100%/12) 0; border: 2px solid #e0b04c; border-top: 0; border-radius: 0 0 14px 14px; padding: 8px 14px 10px; text-align: center; font-size: 0.9rem; color: #9aa8c4; }
+    .map-loop::before { content: ""; position: absolute; top: -8px; inset-inline-start: -8px; border-inline: 7px solid transparent; border-bottom: 9px solid #e0b04c; }
+    .map-loop.cyc { border-color: #6f95d6; margin-inline: calc(100%/14); margin-top: 8px; }
+    .map-loop.cyc::before { border-bottom-color: #6f95d6; }
+
+    .map-row3 { display: flex; align-items: stretch; }
+    .map-row3 .map-node { min-height: 104px; }
+    .map-row3 .m-hub { flex: 1.15 1 0; }
+    .map-lnk { flex: 0 0 150px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 0.84rem; color: #9aa8c4; text-align: center; padding: 0 6px; }
+    .map-lnk svg { width: 34px; height: 22px; color: #9aa8c4; }
+
+    .map-apply { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 12px; color: #b9a0ec; font-size: 0.86rem; font-weight: 600; }
+    .map-apply svg { width: 20px; height: 20px; transform: rotate(-90deg); }
+    .map-human { margin-top: 12px; border: 1.5px solid #6d4fb3; border-radius: 10px; padding: 9px 14px; text-align: center; font-size: 0.92rem; color: #e8edf7;}
+    
+    /* مؤشرات الأسطورة (Legend) */
+    .map-legend { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 0 0 18px 0; font-size: 0.9rem; color: #9aa8c4; justify-content: center; }
+    .map-legend span { display: inline-flex; align-items: center; gap: 7px; }
+    .map-legend i { width: 14px; height: 14px; border-radius: 4px; display: inline-block; }
+
+    /* التذييل (Footer) */
+    .dark-map-footer { margin-top: 16px; border-radius: 14px; background: #121f38; border: 1px solid #2a3a5c; color: #ffffff; padding: 20px 22px; text-align: center; }
+    .dark-map-footer .msg { font-weight: 600; font-size: 1rem; line-height: 1.8; text-wrap: balance; margin: 0; }
+    .dark-map-footer .msg em { font-style: normal; color: #e6b84f; }
+    .dark-map-footer .fine { margin: 12px 0 0; font-size: 0.85rem; opacity: 0.85; color: #9aa8c4; }
+</style>
+
+<section id="sec-architecture-map" class="section-padding py-16" style="background-color: #0b1426;">
+    <div class="max-w-[1200px] mx-auto px-6">
+        
+        <!-- رأس القسم مع زر العودة للفهرس -->
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
+            <div class="text-center md:text-start">
+                <h3 class="font-bold text-white uppercase tracking-widest text-xl md:text-3xl m-0">
+                    <span class="content-group !mb-0">
+                        <span class="lang-en block">EPLF Architecture Map</span>
+                        <span class="lang-ar block mt-2">الخريطة المعمارية لإطار EPLF</span>
+                    </span>
+                </h3>
+                <div class="w-24 h-1 bg-[#D4AF37] mx-auto md:mx-0 mt-3 rounded-full"></div>
+            </div>
+
+            <!-- زر العودة للفهرس -->
+            <a href="#sec-index" class="inline-flex items-center gap-2 px-5 py-2.5 bg-[#D4AF37] text-[#0a1428] rounded-full font-bold text-sm shadow-lg hover:bg-white transition-all duration-300 shrink-0">
+                <i class="ph-bold ph-arrow-fat-up text-lg"></i>
+                <span class="lang-en">Back to Index</span>
+                <span class="lang-ar">العودة للفهرس</span>
+            </a>
+        </div>
+
+        <!-- الأسطورة (Legend) -->
+        <div class="map-legend">
+            <span><i style="background:#2b5192"></i><span class="content-group !mb-0 !gap-0"><span class="lang-en">Core delivery pillars</span><span class="lang-ar">ركائز التسليم الأساسية</span></span></span>
+            <span><i style="background:#6d4fb3"></i><span class="content-group !mb-0 !gap-0"><span class="lang-en">Cross-cutting enabling layers</span><span class="lang-ar">الطبقات التمكينية المتقاطعة</span></span></span>
+            <span><i style="background:#e0b04c"></i><span class="content-group !mb-0 !gap-0"><span class="lang-en">Governance</span><span class="lang-ar">الحوكمة</span></span></span>
+            <span><i style="background:#4fc3c7"></i><span class="content-group !mb-0 !gap-0"><span class="lang-en">Digital thread</span><span class="lang-ar">الخيط الرقمي</span></span></span>
+        </div>
+
+        <div class="map-scroll">
+          <div class="dark-map-container">
+
+            <!-- 1. Execution logic -->
+            <section class="map-sec">
+              <div class="map-sec-h content-group !mb-3 !flex-row !gap-4">
+                <h2>
+                    <span class="lang-en block">1 · Execution Logic</span>
+                    <span class="lang-ar block">1 · المنطق التنفيذي</span>
+                </h2>
+                <p>
+                    <span class="lang-en block">How governance operates continuously</span>
+                    <span class="lang-ar block">كيف تعمل الحوكمة بشكل مستمر</span>
+                </p>
+              </div>
+              <div class="map-row map-steps">
+                <div class="map-node m-core"><span class="map-badge">1</span><span class="content-group !mb-0"><span class="lang-en">Assess</span><span class="lang-ar">تقييم</span></span></div>
+                <div class="map-arr"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="map-node m-core"><span class="map-badge">2</span><span class="content-group !mb-0"><span class="lang-en">Diagnose</span><span class="lang-ar">تشخيص</span></span></div>
+                <div class="map-arr"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="map-node m-core"><span class="map-badge">3</span><span class="content-group !mb-0"><span class="lang-en">Align</span><span class="lang-ar">مواءمة</span></span></div>
+                <div class="map-arr"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="map-node m-core"><span class="map-badge">4</span><span class="content-group !mb-0"><span class="lang-en">Decide</span><span class="lang-ar">اتخاذ القرار</span></span></div>
+                <div class="map-arr"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="map-node m-core"><span class="map-badge">5</span><span class="content-group !mb-0"><span class="lang-en">Execute</span><span class="lang-ar">تنفيذ</span></span></div>
+                <div class="map-arr"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="map-node m-core"><span class="map-badge">6</span><span class="content-group !mb-0"><span class="lang-en">Monitor</span><span class="lang-ar">مراقبة</span></span></div>
+                <div class="map-arr"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="map-node m-core"><span class="map-badge">7</span><span class="content-group !mb-0"><span class="lang-en">Improve</span><span class="lang-ar">تحسين</span></span></div>
+              </div>
+              <div class="map-loop cyc content-group !mb-0 !mt-2">
+                <span class="lang-en block"><b class="text-white">A repeating cycle:</b> Improve leads back to the next Assess.</span>
+                <span class="lang-ar block"><b class="text-white">دورة متكررة:</b> يعود التحسين إلى التقييم التالي.</span>
+              </div>
+              <div class="map-band mb-gov content-group !mb-0">
+                <span class="lang-en block"><b>Governance is a continuous layer, not a stage:</b> decision rights, accountability and risk oversight across all seven steps.</span>
+                <span class="lang-ar block"><b>الحوكمة طبقة مستمرة وليست مرحلة:</b> صلاحيات القرار والمساءلة والإشراف على المخاطر عبر الخطوات السبع.</span>
+              </div>
+            </section>
+
+            <!-- 2. Primary executive value flow -->
+            <section class="map-sec">
+              <div class="map-sec-h content-group !mb-3 !flex-row !gap-4">
+                <h2>
+                    <span class="lang-en block">2 · Primary Executive Value Flow</span>
+                    <span class="lang-ar block">2 · مسار القيمة التنفيذي الأساسي</span>
+                </h2>
+                <p>
+                    <span class="lang-en block">Where value is created across the pillars</span>
+                    <span class="lang-ar block">أين تُخلق القيمة عبر الركائز</span>
+                </p>
+              </div>
+              <div class="map-row">
+                <div class="map-node m-core"><span class="map-badge">1</span><span class="content-group !mb-0">
+                  <span class="lang-en block">Leadership &amp; Emotional Intelligence</span><span class="lang-ar block">القيادة والذكاء العاطفي</span></span></div>
+                <div class="map-arr"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="map-node m-core"><span class="map-badge">4</span><span class="content-group !mb-0">
+                  <span class="lang-en block">Business Strategy &amp; Value Creation</span><span class="lang-ar block">استراتيجية الأعمال وخلق القيمة</span></span></div>
+                <div class="map-arr"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="map-node m-core"><span class="map-badge">3</span><span class="content-group !mb-0">
+                  <span class="lang-en block">Project, Program &amp; Portfolio Management</span><span class="lang-ar block">إدارة المشاريع والبرامج والمحافظ</span></span></div>
+                <div class="map-arr"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="map-node m-core"><span class="map-badge">7</span><span class="content-group !mb-0">
+                  <span class="lang-en block">Delivery &amp; Commercial Excellence</span><span class="lang-ar block">تسليم متميز وتميز تجاري</span></span></div>
+                <div class="map-arr"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="map-node m-mid"><span class="content-group !mb-0">
+                  <span class="lang-en block">Business Value</span><span class="lang-ar block">قيمة الأعمال</span></span></div>
+                <div class="map-arr"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="map-node m-end"><span class="content-group !mb-0">
+                  <span class="lang-en block">Sustainable Organizational Value</span><span class="lang-ar block">قيمة مؤسسية مستدامة</span></span></div>
+              </div>
+              <div class="map-loop content-group !mb-0 !mt-3">
+                <span class="lang-en block"><b class="text-white">Continuous learning &amp; feedback loop:</b> outcomes and performance inform later decisions, adaptation and strategic refinement.</span>
+                <span class="lang-ar block"><b class="text-white">حلقة التعلم والتغذية الراجعة:</b> تُغذي النتائج والأداء القرارات اللاحقة والتكيف وإعادة ضبط الاستراتيجية.</span>
+              </div>
+              <div class="map-band mb-dig content-group !mb-0">
+                <span class="lang-en block"><b>⑥ Digital Project Delivery &amp; Transformation:</b> a digital thread across the core delivery flow.</span>
+                <span class="lang-ar block"><b>⑥ التحول الرقمي وتسليم المشاريع:</b> خيط رقمي يمتد عبر مسار التسليم الأساسي.</span>
+              </div>
+              <div class="map-band mb-gov content-group !mb-0">
+                <span class="lang-en block"><b>② Governance Architecture &amp; Systems:</b> structures, policies, stage gates and assurance.</span>
+                <span class="lang-ar block"><b>② هيكلية وأنظمة الحوكمة المؤسسية:</b> الهياكل والسياسات وبوابات المراحل والتوكيد.</span>
+              </div>
+            </section>
+
+            <!-- 3. Cross-cutting enabling layers -->
+            <section class="map-sec">
+              <div class="map-sec-h content-group !mb-3 !flex-row !gap-4">
+                <h2>
+                    <span class="lang-en block">3 · Cross-cutting Enabling Layers</span>
+                    <span class="lang-ar block">3 · الطبقتان التمكينيتان المتقاطعتان</span>
+                </h2>
+                <p>
+                    <span class="lang-en block">Pillars 5 and 8 act across the entire EPLF architecture</span>
+                    <span class="lang-ar block">تعمل الركيزتان 5 و8 عبر معمارية EPLF بأكملها</span>
+                </p>
+              </div>
+              <div class="map-apply content-group !mb-3 !flex-row !items-center">
+                <svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span class="lang-en block">Applied across the EPLF architecture</span>
+                <span class="lang-ar block">تُطبَّق عبر معمارية EPLF</span>
+              </div>
+              <div class="map-row3">
+                <div class="map-node m-enab"><span class="map-badge">8</span><span class="content-group !mb-0">
+                  <span class="lang-en block">Executive Decision Intelligence</span><span class="lang-ar block">ذكاء القرار التنفيذي</span></span>
+                  <span class="map-sub content-group !mb-0"><span class="lang-en block">Telemetry, predictive and risk analytics, decision support</span><span class="lang-ar block">القياس اللحظي والتحليلات التنبؤية وتحليل المخاطر ودعم القرار</span></span></div>
+                <div class="map-lnk"><svg viewBox="0 0 34 22" aria-hidden="true"><path d="M2 11h30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 4"/></svg><span class="content-group !mb-0">
+                  <span class="lang-en block">the Hub applies this domain</span><span class="lang-ar block">يطبّق المركز هذا المجال</span></span></div>
+                <div class="map-node m-hub">
+                  <span class="content-group !mb-0"><span class="lang-en block">Executive Decision Intelligence Hub</span><span class="lang-ar block">مركز ذكاء القرار التنفيذي</span></span>
+                  <span class="map-sub content-group !mb-0"><span class="lang-en block">Cross-cutting capability, not a pillar or an additional layer</span><span class="lang-ar block">قدرة عابرة، وليست ركيزة ولا طبقة معمارية إضافية</span></span></div>
+                <div class="map-lnk"><svg viewBox="0 0 34 22" aria-hidden="true"><path d="M2 11h30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 4"/></svg><span class="content-group !mb-0">
+                  <span class="lang-en block">the Hub supports decision rights and oversight</span><span class="lang-ar block">يدعم المركز صلاحيات القرار والإشراف</span></span></div>
+                <div class="map-node m-enab"><span class="map-badge">5</span><span class="content-group !mb-0">
+                  <span class="lang-en block">Executive Decision Governance</span><span class="lang-ar block">حوكمة القرارات التنفيذية</span></span>
+                  <span class="map-sub content-group !mb-0"><span class="lang-en block">Authority, decision rights, escalation, accountability</span><span class="lang-ar block">الصلاحيات وحقوق القرار والتصعيد والمساءلة</span></span></div>
+              </div>
+              <div class="map-human content-group !mb-0 !mt-3">
+                <span class="lang-en block">AI augments analysis and decision support. Human judgment and executive accountability remain.</span>
+                <span class="lang-ar block">الذكاء الاصطناعي يعزز التحليل ودعم القرار، ويبقى الحكم البشري والمساءلة التنفيذية.</span>
+              </div>
+            </section>
+
+            <!-- 4. Ecosystem flow -->
+            <section class="map-sec">
+              <div class="map-sec-h content-group !mb-3 !flex-row !gap-4">
+                <h2>
+                    <span class="lang-en block">4 · Ecosystem Flow</span>
+                    <span class="lang-ar block">4 · مسار منظومة الإطار</span>
+                </h2>
+                <p>
+                    <span class="lang-en block">How the framework's own components relate</span>
+                    <span class="lang-ar block">كيف ترتبط مكوّنات الإطار نفسها ببعضها</span>
+                </p>
+              </div>
+              <div class="map-row">
+                <div class="map-node m-eco"><span class="content-group !mb-0">
+                  <span class="lang-en block">EPLF Framework</span><span class="lang-ar block">إطار EPLF</span></span>
+                  <span class="map-sub content-group !mb-0"><span class="lang-en block">Defines what and why</span><span class="lang-ar block">يحدد ماذا ولماذا</span></span></div>
+                <div class="map-arr"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="map-node m-eco"><span class="content-group !mb-0">
+                  <span class="lang-en block">Executive Operating Model</span><span class="lang-ar block">نموذج التشغيل التنفيذي</span></span>
+                  <span class="map-sub content-group !mb-0"><span class="lang-en block">Applies it as organizational practice</span><span class="lang-ar block">يترجمه إلى ممارسة مؤسسية</span></span></div>
+                <div class="map-arr"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="map-node m-eco"><span class="content-group !mb-0">
+                  <span class="lang-en block">EPLT Toolkit</span><span class="lang-ar block">أدوات EPLT</span></span>
+                  <span class="map-sub content-group !mb-0"><span class="lang-en block">Supports implementation</span><span class="lang-ar block">تدعم التطبيق</span></span></div>
+                <div class="map-arr"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="map-node m-concept"><span class="content-group !mb-0">
+                  <span class="lang-en block">Project OS</span><span class="lang-ar block">Project OS</span></span>
+                  <span class="map-sub content-group !mb-0"><span class="lang-en block">Digital enablement layer (conceptual)</span><span class="lang-ar block">طبقة التمكين الرقمي (مفاهيمية)</span></span></div>
+                <div class="map-arr"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="map-node m-end"><span class="content-group !mb-0">
+                  <span class="lang-en block">Sustainable Organizational Value</span><span class="lang-ar block">قيمة مؤسسية مستدامة</span></span></div>
+              </div>
+            </section>
+
+          </div>
+        </div>
+
+       <!-- التذييل الذهبي والرسالة الفلسفية (بدون اسم أو إصدار) -->
+        <footer class="dark-map-footer">
+          <p class="msg">
+            <span class="lang-en block">People Lead. Governance Guides. Strategy Aligns. Commercial Excellence Protects Value. Data Informs. Artificial Intelligence Augments. <em>Decision Intelligence Creates Sustainable Organizational Value.</em></span>
+            <span class="lang-ar block">الأشخاص يقودون. الحوكمة توجّه. الاستراتيجية توائم. التميز التجاري يحمي القيمة. البيانات تُعلِم. الذكاء الاصطناعي يعزز. <em>ذكاء القرار يخلق قيمة مؤسسية مستدامة.</em></span>
+          </p>
+        </footer>
+
+    </div>
+</section>
 
    <!-- ==========================================================================
      KEY DEFINITIONS (GLOSSARY)
