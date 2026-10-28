@@ -7,7 +7,7 @@
 
     <!-- Executive Fonts: Inter for EN, Cairo for AR -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <!-- خط التوقيع الكلاسيكي الفخم للاسم -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
@@ -102,40 +102,53 @@
     </div>
 </nav>
     
-    <!-- ==========================================================================
-         HERO SECTION (Navy Marble)
-         ========================================================================== -->
-    <section class="section-padding bg-executive-navy marble-dark text-center relative overflow-hidden flex flex-col items-center">
-        <!-- 3D Grid Background -->
-        <div class="absolute inset-0 opacity-20" style="background-image: linear-gradient(#D4AF37 1px, transparent 1px), linear-gradient(90deg, #D4AF37 1px, transparent 1px); background-size: 50px 50px; transform: perspective(500px) rotateX(60deg) scale(2); transform-origin: top;"></div>
-        
-        <!-- الصورة الشخصية، الاسم، والتاريخ (في المنتصف تماماً) -->
-        <div class="relative z-30 flex flex-col items-center group pointer-events-auto mb-12">
-            <!-- الصورة وتوهجها -->
-            <div class="relative">
-                <div class="absolute -inset-3 bg-gradient-to-r from-[#D4AF37] via-[#FFF8DC] to-[#D4AF37] rounded-full blur-lg opacity-70 group-hover:opacity-100 transition duration-1000 animate-pulse"></div>
-                <!-- تأكد من تعديل profile.jpg إلى اسم ملف صورتك -->
-                <img src="profile.jpg" 
-                     onerror="this.style.display='none'"
-                     alt="Engr. Amin Balagem" 
-                     class="relative w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 object-cover rounded-full border-[6px] border-[#D4AF37] shadow-[0_0_60px_rgba(212,175,55,0.9)] transform transition duration-500 hover:scale-105">
-            </div>
-            
-            <!-- الاسم بخط التوقيع (القلم) وتاريخ الإعداد أسفل الصورة -->
-            <div class="mt-6 text-center transform transition duration-500 group-hover:scale-105 flex flex-col items-center">
-                <span class="block text-[#D4AF37] text-5xl md:text-6xl tracking-wider mb-2" style="font-family: 'Great Vibes', cursive; text-shadow: 2px 4px 8px rgba(0,0,0,0.9);">
-                    Engr. Amin Balagem
-                </span>
-                
-                <!-- تاريخ الإعداد باللغتين -->
-                <div class="content-group !mb-0 text-gray-400 font-medium tracking-widest text-sm md:text-base mt-2 px-6 py-1 border-t border-b border-gray-600/50">
-                    <span class="lang-en uppercase">Prepared on: October 18, 2026</span>
-                    <span class="lang-ar">تاريخ الإعداد: 18 أكتوبر  2026</span>
-                </div>
-            </div>
+   
+<!-- ==========================================================================
+     HERO SECTION (Navy Marble)
+     ========================================================================== -->
+<section class="section-padding bg-executive-navy marble-dark text-center relative overflow-hidden flex flex-col items-center">
+
+    <!-- 3D Grid Background -->
+    <div class="absolute inset-0 opacity-20"
+         style="background-image: linear-gradient(#D4AF37 1px, transparent 1px), linear-gradient(90deg, #D4AF37 1px, transparent 1px); background-size: 50px 50px; transform: perspective(500px) rotateX(60deg) scale(2); transform-origin: top;">
+    </div>
+
+    <!-- الصورة الشخصية، الاسم، والتاريخ -->
+    <div class="relative z-30 flex flex-col items-center group pointer-events-auto mb-12">
+
+        <!-- الصورة وتوهجها -->
+        <div class="relative">
+            <div class="absolute -inset-3 bg-gradient-to-r from-[#D4AF37] via-[#FFF8DC] to-[#D4AF37] rounded-full blur-lg opacity-70 group-hover:opacity-100 transition duration-1000 animate-pulse"></div>
+
+            <img src="profile.jpg"
+                 onerror="this.style.display='none'"
+                 alt="Engr. Amin Alawy Balagem"
+                 class="relative w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 object-cover rounded-full border-[6px] border-[#D4AF37] shadow-[0_0_60px_rgba(212,175,55,0.9)] transform transition duration-500 hover:scale-105">
         </div>
 
-        <div class="relative z-10 w-full max-w-[1600px]">
+        <!-- الاسم وتاريخ الإعداد -->
+        <div class="mt-6 text-center transform transition duration-500 group-hover:scale-105 flex flex-col items-center">
+
+            <!-- الاسم بخط رسمي مع الحفاظ على الأحرف الكبيرة -->
+            <span class="block text-[#D4AF37] text-5xl md:text-6xl tracking-wider mb-2"
+                  style="font-family: 'Playfair Display', serif;
+                         font-weight: 700;
+                         text-transform: none;
+                         font-variant: normal;
+                         text-shadow: 2px 4px 8px rgba(0,0,0,0.9);">
+                Engr. Amin Alawy Balagem
+            </span>
+
+            <!-- تاريخ الإعداد باللغتين -->
+            <div class="content-group !mb-0 text-gray-400 font-medium tracking-widest text-sm md:text-base mt-2 px-6 py-1 border-t border-b border-gray-600/50">
+                <span class="lang-en uppercase">Prepared on: October 28, 2026</span>
+                <span class="lang-ar">تاريخ الإعداد: 28 أكتوبر 2026</span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="relative z-10 w-full max-w-[1600px]">
 
    <!-- الشارة الذهبية -->
 <div class="hero-badge inline-flex items-center gap-3 px-6 py-2 border border-executive-gold bg-executive-gold/10 text-executive-gold text-2xl font-bold uppercase tracking-widest mb-10 rounded-full shadow-[0_0_20px_rgba(212,175,55,0.3)]">
