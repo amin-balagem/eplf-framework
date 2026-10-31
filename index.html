@@ -422,83 +422,284 @@
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+    #sec-author-note .author-en-text {
+        font-size: 1.08rem;
+        line-height: 1.95;
+        text-align: left;
+        font-style: normal;
+    }
+
+    #sec-author-note .author-ar-text {
+        font-size: 1.12rem;
+        line-height: 2;
+        text-align: right;
+        text-shadow: 0 1px 1px rgba(255,255,255,0.65);
+    }
+
+    #sec-author-note .author-en-text p,
+    #sec-author-note .author-ar-text p {
+        margin-bottom: 1.35rem;
+    }
+
+    #sec-author-note .author-en-text p:last-child,
+    #sec-author-note .author-ar-text p:last-child {
+        margin-bottom: 0;
+    }
+
+    #sec-author-note .author-en-text strong,
+    #sec-author-note .author-ar-text strong {
+        color: #0B2E59;
+        font-weight: 800;
+        font-size: 1.07em;
+    }
+
+    @media (min-width: 768px) {
+        #sec-author-note .author-en-text {
+            font-size: 1.2rem;
+            line-height: 2;
+        }
+
+        #sec-author-note .author-ar-text {
+            font-size: 1.3rem;
+            line-height: 2.05;
+        }
+    }
 </style>
 
-<section id="sec-author-note" class="section-padding bg-gray-50 border-b-8 border-gray-200 relative overflow-hidden py-16">
-        
-        <!-- صندوق الاقتباس: تم إضافة إطار ذهبي سميك وخلفية بيج رخامية متدرجة -->
-        <div class="relative rounded-3xl border-[4px] border-[#D4AF37] p-8 md:p-14 overflow-hidden" 
-             style="background: linear-gradient(135deg, #fcf8f2 0%, #f4ead5 50%, #fcf8f2 100%); box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);">
-            
-            <!-- علامات الاقتباس الخلفية (للزينة) -->
-            <div class="absolute top-4 left-6 text-[#D4AF37]/20 font-serif text-9xl leading-none select-none">"</div>
-            <div class="absolute top-4 right-6 text-[#D4AF37]/20 font-serif text-9xl leading-none select-none" style="transform: rotate(180deg) translateY(-20px);">"</div>
+<section id="sec-author-note"
+         class="section-padding bg-gray-50 border-b-8 border-gray-200 relative overflow-hidden py-16">
 
-            <!-- العنوان -->
-            <h3 class="text-center font-bold text-executive-navy uppercase tracking-widest mb-10 text-xl md:text-2xl">
-                <span class="content-group !mb-0">
-                    <span class="lang-en block">Author’s Professional Perspective</span>
-                    <span class="lang-ar block mt-2">الرؤية المهنية للمؤلف</span>
-                </span>
-                <div class="w-16 h-1 bg-executive-gold mx-auto mt-4 rounded-full"></div>
-            </h3>
+    <!-- Main Executive Quote Box -->
+    <div class="relative rounded-3xl border-[4px] border-[#D4AF37] p-6 md:p-14 overflow-hidden"
+         style="background: linear-gradient(135deg, #fcf8f2 0%, #f4ead5 50%, #fcf8f2 100%);
+                box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);">
 
-            <!-- النص باللغة الإنجليزية -->
-            <div class="lang-en text-center text-gray-800 font-serif text-lg md:text-xl leading-relaxed italic mb-8 relative z-10 font-bold">
-                <p class="mb-4">
-                    Drawing on my experience managing major and diverse projects, including hospital projects, I have seen firsthand how these projects require a balanced approach to managing quality and safety (HSE) requirements within schedules that leave little room for delay.
-                </p>
-                <p class="mb-4">
-                    The absence of clear Executive Decision Governance—particularly regarding decision-making authority, responsibility boundaries, and escalation paths among team members and technical and administrative stakeholders—can lead to conflicting instructions, delayed decisions, disrupted workflows, and increased project costs.
-                </p>
-                <p class="mb-4">
-                    When problems arise, these gaps in authority and responsibilities can make it difficult to determine who held decision-making authority, who was responsible for addressing the issue, and who should be held accountable for the consequences. In some cases, the resulting losses may exceed the impact of engineering errors themselves.
-                </p>
-                <p class="mb-4">
-                    This experience reinforced my conviction that project success depends not only on design and execution quality, but also on clearly defined decision-making authority and responsibilities, integrated governance, and leadership’s ability to intervene at the right time.
-                </p>
-                <p>
-                    These principles underpin the Executive Project Leadership Framework (EPLF), particularly its focus on Executive Decision Governance. They are also relevant to healthcare, infrastructure, major construction, and other capital-intensive sectors, while recognizing the nature and specific requirements of each project and sector.
-                </p>
-            </div>
+        <!-- Decorative Quotation Marks -->
+        <div class="absolute top-4 left-6 text-[#D4AF37]/20 font-serif text-9xl leading-none select-none">"</div>
 
-            <!-- فاصل زخرفي بين اللغتين -->
-            <div class="w-full flex justify-center items-center gap-4 my-10 opacity-70 relative z-10">
-                <div class="h-[1px] w-1/4 bg-executive-gold"></div>
-                <i class="ph-fill ph-star text-executive-gold text-sm"></i>
-                <div class="h-[1px] w-1/4 bg-executive-gold"></div>
-            </div>
+        <div class="absolute top-4 right-6 text-[#D4AF37]/20 font-serif text-9xl leading-none select-none"
+             style="transform: rotate(180deg) translateY(-20px);">"</div>
 
-            <!-- النص باللغة العربية -->
-            <div class="lang-ar text-center text-gray-900 text-xl md:text-2xl leading-relaxed mb-10 relative z-10 font-bold" style="line-height: 1.8; text-shadow: 0px 1px 1px rgba(255,255,255,0.8);">
-                <p class="mb-4">
-                    من واقع تجربتي في إدارة المشاريع الكبرى والمتنوعة، ومنها مشاريع المستشفيات، لمستُ كيف تتطلب هذه المشاريع إدارة متوازنة لمتطلبات الجودة والسلامة (HSE) ضمن جداول زمنية لا تحتمل التأخير.
-                </p>
-                <p class="mb-4">
-                    وقد يؤدي غياب حوكمة واضحة للقرار التنفيذي (Executive Decision Governance)، ولا سيما عدم وضوح صلاحيات اتخاذ القرار وحدود المسؤولية ومسارات التصعيد بين أعضاء الفريق والأطراف الفنية والإدارية، إلى تضارب التوجيهات، وتأخر القرارات، وتعطّل سير العمل، وزيادة تكاليف المشروع.
-                </p>
-                <p class="mb-4">
-                    وعند وقوع المشكلات، قد تجعل هذه الفجوات في الصلاحيات والمسؤوليات من الصعب تحديد من كان يملك صلاحية اتخاذ القرار، ومن كان مسؤولًا عن معالجة المشكلة، ومن ينبغي مساءلته عن النتائج المترتبة عليها. وفي بعض الحالات، قد تتجاوز الخسائر الناتجة عن هذه الاختلالات أثر الأخطاء الهندسية نفسها.
-                </p>
-                <p class="mb-4">
-                    وقد عززت هذه التجربة قناعتي بأن نجاح المشاريع لا يعتمد فقط على جودة التصميم والتنفيذ، بل أيضًا على وضوح صلاحيات اتخاذ القرار والمسؤوليات، وتكامل الحوكمة، وقدرة القيادة على التدخل في الوقت المناسب.
-                </p>
-                <p>
-                    وتشكّل هذه المبادئ أساسًا لإطار القيادة التنفيذية للمشاريع (EPLF)، ولا سيما تركيزه على حوكمة القرار التنفيذي. كما يمكن الاستفادة منها في قطاعات الرعاية الصحية والبنية التحتية والإنشاءات الكبرى وغيرها من القطاعات كثيفة الاستثمار الرأسمالي، مع مراعاة طبيعة كل مشروع ومتطلبات كل قطاع.
-                </p>
-            </div>
+        <!-- Section Heading -->
+        <h3 class="text-center font-bold text-executive-navy uppercase tracking-widest mb-10 text-xl md:text-2xl relative z-10">
+            <span class="content-group !mb-0">
+                <span class="lang-en block">Author’s Professional Perspective</span>
+                <span class="lang-ar block mt-2">الرؤية المهنية للمؤلف</span>
+            </span>
 
-            <!-- التوقيع -->
-            <div class="text-center relative z-10 mt-8">
-                <span class="block text-executive-navy text-3xl md:text-4xl tracking-wider mb-2" style="font-family: 'Great Vibes', cursive;">
-                    Engr. Amin Alawy Balagem
-                </span>
-                <span class="block text-executive-gold font-bold tracking-widest text-sm uppercase">
-                    Senior Projects & Construction Manager | AI-Enabled Project Delivery
-                </span>
-            </div>
+            <div class="w-16 h-1 bg-executive-gold mx-auto mt-4 rounded-full"></div>
+        </h3>
+
+        <!-- ================= ENGLISH VERSION ================= -->
+        <div class="lang-en author-en-text text-gray-800 relative z-10 font-serif">
+
+            <p>
+                Drawing on my experience managing <strong>major and diverse projects</strong>,
+                including hospital, infrastructure, and construction projects, I have come to
+                recognize that their success requires <strong>disciplined integration of
+                engineering, execution, management, and commercial requirements</strong>.
+                This involves balancing quality, health, safety and environment (HSE),
+                schedule and cost objectives, and risk management, within an environment
+                characterized by multiple stakeholders, overlapping responsibilities,
+                delivery pressures, and various external influences.
+            </p>
+
+            <p>
+                My experience has shown that some project challenges do not necessarily
+                arise from technical shortcomings or a lack of competence. Rather, they may
+                result from <strong>unclear authority, poorly defined team responsibilities,
+                overlapping roles, weak coordination, and the absence of clear escalation
+                and decision-making pathways</strong>. Such shortcomings can lead to
+                conflicting instructions, delayed decisions, inadequate risk responses,
+                workflow disruptions, reduced productivity, rework, schedule slippage,
+                increased costs, and declining execution quality.
+            </p>
+
+            <p>
+                When problems arise, unclear authority and responsibilities can make it
+                difficult to determine <strong>who has the authority to make decisions,
+                who is responsible for resolving the issue, and who is accountable for
+                implementation and outcomes</strong>. In some cases I have experienced,
+                the consequences of these shortcomings may exceed the direct impact of
+                engineering errors themselves, affecting the project's financial,
+                operational, and contractual performance. This highlights the importance
+                of <strong>Executive Decision Governance</strong>, founded on clear
+                authority and responsibilities, defined stakeholder roles and escalation
+                mechanisms, documented decisions, transparency and accountability,
+                stakeholder expectation management, and effective coordination.
+            </p>
+
+            <p>
+                Project success also requires <strong>effective leadership, integrated
+                governance, proactive risk management, and appropriate Key Performance
+                Indicators (KPIs)</strong> to measure progress and efficiency, identify
+                deviations, and support corrective action. Project management cannot be
+                separated from the broader perspective of <strong>integrated project,
+                program, and portfolio management</strong>, which helps align objectives,
+                priorities, and resources across planning, execution, and control.
+            </p>
+
+            <p>
+                This also requires the integration of digital and commercial dimensions:
+                from the application of <strong>Building Information Modeling (BIM)</strong>
+                and its digital dimensions, including <strong>4D for schedule</strong> and
+                <strong>5D for cost</strong>, to the effective management of contracts,
+                changes, variation orders, claims, and commercial risks in accordance
+                with applicable contractual frameworks. This helps protect rights and
+                obligations while preserving project value.
+            </p>
+
+            <p>
+                In the context of digital transformation, <strong>data, predictive
+                analytics, and artificial intelligence</strong>, when supported by
+                suitable data and effective governance controls, can help identify
+                early warning indicators, anticipate potential risks and deviations,
+                analyze scenarios and alternatives, strengthen executive decision
+                intelligence, and support timely decision-making. Nevertheless,
+                <strong>human judgment, executive responsibility, and accountability
+                remain fundamental to every decision</strong>.
+            </p>
+
+            <p>
+                Success is not limited to achieving time, cost, and quality objectives.
+                It also extends to <strong>operational asset readiness, effective
+                handover, realization of intended benefits, sustainability, and
+                resource efficiency</strong>, while supporting the transition toward
+                greener projects. These contribute to creating long-term value for
+                organizations and communities.
+            </p>
+
+            <p>
+                These principles form the foundation of the
+                <strong>Executive Project Leadership Framework (EPLF)</strong>, which
+                connects leadership, governance, strategy, integrated project, program
+                and portfolio management, commercial excellence, digital transformation,
+                and decision intelligence within an integrated executive system.
+                It supports the transition from fragmented activity management toward
+                a more integrated approach to managing <strong>decisions, performance,
+                risks, and value</strong>.
+            </p>
+
+            <p class="text-center mt-6">
+                <strong>This framework remains open to discussion, review, and continuous development.</strong>
+            </p>
 
         </div>
+
+        <!-- Decorative Divider -->
+        <div class="w-full flex justify-center items-center gap-4 my-10 opacity-70 relative z-10">
+            <div class="h-[1px] w-1/4 bg-executive-gold"></div>
+            <i class="ph-fill ph-star text-executive-gold text-sm"></i>
+            <div class="h-[1px] w-1/4 bg-executive-gold"></div>
+        </div>
+
+        <!-- ================= ARABIC VERSION ================= -->
+        <div class="lang-ar author-ar-text text-gray-900 relative z-10">
+
+            <p>
+                من واقع خبرتي في إدارة <strong>المشاريع الكبرى والمتنوعة</strong>،
+                ومنها مشاريع المستشفيات والبنية التحتية والإنشاءات، أدركت أن نجاح
+                هذه المشاريع يتطلب <strong>تكاملًا منضبطًا بين المتطلبات الهندسية
+                والتنفيذية والإدارية والتجارية</strong>، مع تحقيق التوازن بين الجودة
+                والصحة والسلامة والبيئة (HSE)، ومتطلبات البرنامج الزمني والتكلفة
+                وإدارة المخاطر، في بيئة تتسم بتعدد الأطراف وتداخل المسؤوليات وضغوط
+                الإنجاز والتأثيرات الخارجية المختلفة.
+            </p>
+
+            <p>
+                وقد أظهرت لي التجربة أن بعض التحديات التي تواجه المشاريع لا تنشأ
+                بالضرورة من قصور فني أو نقص في الكفاءات، بل قد تكون نتيجة
+                <strong>غموض الصلاحيات، وعدم وضوح مهام أعضاء الفريق وحدود
+                مسؤولياتهم، وتداخل الأدوار، وضعف التنسيق، وغياب مسارات واضحة
+                للتصعيد واتخاذ القرار</strong>. ويمكن أن تؤدي هذه الاختلالات إلى
+                تضارب التوجيهات، وتأخر القرارات، وضعف الاستجابة للمخاطر، وتعطّل
+                سير العمل، وانخفاض الإنتاجية، وإعادة تنفيذ الأعمال، والانحراف عن
+                البرنامج الزمني، وارتفاع التكاليف، وتراجع جودة التنفيذ.
+            </p>
+
+            <p>
+                وعند وقوع المشكلات، يصبح من الصعب في ظل غموض الصلاحيات والمسؤوليات
+                تحديد <strong>من يملك سلطة اتخاذ القرار، ومن يتولى معالجة المشكلة،
+                ومن يتحمل مسؤولية التنفيذ والمساءلة عن النتائج</strong>. وفي بعض
+                الحالات التي عايشتها، قد تتجاوز آثار هذه الاختلالات الأثر المباشر
+                للأخطاء الهندسية نفسها، وتنعكس على الأداء المالي والتشغيلي
+                والتعاقدي للمشروع. ومن هنا تبرز أهمية
+                <strong>حوكمة القرار التنفيذي (Executive Decision Governance)</strong>،
+                القائمة على وضوح الصلاحيات والمسؤوليات، وتحديد مهام الأطراف المعنية
+                وآليات التصعيد، وتوثيق القرارات، وتعزيز الشفافية والمساءلة، وإدارة
+                توقعات أصحاب المصلحة، وتعزيز التنسيق الفعّال فيما بينهم.
+            </p>
+
+            <p>
+                كما يتطلب نجاح المشاريع <strong>قيادة فعّالة، وحوكمة متكاملة،
+                وإدارة استباقية للمخاطر، ومؤشرات أداء رئيسية (KPIs)</strong>
+                مناسبة لقياس التقدم والكفاءة ورصد الانحرافات ودعم الإجراءات
+                التصحيحية. ولا يمكن فصل إدارة المشروع عن المنظور الأوسع
+                <strong>للإدارة المتكاملة للمشاريع والبرامج والمحافظ</strong>،
+                الذي يساعد على مواءمة الأهداف والأولويات والموارد عبر مستويات
+                التخطيط والتنفيذ والرقابة.
+            </p>
+
+            <p>
+                ويتطلب ذلك أيضًا <strong>تكامل الجوانب الرقمية والتجارية</strong>؛
+                من توظيف نمذجة معلومات البناء (BIM) وأبعادها الرقمية، بما يشمل
+                <strong>البعد الرابع (4D) المرتبط بالبرنامج الزمني والبعد الخامس
+                (5D) المرتبط بالتكلفة</strong>، إلى الإدارة الفعّالة للعقود
+                والتغييرات وأوامر التغيير والمطالبات والمخاطر التجارية، وفق
+                الأطر التعاقدية المعتمدة، بما يحمي الحقوق والالتزامات ويحافظ
+                على قيمة المشروع.
+            </p>
+
+            <p>
+                وفي ظل التحول الرقمي، تساعد <strong>البيانات والتحليلات التنبؤية
+                والذكاء الاصطناعي</strong>، عند توافر بيانات مناسبة وضوابط حوكمة
+                فعّالة، على رصد مؤشرات الإنذار المبكر، واستشراف المخاطر
+                والانحرافات المحتملة، وتحليل السيناريوهات والبدائل، وتعزيز
+                ذكاء القرار التنفيذي ودعم اتخاذ القرارات في الوقت المناسب.
+                ومع ذلك، يظل <strong>الحكم البشري والمسؤولية التنفيذية
+                والمساءلة أساسًا لكل قرار</strong>.
+            </p>
+
+            <p>
+                ولا يقتصر النجاح على تحقيق أهداف الوقت والتكلفة والجودة، بل
+                يمتد إلى <strong>جاهزية الأصول للتشغيل، وفاعلية التسليم،
+                وتحقيق المنافع المستهدفة، والاستدامة وكفاءة استخدام الموارد</strong>،
+                ودعم التوجه نحو المشاريع الخضراء، بما يسهم في تحقيق قيمة طويلة
+                الأجل للمؤسسات والمجتمعات.
+            </p>
+
+            <p>
+                وتشكّل هذه المبادئ أساس
+                <strong>إطار القيادة التنفيذية للمشاريع (Executive Project
+                Leadership Framework – EPLF)</strong>، الذي يربط القيادة
+                والحوكمة والاستراتيجية والإدارة المتكاملة للمشاريع والبرامج
+                والمحافظ والتميز التجاري والتحول الرقمي وذكاء القرار ضمن
+                منظومة تنفيذية متكاملة، ويدعم الانتقال من إدارة الأنشطة
+                المجزأة إلى إدارة أكثر تكاملًا
+                <strong>للقرارات والأداء والمخاطر والقيمة</strong>.
+            </p>
+
+            <p class="text-center mt-6">
+                <strong>ويبقى هذا الإطار مفتوحًا للنقاش والمراجعة والتطوير المستمر.</strong>
+            </p>
+
+        </div>
+
+        <!-- Author Signature -->
+        <div class="text-center relative z-10 mt-10">
+
+            <span class="block text-executive-navy text-3xl md:text-4xl tracking-wider mb-2"
+                  style="font-family: 'Great Vibes', cursive;">
+                Engr. Amin Alawy Balagem
+            </span>
+
+            <span class="block text-executive-gold font-bold tracking-widest text-xs md:text-sm uppercase">
+                Senior Projects &amp; Construction Manager | AI-Enabled Project Delivery
+            </span>
+
+        </div>
+
     </div>
 </section>
 
